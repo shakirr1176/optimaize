@@ -56,7 +56,7 @@
         @endphp
 
         @if ($link['confirmation'])
-            <a class="confirmation relative group {{ $link['link_class'] }} relative group w-8 h-8 duration-300 flex items-center justify-center capitalize rounded-full text-white"
+            <a class="confirmation relative group {{ $link['link_class'] }} relative group action-btn"
                 href="{{ route($link['route_name'], $actionRouteParams) }}"
                 target="{{ $link['target'] }}"
                 data-form-id="{{ $rowData->{$link['primary_key']} }}"

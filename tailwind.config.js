@@ -75,7 +75,7 @@ module.exports = {
             borderRadius: {
                 'radious-30': '30px',
                 'radious-3': '3px',
-                'lara-radious' : '15px',
+                'lara-radious' : '12px',
             },
 
             boxShadow: {
