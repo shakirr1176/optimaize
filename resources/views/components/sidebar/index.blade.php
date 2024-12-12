@@ -1,14 +1,23 @@
 <div class="shadow-layer"></div>
-<div class="bg-white dark:bg-lara-primary rounded-br-[36px] z-50">
+<div class="bg-optm-gray-200 dark:bg-lara-primary z-50">
     <div
-    {{ $attributes->merge(['class' => 'flex flex-col justify-between bg-white dark:bg-lara-gray-100 duration-300 z-50 customScroll-none rounded-tr-[36px]']) }}>
+    {{ $attributes->merge(['class' => 'flex flex-col justify-between bg-optm-gray-200 dark:bg-lara-gray-100 duration-300 z-50 customScroll-none']) }}>
     <div class="h-full">
-            <div class="sticky top-0 z-50 bg-white dark:bg-lara-primary">
+            <div class="pt-14 sticky top-0 z-50 bg-optm-gray-200 dark:bg-lara-primary">
+                <div class="text-center">
+                    <button id="sidebar-collapse-button">
+                        <svg class="w-4 2xl:w-5 mx-auto" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="2.00152e-07" y1="16.5" x2="20" y2="16.5" stroke="#10122B" stroke-width="3"/>
+                            <line x1="2.23158e-07" y1="9" x2="20" y2="9" stroke="#10122B" stroke-width="3"/>
+                            <line x1="2.23158e-07" y1="1.5" x2="13.3333" y2="1.5" stroke="#10122B" stroke-width="3"/>
+                            </svg>
+                    </button>
+                </div>
                 <div
-            class="duration-300 bg-white dark:bg-lara-gray-100 flex h-[80px] items-center justify-center text-sm font-bold text-white 2xl:h-[100px] rounded-tr-[36px]">
+            class=" duration-300 bg-optm-gray-200 dark:bg-lara-gray-100 flex h-[75px] items-center justify-center text-sm font-bold text-white 2xl:h-[80px]">
                 <a class="flex justify-center" href="{{ url('/') }}">
                     <img class="menu-logo pl-6 2xl:pl-0 pr-12 w-[250px]" src="{{ get_logo_url() }}" alt="">
-                    <img class="menu-logo w-10" src="{{ get_logo_small_url() }}" alt="">
+                    <img class="menu-logo w-5 2xl:w-6" src="{{ get_logo_small_url() }}" alt="">
                 </a>
                 </div>
             </div>
@@ -19,25 +28,8 @@
             </div>
         </div>
 
-        <div class="sticky bottom-[0.5px] bg-light-body dark:bg-lara-primary">
-            <div class="calendar-sec duration-300 bg-white dark:bg-lara-gray-100 rounded-br-[36px] text-lara-gray-200 dark:text-white">
-                <div class="calendar-sec-div duration-300 py-4 bg-light-body dark:bg-lara-primary rounded-[16px]">
-                    <div class="clock">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span class="block sidebar-time font-14 font-bold"></span>
-                    </div>
-                    <div class="text-right mb-1">
-                        <span class="sidebar-day font-semibold font-18 pl-4"></span>
-                        <span class="sidebar-date font-14 text-xs block"></span>
-                    </div>
-                </div>
-
-                <div class="text-lara-gray-200 footer pt-6">
-                    {{ __('All Right Reserved Powered by') }} <span class="text-lara-orange font-medium">codemen</span>
-                </div>
-            </div>
+        <div class="sticky bottom-[0.5px] dark:bg-lara-primary">
+            
         </div>
     </div>
 </div>

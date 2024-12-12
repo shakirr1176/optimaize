@@ -60,7 +60,7 @@
     .lara-padding,
     .multiselect-dropdown,
     .multiselect-dropdown-search {
-        @apply font-14 px-4 2xl:px-6 py-2.5;
+        @apply font-14 px-4 2xl:px-6 py-3 2xl:py-4;
     }
 
     .lara-btn {
@@ -78,7 +78,7 @@
     .lara-input,
     .lara-input-search,
     .lara-input-date {
-        @apply text-black-50 outline-none w-full rounded-lara-radious;
+        @apply text-black-50 bg-optm-gray-300 outline-none w-full rounded-lara-radious;
     }
 
     .lara-input,
@@ -87,7 +87,7 @@
     }
 
     .lara-input-search {
-        @apply px-4 pr-10 py-2.5 rounded-lara-radious relative font-12;
+        @apply px-4 pl-8 2xl:pl-10 py-3 2xl:py-4 rounded-lara-radious relative font-12;
     }
 
     .lara-input-date {
@@ -500,7 +500,7 @@ td:last-child {
 
 table {
     border-collapse: separate;
-    border-spacing: 1px 10px;
+    border-spacing: 0px 10px;
 }
 
 
@@ -619,7 +619,7 @@ body:has(.expand-sidebar){
 }
 
 .collapse-sidebar {
-    @apply 2xl:w-[130px] w-28 h-full;
+    @apply w-24 2xl:w-[104px] h-full;
 }
 
 .collapse-sidebar .menu-logo:nth-child(1){
@@ -643,7 +643,7 @@ body:has(.expand-sidebar){
 }
 
 .collapse-sidebar .menu-icon{
-    @apply 2xl:w-6 2xl:h-6 w-5 h-5
+    @apply  w-5 h-6 2xl:w-6 2xl:h-6
 }
 
 .collapse-sidebar .root-item {
@@ -718,12 +718,12 @@ body:has(.expand-sidebar){
 }
 
 .shadow-layer{
-    @apply duration-300 fixed h-screen shrink-0 rounded-r-[36px] top-0 left-0 light-box-shadow pointer-events-none;
+    @apply duration-300 fixed h-screen shrink-0 top-0 left-0 light-box-shadow pointer-events-none;
     z-index: 99;
 }
 
 .collapse-shadow .shadow-layer{
-    @apply 2xl:w-[130px] w-28
+    @apply w-24 2xl:w-[104px];
 }
 .expand-shadow .shadow-layer{
     @apply w-[230px] lg:w-[200px] xl:w-[230px] 2xl:w-300px
@@ -971,12 +971,9 @@ input:-webkit-autofill:active {
 
 @layer utilities{
     .light-box-shadow {
-        -webkit-box-shadow: 5px 0px 4px rgba(56, 65, 74, 0.089);
-        box-shadow: 5px 0px 4px rgba(56, 65, 74, 0.089);
+        -webkit-box-shadow: 5px 0px 10px rgba(56, 65, 74, 0.089);
+        box-shadow: 5px 0px 10px rgba(56, 65, 74, 0.089);
     }
-    /* .light-box-shadow {
-        box-shadow: 10px 2px 3px -6px rgba(56, 65, 74, 0.089);
-    } */
 }
 
 .fade-in{

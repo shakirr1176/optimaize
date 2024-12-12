@@ -1,13 +1,5 @@
 <header {{ $attributes->merge(['class' => 'sticky top-0 z-40']) }}>
     <div class="top-header border-b dark:border-none w-full bg-light-primary dark:bg-lara-primary bg-white h-[80px] 2xl:h-[100px] px-6 2xl:px-12 flex items-center">
-        <div class="w-2/12">
-            <div class="flex items-center">
-                <div id="sidebar-collapse-button"
-                class="mr-7 text-lara-gray-300 dark:text-white hover:text-opacity-80 text-2xl 2xl:text-3xl cursor-pointer">
-                    @svg('heroicon-s-bars-3', 'w-8 2xl:w-10 pointer-events-none')
-                </div>
-            </div>
-        </div>
         @php
             $userNotifications = get_user_notifications();
         @endphp

@@ -17,7 +17,6 @@ module.exports = {
                 secondary: "#0E395F",
                 success: "#37af84",
                 info: "#47A3CC",
-                danger: "#cf4a41",
                 warning: "#edad4c",
                 "black-100": "#39393a",
                 "black-80": "#6B6B6C",
@@ -30,7 +29,6 @@ module.exports = {
                 "lara-primary": "#24292E",
                 "lara-darkBlack": "#1C2126",
                 "lara-gray-100": "#2F363D",
-                "lara-green": "#50cd89",
                 "lara-whiteGray": "#343C44",
                 "lara-gray-200" : "#969BA0",
                 "lara-gray-300" : "#c4c4c4",
@@ -45,7 +43,16 @@ module.exports = {
                 "light-body" : "#f3f3f9",
                 "light-table-row" : '#f3f3f9',
                 "light-gray-100" : '#94a3b8',
-                "light-menu-active" : "#f3f3f9"
+                "light-menu-active" : "#f3f3f9",
+
+                // optimaize
+                "danger": "#FF5454",
+                "lara-green": "#43DC80",
+                "optm-gray-200" : "#F2F2F2",
+                "optm-gray-300" : "#4A3F6E1A",
+                "dark_1" : "#25284D",
+                "dark_2" : "#10122B",
+                "optm-purple" : "#A249FF",
 
             },
 
@@ -68,7 +75,7 @@ module.exports = {
             borderRadius: {
                 'radious-30': '30px',
                 'radious-3': '3px',
-                'lara-radious' : '6px'
+                'lara-radious' : '15px',
             },
 
             boxShadow: {
