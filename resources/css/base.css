@@ -64,7 +64,7 @@
     }
 
     .lara-btn {
-        @apply duration-300 capitalize rounded-lara-radious;
+        @apply min-w-fit duration-300 font-medium capitalize rounded-lara-radious bg-optm-purple/10 hover:bg-optm-purple/20 text-dark_2;
     }
 
     .lara-logo-btn {
@@ -87,7 +87,7 @@
     }
 
     .lara-input-search {
-        @apply px-4 pl-8 2xl:pl-10 py-3 2xl:py-4 rounded-lara-radious relative font-12;
+        @apply px-4 pl-8 2xl:pl-10 py-3 2xl:py-4 text-dark_2 rounded-lara-radious relative font-12;
     }
 
     .lara-input-date {
@@ -500,7 +500,7 @@ td:last-child {
 
 table {
     border-collapse: separate;
-    border-spacing: 0px 10px;
+    border-spacing: 0px 8px;
 }
 
 
@@ -727,6 +727,13 @@ body:has(.expand-sidebar){
 }
 .expand-shadow .shadow-layer{
     @apply w-[230px] lg:w-[200px] xl:w-[230px] 2xl:w-300px
+}
+
+.expand-sidebar .expand-menu-icon{
+    @apply hidden
+}
+.collapse-sidebar .collapse-menu-icon{
+    @apply hidden
 }
 
 .custom-row {

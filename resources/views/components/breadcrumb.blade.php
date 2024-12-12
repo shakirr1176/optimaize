@@ -1,6 +1,6 @@
 <div class="w-full">
-    <h1 class="font-20 font-medium text-lara-gray-400 capitalize">{{ $slot }}</h1>
-    <ul class="mt-1.5 flex flex-wrap items-center">
+    <h1 class="font-bold font-34 my-8 2xl:my-10 capitalize">{{ $slot }}</h1>
+    {{-- <ul class="mt-1.5 flex flex-wrap items-center">
         <li>
             <a class="capitalize text-lara-gray-400 dark:hover:text-white hover:text-lara-primary duration-300 flex items-center" href="{{ route('admin.dashboard') }}">
                 @svg('heroicon-s-home', 'w-4 mr-2')
@@ -26,5 +26,5 @@
                 @endif
             @endif
         @endforeach
-    </ul>
+    </ul> --}}
 </div>

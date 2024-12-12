@@ -67,9 +67,9 @@
             <!-- header start -->
             {{-- <x-header></x-header> --}}
 
-            <header class="w-full flex gap-4">
-                <div class="flex-1 relative">
-                    @svg('heroicon-s-magnifying-glass', 'w-4 2xl:w-5 text-black-50 absolute top-1/2 -translate-y-1/2 left-3')
+            <header class="w-full flex flex-wrap sm:flex-nowrap gap-4">
+                <div class="flex-1 relative min-w-[200px]">
+                    @svg('heroicon-s-magnifying-glass', 'w-4 2xl:w-5 text-dark_2 absolute top-1/2 -translate-y-1/2 left-3')
                     <input class="lara-input-search" placeholder="Search" type="text">
                 </div>
                 <div class="relative px-4 flex items-center rounded-lara-radious w-fit bg-optm-gray-300">

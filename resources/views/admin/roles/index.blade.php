@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-section name="title">{{ $title }}</x-section>
     <x-section name="breadcrumb">
-        <x-breadcrumb>{{ $title }}</x-breadcrumb>
+        <x-breadcrumb>Role Management</x-breadcrumb>
     </x-section>
     <x-datatable :data="$roles"></x-datatable>
     <!-- modal start  -->

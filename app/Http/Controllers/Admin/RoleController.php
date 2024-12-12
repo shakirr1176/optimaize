@@ -49,7 +49,7 @@ class RoleController extends Controller
             [
                 'name' => __('Add New'),
                 'has_permission' => has_permission('admin.roles.store'),
-                'btn_class' => 'font-semibold dark:bg-primary bg-white addModalButton'
+                'btn_class' => 'addModalButton'
             ]
         ];
 
@@ -59,13 +59,13 @@ class RoleController extends Controller
                 'tooltip' => __('Edit'),
                 'route_name' => 'admin.roles.edit',
                 'primary_key' => 'slug',
-                'link_class' => 'dark:bg-black-30 dark:bg-opacity-20 bg-white border dark:border-none hover:bg-lara-gray-200 dark:hover:bg-lara-gray-200 hover:text-white text-lara-gray-400',
+                'link_class' => 'bg-optm-purple',
             ],
             [
                 'name' => 'heroicon-s-trash',
                 'tooltip' => __('Delete'),
                 'route_name' => 'admin.roles.destroy',
-                'link_class' => 'bg-danger hover:bg-red-600 hover:text-white',
+                'link_class' => 'bg-danger hover:bg-red-600',
                 'primary_key' => 'slug',
                 'confirmation' => true,
                 'confirmation_data' => [

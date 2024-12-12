@@ -21,7 +21,7 @@
         $btnOrd = "asc";
     }
 @endphp
-<th {{ $attributes->merge(['class' => 'my-3 2xl:py-2.5 py-2 font-14 font-medium capitalize px-4']) }}>
+<th {{ $attributes->merge(['class' => '2xl:pt-3 pt-2.5 font-14 font-medium px-4']) }}>
     @if($sortableColumn)
         <a href="{{ generate_filter_url(["{$pageName}-sort-col" => $sortableColumn, "{$pageName}-sort-ord"=> $btnOrd]) }}">
         <div class="relative">

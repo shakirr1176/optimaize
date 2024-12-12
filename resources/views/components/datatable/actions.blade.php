@@ -1,6 +1,6 @@
 @props(['data', 'rowData'])
 
-<div class="flex items-center justify-end">
+<div class="flex items-center justify-end gap-2">
     @foreach ($data->actionLinks as $link)
         @if (!has_permission($link['route_name']))
             @continue
@@ -56,7 +56,7 @@
         @endphp
 
         @if ($link['confirmation'])
-            <a class="confirmation relative group {{ $link['link_class'] }} flex items-center space-x-1.5 rounded-md w-[30px] h-[30px] justify-center capitalize text-white  ml-1"
+            <a class="confirmation relative group {{ $link['link_class'] }} relative group w-8 h-8 duration-300 flex items-center justify-center capitalize rounded-full text-white"
                 href="{{ route($link['route_name'], $actionRouteParams) }}"
                 target="{{ $link['target'] }}"
                 data-form-id="{{ $rowData->{$link['primary_key']} }}"
@@ -73,7 +73,7 @@
 
             </a>
         @else
-            <a class="{{ $link['link_class'] }} relative group flex items-center space-x-2 rounded-md w-[30px] h-[30px] justify-center capitalize dark:text-white text-lara-gray-400 ml-1"
+            <a class="{{ $link['link_class'] }} relative group w-8 h-8 duration-300 flex items-center justify-center capitalize rounded-full text-white"
                 href="{{ route($link['route_name'], $actionRouteParams) }}"
                 target="{{ $link['target'] }}"
                 data-form-id="{{ $rowData->{$link['primary_key']} }}">

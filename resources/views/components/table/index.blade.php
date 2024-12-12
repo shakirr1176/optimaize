@@ -1,13 +1,13 @@
 @props(['pageName'])
-<div class="border dark:border-0 bg-white dark:bg-lara-darkBlack rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
+<div class="dark:bg-lara-darkBlack rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
     <table
-        {{ $attributes->merge(['class' => 'responsive-table border-spacing-y-1.5 px-4 2xl:px-6 pb-6 border-separate w-full whitespace-nowrap']) }}>
+        {{ $attributes->merge(['class' => 'responsive-table w-full whitespace-nowrap']) }}>
         @isset($thead)
-            <thead>
+            <thead class="text-dark_1">
                 {{ $thead }}
             </thead>
         @endisset
-        <tbody class="text-lara-gray-400 dark:text-white rounded-3xl">
+        <tbody class="text-dark_2 dark:text-white rounded-3xl">
             {{ $slot }}
         </tbody>
         @isset($tfoot)

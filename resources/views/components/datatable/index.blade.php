@@ -8,7 +8,7 @@
             <x-slot name="buttons">
                 @foreach ($data->filterButtons as $filterButton)
                     @if ($filterButton['has_permission'])
-                        <a href="{{ $filterButton['url'] }}" class="{{ $filterButton['btn_class'] }} lara-btn px-4 py-1.5 flex items-center font-medium hover:bg-lara-blue dark:text-white text-lara-whiteGray hover:text-white border dark:border-none duration-300 hover:bg-opacity-90">
+                        <a href="{{ $filterButton['url'] }}" class="{{ $filterButton['btn_class'] }} lara-btn">
                             {{ $filterButton['name'] }}
                         </a>
                     @endif
@@ -29,7 +29,7 @@
         @else
             <x-table.index>
                 <x-slot name="thead">
-                    <x-table.tr class=" text-black-50">
+                    <x-table.tr class="0">
                         {{-- <th></th> --}}
                         @foreach ($data->datatableFields as $fieldOptions)
                             @if ($fieldOptions['visibility'])
@@ -81,7 +81,7 @@
                         @foreach ($data->datatableFields as $fieldOptions)
                             @if ($fieldOptions['visibility'])
 
-                                <x-table.td class="{{ $fieldOptions['data_class'] }} border-l border-white dark:border-lara-darkBlack">
+                                <x-table.td class="{{ $fieldOptions['data_class'] }}">
                                     @php
                                         // code need to optimize
                                         $funcParams = [];
