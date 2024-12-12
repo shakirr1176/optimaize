@@ -45,7 +45,7 @@ class AnnouncementController extends Controller
                 'name' => 'heroicon-s-eye',
                 'tooltip' => __('Show'),
                 'route_name' => 'announcements.show',
-                'link_class' => 'dark:bg-black-30 dark:bg-opacity-20 bg-white border dark:border-none hover:bg-lara-gray-200 dark:hover:bg-lara-gray-200 hover:text-white',
+                'link_class' => 'bg-optm-purple',
             ],
         ];
 

@@ -83,7 +83,7 @@ class UsersController extends Controller
             [
                 'name' => __('Add New'),
                 'has_permission' => has_permission('admin.users.store'),
-                'btn_class' => 'font-semibold dark:bg-primary bg-white addModalButton'
+                'btn_class' => 'addModalButton'
             ],
         ];
 
@@ -92,13 +92,13 @@ class UsersController extends Controller
                 'name' => 'heroicon-s-eye',
                 'tooltip' => __('Show'),
                 'route_name' => 'admin.users.show',
-                'link_class' => 'dark:bg-black-30 dark:bg-opacity-20 bg-white border dark:border-none hover:bg-lara-gray-200 dark:hover:bg-lara-gray-200 hover:text-white',
+                'link_class' => 'bg-optm-purple',
             ],
             [
                 'name' => 'heroicon-s-pencil',
                 'tooltip' => __('Edit'),
                 'route_name' => 'admin.users.edit',
-                'link_class' => 'editModalButton dark:bg-black-30 dark:bg-opacity-20 bg-white border dark:border-none hover:bg-lara-gray-200 dark:hover:bg-lara-gray-200 hover:text-white',
+                'link_class' => 'editModalButton bg-optm-purple',
             ],
             [
                 'name' => 'heroicon-s-trash',

@@ -59,7 +59,7 @@
     </div>
     <div class="main-layout bg-optm-gray-200 dark:bg-lara-primary flex min-h-screen">
         <!-- side menu start -->
-        <x-sidebar id="collapse-sidebar" class="group"></x-sidebar>
+        <x-sidebar id="collapse-sidebar" class="group collapse-sidebar"></x-sidebar>
         <!-- side menu end -->
 
         <!-- main section start -->

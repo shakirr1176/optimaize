@@ -113,5 +113,8 @@
     <x-section name="scripts">
         <script src="{{ Vite::js('upload-image.js') }}"></script>
         <script src="{{ Vite::js('tab.js') }}"></script>
+        <script>
+            tabFunc('edit-tab');
+        </script>
     </x-section>
 </x-app-layout>

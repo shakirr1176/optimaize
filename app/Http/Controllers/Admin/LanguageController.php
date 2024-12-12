@@ -85,7 +85,7 @@ class LanguageController extends Controller
             [
                 'name' => __('Add New'),
                 'has_permission' => has_permission('admin.languages.store'),
-                'btn_class' => 'font-semibold dark:bg-primary bg-white addModalButton'
+                'btn_class' => 'addModalButton'
             ]
         ];
 
@@ -94,13 +94,13 @@ class LanguageController extends Controller
                 'name' => 'heroicon-s-pencil',
                 'tooltip' => __('Edit'),
                 'route_name' => 'admin.languages.edit',
-                'link_class' => 'editModalButton dark:bg-black-30 dark:bg-opacity-20 bg-white border dark:border-none hover:bg-lara-gray-200 dark:hover:bg-lara-gray-200 hover:text-white',
+                'link_class' => 'editModalButton bg-optm-purple',
             ],
             [
                 'name' => 'heroicon-s-trash',
                 'tooltip' => __('Delete'),
                 'route_name' => 'admin.languages.destroy',
-                'link_class' => 'bg-danger hover:bg-red-600 hover:text-white',
+                'link_class' => 'bg-danger hover:bg-red-600',
                 'confirmation' => true,
                 'confirmation_data' => [
                     'title' => __('Are you sure?'),

@@ -68,9 +68,12 @@
     }
 
     .lara-logo-btn {
-        @apply duration-300 capitalize rounded-lara-radious h-[35px] w-[35px] 2xl:h-10 2xl:w-10 flex justify-center items-center;
+        @apply duration-300 capitalize rounded-full bg-optm-purple size-10 2xl:size-[52px] flex justify-center items-center;
     }
 
+    .action-btn{
+        @apply w-8 h-8 duration-300 flex items-center justify-center bg-optm-purple rounded-full text-white
+    }
     .lara-label {
         @apply block font-14 font-medium text-black-50 capitalize mb-2;
     }
@@ -1075,9 +1078,13 @@ input:-webkit-autofill:active {
     100% { transform: rotate(360deg); }
   }
 
-  .tabButton.active{
-    @apply bg-lara-blue text-white
+  .tabButton{
+    @apply bg-optm-gray-300 text-dark_1 p-2.5 2xl:p-3.5
   }
+  .tabButton.active, .tabButton:hover{
+    @apply bg-dark_1/20
+  }
+
   .tabButton:not(.active){
     @apply text-black-80
   }

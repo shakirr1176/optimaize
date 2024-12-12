@@ -159,7 +159,7 @@
             @if ($data->showDownloadButton)
                 <div class="relative">
                     <button
-                        class="download-btn border rounded-lara-radious dark:border-none lara-logo-btn w-[30px] h-[30px] 2xl:w-8 2xl:h-8 text-lara-gray-400 dark:text-white bg-white dark:bg-lara-filter-gray hover:text-white dark:hover:text-white hover:bg-lara-blue dark:hover:bg-lara-blue">
+                        class="download-btn lara-logo-btn bg-optm-purple text-white">
                         @svg('heroicon-s-folder-arrow-down', 'w-3.5 pointer-events-none')
                     </button>
                     <div
