@@ -10,7 +10,12 @@ use App\Http\Controllers\Admin\{
     DashboardController,
     RoleController,
     TicketController,
-    UsersController
+    UsersController,
+    HumanResourceController,
+    MachinesAndEquipmentController,
+    ProductsController,
+    RoutesController,
+    SectionsController
 };
 
 Route::prefix("admin")->name("admin.")->middleware(['auth', 'permission'])->group(function () {
@@ -62,6 +67,21 @@ Route::prefix("admin")->name("admin.")->middleware(['auth', 'permission'])->grou
     Route::post('tickets/{ticket}/comment', [TicketController::class, 'comment'])->name('tickets.comment.store');
     Route::get('ticket/{ticket}/download-attachment/{fileName}', [TicketController::class, 'download'])->name('tickets.attachment.download');
     Route::resource('tickets', TicketController::class)->only(['index', 'show'])->names('tickets');
+
+    // human_resource
+    Route::resource('human-resource', HumanResourceController::class);
+
+    // products
+    Route::resource('products', ProductsController::class);
+
+    // machines and equipment
+    Route::resource('machines-and-equipment', MachinesAndEquipmentController::class);
+
+    // sections
+    Route::resource('sections', SectionsController::class);
+
+    // routes
+    Route::resource('routes', RoutesController::class);
 
     Route::get('/components', function () {
         return view('admin.components-designs');

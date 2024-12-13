@@ -5,7 +5,7 @@ return [
     [
         "title" => "Dashbaord",
         "route_name" => "admin.dashboard",
-        "icon" => "heroicon-o-squares-2x2",
+        "icon" => "heroicon-o-home",
     ],
     [
         "title" => "Application Control",
@@ -40,7 +40,7 @@ return [
     ],
     [
         "title" => "Admin Section",
-        "icon" => "heroicon-o-user",
+        "icon" => "heroicon-o-building-library",
         "children" => [
             [
                 "title" => "Announcements",
@@ -70,9 +70,34 @@ return [
             ],
         ],
     ],
+    // [
+    //     "title" => "Component",
+    //     "icon" => "heroicon-o-user",
+    //     "route_name" => "admin.component"
+    // ],
     [
-        "title" => "Component",
-        "icon" => "heroicon-o-user",
-        "route_name" => "admin.component"
+        "title" => "Human resource",
+        "icon" => "heroicon-o-user-group",
+        "route_name" => "admin.human-resource.index"
+    ],
+    [
+        "title" => "Products",
+        "icon" => "heroicon-o-archive-box",
+        "route_name" => "admin.products.index"
+    ],
+    [
+        "title" => "Machines And Equipment",
+        "icon" => "heroicon-o-computer-desktop",
+        "route_name" => "admin.machines-and-equipment.index"
+    ],
+    [
+        "title" => "Sections",
+        "icon" => "heroicon-o-squares-2x2",
+        "route_name" => "admin.sections.index"
+    ],
+    [
+        "title" => "Sections",
+        "icon" => "heroicon-o-arrow-uturn-right",
+        "route_name" => "admin.routes.index"
     ]
 ];
