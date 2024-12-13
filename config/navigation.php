@@ -96,7 +96,7 @@ return [
         "route_name" => "admin.sections.index"
     ],
     [
-        "title" => "Sections",
+        "title" => "Routes",
         "icon" => "heroicon-o-arrow-uturn-right",
         "route_name" => "admin.routes.index"
     ]

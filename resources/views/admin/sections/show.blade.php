@@ -12,7 +12,53 @@
             {{ $title }}
         </x-breadcrumb>
     </x-section>
-    <div class="">
-        this is show
+    <div class="rounded-2xl bg-[#25284D0D] overflow-hidden">
+        <div id="show-4-tab" class="flex flex-wrap font-16 font-semibold">
+            <button class="tabButton active duration-300 flex-1 min-w-[200px]">Information</button>
+            <button class="tabButton duration-300 flex-1 min-w-[200px]">Associated Machines and Equipments</button>
+        </div>
+        <div class="p-6">
+            <div id="show-4-tab-content">
+                <div class="tab">
+                    <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Section Info') }}</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div>
+                            <label class="font-13 text-dark_1">SECTION Name</label>
+                            <p class="font-16 text-dark_2 font-medium">Cutting Section</p>
+                        </div>
+                        <div>
+                            <label class="font-13 pb-2 text-dark_1 block">Operation Type</label>
+                            <p class="tag-btn bg-info/50">Cutting</p>
+                        </div>
+                        <div>
+                            <label class="font-13 pb-2 text-dark_1 block">Created Date</label>
+                            <p class="font-16 text-dark_2 font-medium">2020-03-15</p>
+
+                        </div>
+                        <div>
+                            <label class="font-13 text-dark_1 block pb-2">Status</label>
+                            <div class="tag-btn bg-success/50">active</div>
+                        </div>
+                        <div>
+                            <label class="font-13 text-dark_1 block pb-2">Production Capacity (per hour)</label>
+                            <div class="font-16 text-dark_2 font-medium">50 units</div>
+                        </div>
+                        <div>
+                            <label class="font-13 text-dark_1 block pb-2">Operating Cost (per hour)</label>
+                            <div class="font-16 text-dark_2 font-medium">20€</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab font-16 text-center text-dark_2 capitalize">no data</div>
+                <div class="tab font-16 text-center text-dark_2 capitalize">no data</div>
+            </div>
+        </div>
     </div>
+    <x-section name="scripts">
+        <script src="{{ Vite::js('tab.js') }}"></script>
+        <script>
+            tabFunc('show-4-tab');
+        </script>
+    </x-section>
 </x-app-layout>

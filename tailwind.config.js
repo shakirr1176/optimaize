@@ -49,6 +49,7 @@ module.exports = {
                 dark_2: "#10122B",
                 "optm-purple": "#A249FF",
                 "optm-gray-100": "#DEDADA",
+                "optm-deep-purple": "#835FEB",
             },
 
             fontSize: {

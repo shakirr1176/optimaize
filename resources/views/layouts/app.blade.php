@@ -63,7 +63,7 @@
         <!-- side menu end -->
 
         <!-- main section start -->
-        <div class="main-content p-6 md:p-12 2xl:p-24 2xl:pr-36 w-full">
+        <div class="main-content overflow-hidden p-6 md:p-12 2xl:p-24 2xl:pr-36 w-full">
             <!-- header start -->
             {{-- <x-header></x-header> --}}
 
