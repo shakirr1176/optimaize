@@ -27,6 +27,4 @@
             });
         });
     }
-
-    tabFunc('edit-tab')
 }

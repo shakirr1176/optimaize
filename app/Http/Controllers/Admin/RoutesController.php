@@ -22,7 +22,7 @@ class RoutesController extends Controller
 
     public function show(): View
     {
-        $data['title'] = __('Eurico Fertuzinhos');
+        $data['title'] = __('Standard Assembly Route');
         return view('admin.routes.show', $data);
     }
 }

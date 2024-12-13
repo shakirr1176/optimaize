@@ -5,36 +5,31 @@
             {{ $title }}
         </x-breadcrumb>
     </x-section>
-    <div class="w-full 2xl:mt-4">
+    <div class="w-full">
         <div class="dark:bg-lara-darkBlack rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
             <table class="responsive-table w-full whitespace-nowrap">
                 <thead class="text-dark_1">
                     <tr class="uppercase text-left whitespace-nowrap">
                         <th class="always-show 2xl:pt-3 pt-2.5 font-14 font-medium px-4">
-                            ID
+                            Route ID
                         </th>
 
-                        {{-- customer name --}}
                         <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4 ">
 
-                            Order date
+                            Route Name
                         </th>
 
-                        {{-- created date --}}
                         <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4 ">
-                            Order name
+                            Estimated Completion Time
                         </th>
 
-                        {{-- last updated --}}
                         <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
-                            Value
+                            Nr of Operations
                         </th>
 
-                        {{-- note --}}
                         <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
                             Status
                         </th>
-
                         <th class="2xl:pt-3 pt-2.5 font-14 text-right font-medium pl-6 pr-2.5 ">
                             <p>Action</p>
                         </th>
@@ -44,30 +39,28 @@
                     <tr class="text-left whitespace-nowrap font-14">
 
                         <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
-                            #O-00000001
+                            #RT-0001
                         </td>
 
                         <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
-                            2025-00-00
+                            Standard Assembly Route
                         </td>
+
                         <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
-                            Order Name
+                            60 min
                         </td>
 
                         <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
-                            0000,00€
+                            4
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
-                            <div class="flex items-center gap-2">
-                                <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
-                                <span>Closed</span>
-                            </div>
+                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                            <span class="py-1.5 2xl:py-2.5 px-2.5 bg-success/20 rounded-full">Active</span>
                         </td>
-
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1.5 justify-end">
-                                <a href="{{ route('admin.routes.show', 'slug') }}" class="action-btn relative group">
+                                <a href="{{ route('admin.routes.show', 'slug') }}"
+                                    class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="currentColor" aria-hidden="true">
                                         <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
@@ -79,6 +72,16 @@
                                         class="absolute -top-full z-10 -translate-y-1.5 translate-x-1/2 right-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 pointer-events-none">
                                         <span
                                             class="whitespace-nowrap block bg-black px-2 text-gray-200 py-1 rounded-md text-f10">{{ __('Show') }}</span>
+                                        <span
+                                            class="absolute w-2 h-2 bottom-0 right-1/2 translate-x-1/2 rotate-45 -mb-1 -z-20 bg-black"></span>
+                                    </span>
+                                </a>
+                                <a href="" class="action-btn relative group bg-optm-deep-purple">
+                                    @svg('heroicon-s-pencil', 'w-4 mx-auto')
+                                    <span
+                                        class="absolute -top-full z-10 -translate-y-1.5 translate-x-1/2 right-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 pointer-events-none">
+                                        <span
+                                            class="whitespace-nowrap block bg-black px-2 text-gray-200 py-1 rounded-md text-f10">{{ __('Edit') }}</span>
                                         <span
                                             class="absolute w-2 h-2 bottom-0 right-1/2 translate-x-1/2 rotate-45 -mb-1 -z-20 bg-black"></span>
                                     </span>
@@ -105,14 +108,4 @@
             </table>
         </div>
     </div>
-    <x-section name="style">
-        <link rel="stylesheet" href="{{ Vite::css('select.css') }}" />
-    </x-section>
-    <x-section name="scripts">
-        <script src="{{ Vite::js('table.js') }}"></script>
-        <script src="{{ Vite::js('tab.js') }}"></script>
-        <script>
-            tabFunc('component-tab');
-        </script>
-    </x-section>
 </x-app-layout>
