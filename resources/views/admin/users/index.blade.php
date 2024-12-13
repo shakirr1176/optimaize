@@ -13,11 +13,10 @@
         </x-slot>
 
         <x-slot name="button">
-            <div class="px-2 w-full sm:w-1/2 mt-6 sm:mt-0">
-                <x-forms.button class="w-full bg-lara-blue font-semibold" type="submit" id="createSubmitBtn">
-                    {{ __('Create') }}
-                </x-forms.button>
-            </div>
+            <x-forms.button class="lara-submit-btn" type="submit" id="createSubmitBtn">
+                @svg('heroicon-s-plus')
+                {{ __('Create') }}
+            </x-forms.button>
         </x-slot>
     </x-modal>
 
@@ -27,11 +26,9 @@
         </x-slot>
 
         <x-slot name="button">
-            <div class="px-2 w-full sm:w-1/2 mt-6 sm:mt-0">
-                <x-forms.button class="w-full bg-lara-blue font-semibold" type="submit" id="updateSubmitBtn">
-                    {{ __('Update') }}
-                </x-forms.button>
-            </div>
+            <x-forms.button class="lara-submit-btn" type="submit" id="updateSubmitBtn">
+                {{ __('Update') }}
+            </x-forms.button>
         </x-slot>
     </x-modal>
     <!-- modal end  -->

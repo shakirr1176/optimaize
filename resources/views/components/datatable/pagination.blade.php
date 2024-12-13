@@ -48,7 +48,7 @@
 
 <div class="mt-6 flex flex-wrap items-center">
     <div class="w-full md:w-1/2">
-        <p class="font-14 text-center text-black-50 md:text-left rounded-lara-radious block">
+        <p class="font-14 text-center text-dark_2 dark:text-black-50 md:text-left rounded-lara-radious block">
             {{ __('Showing: :currentItem :current of :total data', ['currentItem' => $currentItem, 'current' => $current, 'total' => $paginationData->total()]) }}
         </p>
        <div class="flex items-center space-x-4">

@@ -1,5 +1,5 @@
 
-    <div class="w-full px-4">
+    <div class="col-span-12">
         <x-forms.text
             id="title"
             name="title"
@@ -9,7 +9,7 @@
             <x-slot name="error">{{ $errors->first('title') }}</x-slot>
         </x-forms.text>
     </div>
-    <div class="w-full px-4 mt-4 2xl:mt-6">
+    <div class="col-span-12">
         <x-forms.select
             name="is_published"
             value=""
@@ -19,7 +19,7 @@
             <x-slot name="error">{{ $errors->first('is_published') }}</x-slot>
         </x-forms.select>
     </div>
-    <div class="w-full px-4 mt-4 2xl:mt-6">
+    <div class="col-span-12">
         <x-forms.textarea
             id="description"
             name="description"
