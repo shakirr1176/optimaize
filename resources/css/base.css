@@ -74,19 +74,23 @@
     .action-btn{
         @apply w-8 h-8 duration-300 flex items-center justify-center bg-optm-purple rounded-full text-white
     }
+    .lara-cancel-btn{
+        @apply lara-btn bg-danger/25 hover:bg-danger/40 flex gap-2 items-center justify-center font-semibold
+    }
+    .lara-submit-btn{
+        @apply lara-btn bg-optm-purple/10 hover:bg-optm-purple/20 flex gap-2 items-center justify-center font-semibold
+    }
+    .lara-submit-btn > svg, .lara-cancel-btn > svg{
+        @apply w-4 2xl:w-5 pointer-events-none
+    }
     .lara-label {
-        @apply block font-14 font-medium text-black-50 capitalize mb-2;
+        @apply block font-14 font-medium text-dark_1 capitalize mb-2;
     }
 
     .lara-input,
     .lara-input-search,
     .lara-input-date {
-        @apply text-black-50 bg-optm-gray-300 outline-none w-full rounded-lara-radious;
-    }
-
-    .lara-input,
-    .lara-input-date {
-        @apply border;
+        @apply text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious;
     }
 
     .lara-input-search {
@@ -103,11 +107,11 @@
     }
 
     .select-items div {
-        @apply dark:bg-lara-gray-100 bg-white;
+        @apply dark:bg-lara-gray-100 text-dark_2 bg-optm-gray-200;
     }
     .custom-select > span,
     .drop-icon {
-        @apply absolute text-black-50 pointer-events-none top-1/2 -translate-y-1/2 right-4 2xl:right-6 font-16;
+        @apply absolute text-dark_2 pointer-events-none top-1/2 -translate-y-1/2 right-4 2xl:right-6 font-16;
     }
     .form-arwa > span {
         @apply top-1/2 transform -translate-y-1/2 absolute pointer-events-none  right-3 font-16 pb-px font-thin z-40;
@@ -115,11 +119,11 @@
 
     .select-items div:hover,
     .select-items .same-as-selected {
-        @apply dark:bg-primary bg-gray-100 text-lara-whiteGray dark:text-white;
+        @apply dark:bg-primary bg-purple-200 text-lara-whiteGray dark:text-white;
     }
 
     .select-selected {
-        @apply rounded-lara-radious dark:bg-lara-primary bg-white border dark:border-none   ;
+        @apply rounded-lara-radious dark:bg-lara-primary text-dark_2 bg-optm-gray-300;
     }
 
     .custom-input-checked input:checked + .checked-item,
@@ -129,6 +133,10 @@
 
     .checked-item-com {
         @apply h-4 w-4 rounded  border-2 border-lara-gray text-transparent peer-checked/draft:text-lara-blue;
+    }
+
+    .error-message{
+        @apply font-14 text-red-600 pt-2 empty-hidden
     }
 }
 

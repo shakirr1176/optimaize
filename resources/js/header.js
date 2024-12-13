@@ -51,7 +51,7 @@
         el?.classList.add("active");
 
         for (let i = 0; i < hoverDropdownShowBox.length; i++) {
-            hoverDropdownShowBox[i].classList.add("hidden");
+            hoverDropdownShowBox[i]?.classList.add("hidden");
         }
 
         if (el === langs[0]) {
@@ -93,7 +93,7 @@
             !e.target.closest(".hover-dropdown-show-box")
         ) {
             for (let i = 0; i < hoverDropdownBox.length; i++) {
-                hoverDropdownShowBox[i].classList.add("hidden");
+                hoverDropdownShowBox[i]?.classList.add("hidden");
                 headerPrevDropDown = undefined;
             }
         }

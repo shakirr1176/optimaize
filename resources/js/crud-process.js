@@ -81,8 +81,8 @@
                 }
 
                 location.reload();
-                form.parentElement.classList.add("hidden");
-                form.reset();
+                // form.parentElement.classList.add("hidden");
+                // form.reset();
             })
             .catch((errors) => {
                 errorHandler(errors, form);

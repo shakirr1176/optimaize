@@ -1,15 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        "./resources/views/**/*.blade.php",
-        "./resources/js/**/*.js"
-    ],
-    darkMode: 'class',
+    content: ["./resources/views/**/*.blade.php", "./resources/js/**/*.js"],
+    darkMode: "class",
     theme: {
-
         extend: {
             fontFamily: {
-                Poppins: ['Poppins'],
+                Poppins: ["Poppins"],
             },
 
             colors: {
@@ -30,65 +26,71 @@ module.exports = {
                 "lara-darkBlack": "#1C2126",
                 "lara-gray-100": "#2F363D",
                 "lara-whiteGray": "#343C44",
-                "lara-gray-200" : "#969BA0",
-                "lara-gray-300" : "#c4c4c4",
-                "lara-gray-400" : "#626679",
-                "lara-gray" : "#5E7084",
-                "lara-blue" : "#7792f3",
-                "lara-blue-deep" : '#3e607f',
-                "lara-filter-gray" : "#323940",
-
+                "lara-gray-200": "#969BA0",
+                "lara-gray-300": "#c4c4c4",
+                "lara-gray-400": "#626679",
+                "lara-gray": "#5E7084",
+                "lara-blue": "#7792f3",
+                "lara-blue-deep": "#3e607f",
+                "lara-filter-gray": "#323940",
 
                 // light
-                "light-body" : "#f3f3f9",
-                "light-table-row" : '#f3f3f9',
-                "light-gray-100" : '#94a3b8',
-                "light-menu-active" : "#f3f3f9",
+                "light-body": "#f3f3f9",
+                "light-table-row": "#f3f3f9",
+                "light-gray-100": "#94a3b8",
+                "light-menu-active": "#f3f3f9",
 
                 // optimaize
-                "danger": "#FF5454",
+                danger: "#FF5454",
                 "lara-green": "#43DC80",
-                "optm-gray-200" : "#F2F2F2",
-                "optm-gray-300" : "#4A3F6E1A",
-                "dark_1" : "#25284D",
-                "dark_2" : "#10122B",
-                "optm-purple" : "#A249FF",
-
+                "optm-gray-200": "#F2F2F2",
+                "optm-gray-300": "#4A3F6E1A",
+                dark_1: "#25284D",
+                dark_2: "#10122B",
+                "optm-purple": "#A249FF",
+                "optm-gray-100": "#DEDADA",
             },
 
             fontSize: {
-                'f10': '10px',
-                'f11': '11px',
-                'f13': '13px',
+                f10: "10px",
+                f11: "11px",
+                f13: "13px",
             },
 
             padding: {
-                '18px': '18px',
+                "18px": "18px",
             },
 
             width: {
-                '120px': '120px',
-                '250px': '250px',
-                '300px': '300px',
+                "120px": "120px",
+                "250px": "250px",
+                "300px": "300px",
             },
 
             borderRadius: {
-                'radious-30': '30px',
-                'radious-3': '3px',
-                'lara-radious' : '12px',
+                "radious-30": "30px",
+                "radious-3": "3px",
+                "lara-radious": "12px",
             },
 
             boxShadow: {
-                'lara-input-shadow': '0px 0px 10px rgba(0, 0, 0, 0.05)',
-                'lara-shadow2': '0px 0px 15px rgba(0, 0, 0, 0.15)',
-                'lara-shadow3': '0px 0px 15px rgba(0, 0, 0, 0.1)',
-                'lara-table-shadow': '0px 0px 10px rgba(0, 0, 0, 0.1)',
+                "lara-input-shadow": "0px 0px 10px rgba(0, 0, 0, 0.05)",
+                "lara-shadow2": "0px 0px 15px rgba(0, 0, 0, 0.15)",
+                "lara-shadow3": "0px 0px 15px rgba(0, 0, 0, 0.1)",
+                "lara-table-shadow": "0px 0px 10px rgba(0, 0, 0, 0.1)",
             },
         },
     },
     plugins: [
         require("@tailwindcss/forms")({
-            strategy: 'class',
+            strategy: "class",
         }),
+        function({ addUtilities }) {
+            addUtilities({
+              '.empty-hidden:empty': {
+                display: 'none',
+              },
+            })
+          }
     ],
-}
+};
