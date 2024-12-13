@@ -2,7 +2,7 @@
     <x-sidebar.li>
         @if ($menu['icon'])
             <a href="{{ $menu['url'] }}" title="{{ $menu['title'] }}"
-            class="drop-down-header {{ $menu['active'] ? 'active-menu active-on' : '' }} mt-1 flex items-center justify-between px-6 py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
+            class="drop-down-header {{ $menu['active'] ? 'active-menu active-on' : '' }} mt-1 flex items-center justify-between px-6 py-2 2xl:py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
                 <span class="flex items-center font-medium">
                     <span class="menu-icon flex flex-shrink-0 items-center justify-center">
                         @svg($menu['icon'], 'w-full')
@@ -28,7 +28,7 @@
     <x-sidebar.li>
         @if ($menu['icon'])
             <a href="javascript:" title="{{ __($menu['title']) }}"
-                class="drop-down-header main-header mt-1 flex items-center px-6 py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
+                class="drop-down-header main-header mt-1 flex items-center px-6 py-2 2xl:py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
                 <span class="flex items-center font-medium">
                     <span class="menu-icon flex flex-shrink-0 items-center justify-center">
                         @svg($menu['icon'], 'w-full')

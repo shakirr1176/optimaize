@@ -21,7 +21,7 @@
                 <div
                     class=" duration-300 dark:bg-lara-gray-100 flex h-[75px] items-center justify-center text-sm font-bold text-white 2xl:h-[80px]">
                     <a class="flex justify-center" href="{{ url('/') }}">
-                        <img class="menu-logo pl-6 2xl:pl-0 pr-12 w-[250px]" src="{{ get_logo_url() }}" alt="">
+                        <img class="menu-logo 2xl:pl-0 h-5 w-fit" src="{{ get_logo_url() }}" alt="">
                         <img class="menu-logo w-5 2xl:w-6" src="{{ get_logo_small_url() }}" alt="">
                     </a>
                 </div>

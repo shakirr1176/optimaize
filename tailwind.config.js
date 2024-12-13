@@ -13,7 +13,7 @@ module.exports = {
                 secondary: "#0E395F",
                 success: "#37af84",
                 info: "#47A3CC",
-                warning: "#edad4c",
+                warning: "#DBFF49",
                 "black-100": "#39393a",
                 "black-80": "#6B6B6C",
                 "black-50": "#a0a0a0",
@@ -30,7 +30,7 @@ module.exports = {
                 "lara-gray-300": "#c4c4c4",
                 "lara-gray-400": "#626679",
                 "lara-gray": "#5E7084",
-                "lara-blue": "#7792f3",
+                "lara-blue": "#43AEDC",
                 "lara-blue-deep": "#3e607f",
                 "lara-filter-gray": "#323940",
 

@@ -84,7 +84,7 @@
         @apply w-4 2xl:w-5 pointer-events-none
     }
     .lara-label {
-        @apply block font-14 font-medium text-dark_1 capitalize mb-2;
+        @apply block font-14 font-medium text-dark_1 uppercase mb-2;
     }
 
     .lara-input,
@@ -137,6 +137,9 @@
 
     .error-message{
         @apply font-14 text-red-600 pt-2 empty-hidden
+    }
+    .tag-btn{
+        @apply capitalize font-medium rounded-full px-4 py-1 2xl:py-1.5 flex justify-center items-center gap-2
     }
 }
 
