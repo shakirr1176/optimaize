@@ -10,7 +10,7 @@
             <table class="responsive-table w-full whitespace-nowrap">
                 <thead class="text-dark_1">
                     <tr class="uppercase text-left whitespace-nowrap">
-                        <th class="always-show 2xl:pt-3 pt-2.5 font-14 font-medium px-4">
+                        <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
                             Route ID
                         </th>
 

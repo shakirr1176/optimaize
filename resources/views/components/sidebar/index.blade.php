@@ -33,17 +33,48 @@
             </div>
         </div>
 
-        <div
-            class="text-dark_2 sticky bottom-[0.5px] bg-gray-50 dark:bg-lara-primary flex flex-col gap-4 2xl:gap-6 justify-center items-center pb-10 2xl:pb-16 pt-4">
-            <a href="">
-                @svg('heroicon-o-user', 'menu-icon w-5 2xl:w-6')
-            </a>
-            <a href="">
-                @svg('heroicon-o-cog-8-tooth', 'menu-icon w-5 2xl:w-6')
-            </a>
-            <a href="">
-                @svg('heroicon-o-arrow-left-start-on-rectangle', 'scale-[-1] menu-icon w-5 2xl:w-6')
-            </a>
-        </div>
+        <ul
+            class="text-dark_2 sticky bottom-[0.5px] bg-gray-50 dark:bg-lara-primary gap-4 2xl:gap-6 pb-10 2xl:pb-16 pt-4">
+            <li class="relative">
+                <a href="" title="user"
+                    class="drop-down-header mt-1 flex items-center justify-between px-6 py-2 2xl:py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
+                    <span class="flex items-center font-medium">
+                        <span class="menu-icon flex flex-shrink-0 items-center justify-center">
+                            @svg('heroicon-o-user', 'w-full')
+
+                        </span>
+                        <span
+                            class="menu-title font-14 inline w-32 xl:w-40 2xl:w-48 overflow-hidden text-ellipsis whitespace-nowrap px-3">User</span>
+                    </span>
+                </a>
+            </li>
+            <li class="relative">
+                <a href="" title="settings"
+                    class="drop-down-header mt-1 flex items-center justify-between px-6 py-2 2xl:py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
+                    <span class="flex items-center font-medium">
+                        <span class="menu-icon flex flex-shrink-0 items-center justify-center">
+                            @svg('heroicon-o-cog-8-tooth', 'w-full')
+
+                        </span>
+                        <span
+                            class="menu-title font-14 inline w-32 xl:w-40 2xl:w-48 overflow-hidden text-ellipsis whitespace-nowrap px-3">Settings</span>
+                    </span>
+                </a>
+            </li>
+            <li class="relative">
+                <a data-form-id="logout" data-form-method="POST" title="Logout" data-alert="{{ __('Are you sure?') }}"
+                    href="{{ route('logout') }}"
+                    class="drop-down-header confirmation mt-1 flex items-center justify-between px-6 py-2 2xl:py-3 font-light capitalize text-dark_2 dark:text-white duration-200">
+                    <span class="flex items-center font-medium">
+                        <span class="menu-icon flex flex-shrink-0 items-center justify-center">
+                            @svg('heroicon-o-arrow-left-start-on-rectangle', 'w-full')
+
+                        </span>
+                        <span
+                            class="menu-title font-14 inline w-32 xl:w-40 2xl:w-48 overflow-hidden text-ellipsis whitespace-nowrap px-3">{{ __('Logout') }}</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
