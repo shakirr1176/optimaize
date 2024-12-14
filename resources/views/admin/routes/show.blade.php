@@ -25,27 +25,30 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div>
-                            <label class="font-13 text-dark_1">SECTION Name</label>
+                            <label class="lara-label-sm">SECTION Name</label>
                             <p class="font-16 text-dark_2 font-medium">Standard Assembly Route</p>
                         </div>
                         <div>
-                            <label class="font-13 text-dark_1">Operating Cost (per hour)</label>
+                            <label class="lara-label-sm">Operating Cost (per hour)</label>
                             <p class="font-16 text-dark_2 font-medium">20€</p>
                         </div>
                         <div>
-                            <label class="font-13 pb-2 text-dark_1 block">Created Date</label>
+                            <label class="lara-label-sm">Created Date</label>
                             <p class="font-16 text-dark_2 font-medium">2020-03-15</p>
 
                         </div>
                         <div>
-                            <label class="font-13 text-dark_1 block pb-2">Estimated Completion Time</label>
+                            <label class="lara-label-sm">Estimated Completion Time</label>
                             <div class="tag-btn bg-success/50">60 min</div>
 
                         </div>
                     </div>
                 </div>
-                <div class="tab font-16 text-center text-dark_2 capitalize">no data</div>
-                <div class="tab font-16 text-center text-dark_2 capitalize">no data</div>
+                <div class="tab h-full">
+                    <span class="show-no-data">
+                        {{__("No data")}}
+                    </span>
+                </div>
             </div>
         </div>
     </div>

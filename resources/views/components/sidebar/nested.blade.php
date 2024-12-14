@@ -15,7 +15,7 @@
         <span class="block curve-svg w-2.5 h-0.5 absolute top-5 -translate-y-1/2 -left-0.5">
             </span>
             <a href="{{ $menu['url'] }}" title="{{ __($menu['title']) }}"
-            class="drop-down-header {{ $menu['active'] ? 'active-menu active-on' : '' }} group-[.expand-sidebar]:ml-3.5 mt-1 flex items-center !justify-between py-3 pl-3 pr-18px font-light capitalize text-dark_2 dark:text-white duration-200">
+            class="drop-down-header {{ $menu['active'] ? 'active-menu active-on' : '' }} group-[.expand-sidebar]:ml-3.5 mt-1 flex items-center !justify-between py-2 2xl:py-3 pl-3 pr-18px font-light capitalize text-dark_2 dark:text-white duration-200">
                 <span
                     class="font-14 block w-32 xl:w-40 2xl:w-44 items-center overflow-hidden text-ellipsis whitespace-nowrap pr-2">
                     {{ __($menu['title']) }}
@@ -47,7 +47,7 @@
         <span class="block curve-svg w-2.5 h-0.5 absolute top-5 -translate-y-1/2 -left-0.5">
             </span>
             <a href="javascript:" title="{{ __($menu['title']) }}"
-                class="drop-down-header group-[.expand-sidebar]:ml-3.5 mt-1 flex items-center justify-between py-3 pl-3 pr-18px font-light capitalize text-dark_2 dark:text-white duration-200">
+                class="drop-down-header group-[.expand-sidebar]:ml-3.5 mt-1 flex items-center justify-between py-2 2xl:py-3 pl-3 pr-18px font-light capitalize text-dark_2 dark:text-white duration-200">
                 <span
                     class="font-14 block w-32 xl:w-40 2xl:w-44 items-center overflow-hidden text-ellipsis whitespace-nowrap pr-2">
                     {{ __($menu['title']) }}

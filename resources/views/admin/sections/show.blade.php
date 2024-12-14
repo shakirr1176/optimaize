@@ -24,34 +24,42 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div>
-                            <label class="font-13 text-dark_1">SECTION Name</label>
+                            <label class="lara-label-sm">SECTION Name</label>
                             <p class="font-16 text-dark_2 font-medium">Cutting Section</p>
                         </div>
                         <div>
-                            <label class="font-13 pb-2 text-dark_1 block">Operation Type</label>
+                            <label class="lara-label-sm">Operation Type</label>
                             <p class="tag-btn bg-info/50">Cutting</p>
                         </div>
                         <div>
-                            <label class="font-13 pb-2 text-dark_1 block">Created Date</label>
+                            <label class="lara-label-sm">Created Date</label>
                             <p class="font-16 text-dark_2 font-medium">2020-03-15</p>
 
                         </div>
                         <div>
-                            <label class="font-13 text-dark_1 block pb-2">Status</label>
+                            <label class="lara-label-sm">Status</label>
                             <div class="tag-btn bg-success/50">active</div>
                         </div>
                         <div>
-                            <label class="font-13 text-dark_1 block pb-2">Production Capacity (per hour)</label>
+                            <label class="lara-label-sm">Production Capacity (per hour)</label>
                             <div class="font-16 text-dark_2 font-medium">50 units</div>
                         </div>
                         <div>
-                            <label class="font-13 text-dark_1 block pb-2">Operating Cost (per hour)</label>
+                            <label class="lara-label-sm">Operating Cost (per hour)</label>
                             <div class="font-16 text-dark_2 font-medium">20€</div>
                         </div>
                     </div>
                 </div>
-                <div class="tab font-16 text-center text-dark_2 capitalize">no data</div>
-                <div class="tab font-16 text-center text-dark_2 capitalize">no data</div>
+                <div class="tab h-full">
+                    <span class="show-no-data">
+                        {{__("No data")}}
+                    </span>
+                </div>
+                <div class="tab h-full">
+                    <span class="show-no-data">
+                        {{__("No data")}}
+                    </span>
+                </div>
             </div>
         </div>
     </div>

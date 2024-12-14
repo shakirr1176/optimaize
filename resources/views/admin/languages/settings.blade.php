@@ -9,7 +9,7 @@
                 <div class="w-full sm:w-1/3 xl:w-1/3 px-4 py-2">
                     <form class="flex items-center">
                         <div class="relative w-full">
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                            <div class="absolute inset-y-0 left-3 flex items-center pr-4 cursor-pointer">
                                 <svg aria-hidden="true" class="w-4 h-4 text-black-50" fill="currentColor"
                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -18,7 +18,7 @@
                                 </svg>
                             </div>
                             <input v-model="searchPhrase" @keyup="searchTranslations" type="text"
-                                class="lara-input-search dark:bg-lara-darkBlack bg-white rounded-full" id="simple-search" placeholder="{{ __('Search') }}" required>
+                                class="lara-input-search dark:bg-lara-darkBlack bg-optm-gray-300 rounded-full" id="simple-search" placeholder="{{ __('Search') }}" required>
                         </div>
                     </form>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="flex justify-end space-x-1">
                         <div class="w-auto">
                             <button @click="sync"
-                                class="lara-btn font-semibold bg-lara-blue text-white hover:bg-opacity-90">
+                                class="lara-btn font-semibold text-dark_1 hover:bg-opacity-90">
                                 <span class="px-6">
                                     {{ __('Sync') }}
                                 </span>
@@ -35,15 +35,15 @@
                         <div class="w-32">
                             <div class="relative w-full flex items-center">
                                 @svg('heroicon-s-chevron-down', 'w-4 text-black-50 absolute pointer-events-none right-5')
-                                <div class="flex items-center overflow-hidden h-full cursor-pointer lara-btn text-black-50 dark:bg-lara-darkBlack bg-white border-none w-full uppercase"
+                                <div class="flex items-center overflow-hidden h-full cursor-pointer lara-btn w-full"
                                     @click="isOpen = !isOpen">@{{ selectedLanguage }}</div>
                                 <div v-if="isOpen"
                                     class="absolute z-40 rounded-xl mt-1.5 overflow-hidden top-full w-full">
-                                    <div class="w-full font-14 px-4 2xl:px-6 py-2 2xl:py-2.5 uppercase cursor-pointer hover:bg-primary hover:text-white"
+                                    <div class="w-full font-14 px-4 2xl:px-6 py-2 2xl:py-2.5 uppercase cursor-pointer hover:bg-gray-100"
                                         v-for="language in languages" @click="changeLanguage(language)"
                                         :data-value="language"
-                                        :class="language == selectedLanguage ? 'bg-primary text-white' :
-                                            'dark:bg-lara-primary bg-white text-black-50'">
+                                        :class="language == selectedLanguage ? 'bg-gray-100' :
+                                            'dark:bg-lara-primary bg-white text-dark_1'">
                                         @{{ language }}</div>
                                 </div>
                             </div>
@@ -52,18 +52,18 @@
                 </div>
             </div>
         </div>
-        <div class="w-full dark:bg-lara-whiteGray bg-white p-6 2xl:p-12 mt-4 2xl:mt-8">
+        <div class="rounded-xl w-full dark:bg-lara-whiteGray bg-optm-gray-50 p-6 2xl:p-12 mt-4 2xl:mt-8">
             <div class="row items-center">
                 <div class="lg:w-1/2 w-full px-4 3xl:mt-0">
                     <div class="wrapper w-full mt-8">
                         <div id="scrollParent"
                             class="hide-scrollbar pl-4 customScroll-none h-96 w-full relative overflow-auto">
                             <div class="parent w-full">
-                                <div class="py-4 2xl:py-6 cursor-pointer dark:hover:bg-lara-primary hover:bg-gray-100 p-3 font-14"
+                                <div class="py-4 2xl:py-6 cursor-pointer dark:hover:bg-lara-primary hover:bg-optm-gray-300 p-3 font-14"
                                     v-for="(value, key) in filteredTranslations" @click="selectedKey = key;"
                                     v-if="Object.keys(filteredTranslations).length">
                                     <p class="text-black-50" v-html="highlight(key)"></p>
-                                    <p class="text-black-80" v-html="highlight(value)"></p>
+                                    <p class="text-dark_1" v-html="highlight(value)"></p>
                                 </div>
                                 <div class="py-4 2xl:py-6 cursor-pointer hover:bg-lara-primary p-3 font-14" v-else>
                                     <p class="text-black-50">{{ __('No translation match with your search key.') }}</p>
@@ -79,11 +79,11 @@
                     </div>
                     <div class="mt-4 2xl:mt-6">
                         <label class="lara-label" for="Text">{{ __('Text') }}</label>
-                        <textarea class="lara-input dark:bg-lara-primary bg-white dark:border-none" name="" cols="30" rows="10"
+                        <textarea class="lara-input dark:bg-lara-primary dark:border-none" name="" cols="30" rows="10"
                             v-model="translations[selectedLanguage][selectedKey]" @keyup="changeTranslations(selectedKey, $event)">
                     </textarea>
                     </div>
-                    <p class="mt-4 text-warning font-16">
+                    <p class="mt-4 text-orange-500 font-16">
                         {{ __('NB: Do not modify language variable that start with (:) ie- :user') }}
                     </p>
                     <div class="w-full sm:w-1/3 mt-6 2xl:mt-8">

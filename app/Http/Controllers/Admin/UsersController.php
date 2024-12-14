@@ -28,21 +28,21 @@ class UsersController extends Controller
             [
                 'label' => __('ID'),
                 'field_name' => 'id',
-                // 'downloadable' => true,
+                'downloadable' => true,
                 'visibility' => false,
             ],
             [
                 'label' => __('Name'),
                 'field_name' => 'fullName',
-                // 'searchable' => true,
-                // 'downloadable' => true,
+                'searchable' => true,
+                'downloadable' => true,
             ],
             [
                 'label' => __('Email'),
                 'field_name' => 'email',
                 'sortable' => true,
-                // 'searchable' => true,
-                // 'downloadable' => true,
+                'searchable' => true,
+                'downloadable' => true,
                 'linkable' => true,
                 'link_data' => [
                     'route_name' => 'admin.users.show',
@@ -53,10 +53,10 @@ class UsersController extends Controller
                 'field_name' => 'slug',
                 'data_class' => 'capitalize',
                 'sortable' => true,
-                // 'downloadable' => true,
+                'downloadable' => true,
                 'relation_name' => 'role',
-                // 'searchable' => true,
-                // 'filterable' => true,
+                'searchable' => true,
+                'filterable' => true,
                 'filter_data' => Role::pluck('name', 'slug')->toArray(),
             ],
             [
@@ -67,14 +67,14 @@ class UsersController extends Controller
                 'display_callable_function' => [
                     'name' => 'display_user_status'
                 ],
-                // 'downloadable' => true,
-                // 'filterable' => true,
+                'downloadable' => true,
+                'filterable' => true,
                 'filter_data' => BooleanStatusEnum::getLabels(),
             ],
             [
                 'label' => __('Email Verified Status'),
                 'field_name' => 'email_verified_at',
-                // 'downloadable' => true,
+                'downloadable' => true,
                 'visibility' => false,
             ],
         ];
@@ -119,13 +119,13 @@ class UsersController extends Controller
             ->withFields($dataTableFields)
             ->withFilterButtons($dataTableFilterButtons)
             ->withActionLinks($dataTableActionLinks)
-            // ->withPageOptions(['show_per_page_options' => true])
-            // ->withPageOptions(['show_per_page_options' => true, 'per_page' => 1])
-            // ->withSearchOptions([
-            //     'show_searchable_columns' => false,
-            //     'show_search_conditions' => true,
-            // ])
-            // ->withDateFilter()
+            ->withPageOptions(['show_per_page_options' => true])
+            ->withPageOptions(['show_per_page_options' => true, 'per_page' => 1])
+            ->withSearchOptions([
+                'show_searchable_columns' => false,
+                'show_search_conditions' => true,
+            ])
+            ->withDateFilter()
             ->create($queryBuilder);
         $data['title'] = __('Users');
         $data['booleanStatusEnum'] = BooleanStatusEnum::getLabels();

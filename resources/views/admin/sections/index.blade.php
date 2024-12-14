@@ -65,7 +65,7 @@
 
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                            <div class="flex items-center space-x-1.5 justify-end">
+                            <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="{{ route('admin.sections.show', 'slug') }}"
                                     class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
