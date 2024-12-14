@@ -1,3 +1,3 @@
 
-    <p class="text-sm text-red-600 mt-2">{{ $slot }}</p>
+    <p class="font-14 error-message">{{ $slot }}</p>
 

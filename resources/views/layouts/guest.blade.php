@@ -14,7 +14,7 @@
     @endif
 </head>
 
-<body class="font-Poppins bg-lara-primary">
+<body class="font-Poppins bg-optm-gray-200">
     <!-- main section start -->
     <div class="w-full min-h-screen flex items-center justify-center p-4 md: py-10">
         {{ $slot }}

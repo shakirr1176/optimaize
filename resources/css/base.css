@@ -72,8 +72,11 @@
         @apply min-w-fit duration-300 font-medium capitalize rounded-lara-radious bg-optm-purple/10 hover:bg-optm-purple/20 text-dark_2;
     }
 
+    .lara-secondary-btn{
+        @apply lara-btn bg-optm-purple text-white hover:bg-purple-600
+    }
     .lara-logo-btn {
-        @apply duration-300 capitalize rounded-full bg-optm-purple size-10 2xl:size-[52px] flex justify-center items-center;
+        @apply duration-300 capitalize rounded-full bg-optm-purple size-10 2xl:size-[52px] flex justify-center items-center text-white hover:bg-optm-deep-purple;
     }
 
     .action-btn{
@@ -91,11 +94,17 @@
     .lara-label {
         @apply block font-14 font-medium text-dark_1 uppercase mb-2;
     }
+    .lara-label-sm{
+        @apply font-13 text-dark_1 block mb-1 uppercase
+    }
+.show-no-data{
+    @apply h-full font-semibold flex items-center justify-center text-center font-18 text-gray-600
+}
 
     .lara-input,
     .lara-input-search,
     .lara-input-date {
-        @apply text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious;
+        @apply text-dark_2 bg-optm-gray-300 placeholder:text-gray-500 outline-none w-full rounded-lara-radious;
     }
 
     .lara-input-search {
@@ -103,7 +112,7 @@
     }
 
     .lara-input-date {
-        @apply font-14 px-4 2xl:px-6 h-[35px] 2xl:h-10;
+        @apply font-14 px-4 2xl:px-6 h-[39px] 2xl:h-[50px];
     }
 
     .select-items div,
@@ -133,11 +142,11 @@
 
     .custom-input-checked input:checked + .checked-item,
     .custom-input-checked input:checked + .checked-item > svg {
-        @apply text-lara-blue;
+        @apply text-optm-purple;
     }
 
     .checked-item-com {
-        @apply h-4 w-4 rounded  border-2 border-lara-gray text-transparent peer-checked/draft:text-lara-blue;
+        @apply h-4 w-4 rounded  border-2 border-lara-gray text-transparent peer-checked/draft:text-optm-purple;
     }
 
     .error-message{
@@ -331,7 +340,7 @@
 }
 
 input:checked + .slider {
-    @apply bg-lara-blue;
+    @apply bg-optm-purple;
 }
 
 input:checked + .slider > span:nth-child(2) {
@@ -670,7 +679,7 @@ body:has(.expand-sidebar){
 }
 
 .collapse-sidebar .sub-item{
-    @apply absolute 2xl:w-72 w-[270px] left-full top-0 px-4 !ml-0
+    @apply absolute 2xl:w-72 w-[270px] left-full top-0 !ml-0
 }
 
 .collapse-sidebar .sub-item > ul{

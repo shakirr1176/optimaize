@@ -2,11 +2,12 @@
     <x-section name="title">{{ $title }}</x-section>
     <x-section name="breadcrumb">
         <x-breadcrumb>
-            Welcome, <span class="text-optm-purple">Eurico Fertuzinhos</span>
+            {{__("Welcome")}}, <span class="text-optm-purple"> {{ auth()->user()->first_name }}
+            </span>
         </x-breadcrumb>
     </x-section>
     <div>
-        <div class="text-dark_1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10 2xl:mb-12">
+        <div class="text-dark_1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6 2xl:mb-8">
             <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] p-4 xl:p-6">
                 <img src="{{ Vite::image('machine.png') }}" alt="">
                 <div>
@@ -35,6 +36,96 @@
                     <p class="font-14">Products</p>
                 </div>
             </div>
+
+            {{-- <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+                <div class="flex items-center justify-between">
+                    <p class="font-20 font-medium">{{ __('Users') }}</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                    <p class="font-34 font-medium">{{ $userCount }}</p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-14 font-medium">+{{ round($percentUser) }}.00</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+                <div class="flex items-center justify-between">
+                    <p class="font-20 font-medium">{{ __('Permission') }}</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                    <p class="font-34 font-medium">72k</p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-14 font-medium">+11.01</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+                <div class="flex items-center justify-between">
+                    <p class="font-20 font-medium">{{ __('Active Users') }}</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                    <p class="font-34 font-medium">{{ $activeUserCount }}</p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-14 font-medium">+{{ round($percentActiveUser) }}.00%</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+                <div class="flex items-center justify-between">
+                    <p class="font-20 font-medium">{{ __('Announcement') }}</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                    <p class="font-34 font-medium">{{ $announcmentCount }}</p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-14 font-medium">+{{ round($percentAnnouncment) }}.00%</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                    </div>
+                </div>
+            </div> --}}
         </div>
 
         <div
@@ -102,7 +193,7 @@
 
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                            <div class="flex items-center space-x-1.5 justify-end">
+                            <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="currentColor" aria-hidden="true">
@@ -162,7 +253,7 @@
 
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                            <div class="flex items-center space-x-1.5 justify-end">
+                            <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="currentColor" aria-hidden="true">
@@ -222,7 +313,7 @@
 
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                            <div class="flex items-center space-x-1.5 justify-end">
+                            <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="currentColor" aria-hidden="true">
@@ -282,7 +373,7 @@
 
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                            <div class="flex items-center space-x-1.5 justify-end">
+                            <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="currentColor" aria-hidden="true">
@@ -342,7 +433,7 @@
 
                         {{-- action --}}
                         <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                            <div class="flex items-center space-x-1.5 justify-end">
+                            <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="currentColor" aria-hidden="true">

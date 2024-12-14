@@ -12,20 +12,23 @@
             {{ __('Eurico Fertuzinhos') }}
 
             <x-slot name="below">
-                <div class="flex justify-between border-b border-gray-200 py-2">
+                <div class="flex justify-between">
                     <div class="text-dark_1 font-20 font-semibold">#RH-01</div>
-                    <div class="flex items-center gap-2">
-                        <button class="action-btn">
-                            @svg('heroicon-s-pencil', 'w-4')
-                        </button>
-                        <button class="action-btn bg-danger hover:bg-red-600">
-                            <svg class="size-4" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9.42857 5V13.3333H2.57143V5H9.42857ZM8.14286 0H3.85714L3 0.833333H0V2.5H12V0.833333H9L8.14286 0ZM11.1429 3.33333H0.857143V13.3333C0.857143 14.25 1.62857 15 2.57143 15H9.42857C10.3714 15 11.1429 14.25 11.1429 13.3333V3.33333Z"
-                                    fill="#F2F2F2" />
-                            </svg>
-                        </button>
-                    </div>
+                </div>
+            </x-slot>
+
+            <x-slot name="right">
+                <div class="flex items-center gap-2">
+                    <button class="action-btn">
+                        @svg('heroicon-s-pencil', 'w-4')
+                    </button>
+                    <button class="action-btn bg-danger hover:bg-red-600">
+                        <svg class="size-4" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.42857 5V13.3333H2.57143V5H9.42857ZM8.14286 0H3.85714L3 0.833333H0V2.5H12V0.833333H9L8.14286 0ZM11.1429 3.33333H0.857143V13.3333C0.857143 14.25 1.62857 15 2.57143 15H9.42857C10.3714 15 11.1429 14.25 11.1429 13.3333V3.33333Z"
+                                fill="#F2F2F2" />
+                        </svg>
+                    </button>
                 </div>
             </x-slot>
 
@@ -35,7 +38,7 @@
         <div class="">
             <div class="rounded-2xl bg-[#25284D0D] overflow-hidden">
                 <div id="component-tab" class="flex font-16 font-semibold items-center">
-                    <button class="tabButton active duration-300 flex-1 min-w-[200px]">Information</button>
+                    <button class="active tabButton duration-300 flex-1 min-w-[200px]">Information</button>
                     <button class="tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
                     <button class="tabButton duration-300 flex-1 min-w-[200px]">Competencies</button>
                 </div>
@@ -97,7 +100,8 @@
                                                 Order Name
                                             </td>
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
                                             <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
@@ -108,8 +112,9 @@
                                             </td>
 
                                             {{-- action --}}
-                                            <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                                                <div class="flex items-center space-x-1.5 justify-end">
+                                            <td
+                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
                                                             viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -158,7 +163,8 @@
                                                 Order Name
                                             </td>
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
                                             <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
@@ -169,8 +175,9 @@
                                             </td>
 
                                             {{-- action --}}
-                                            <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                                                <div class="flex items-center space-x-1.5 justify-end">
+                                            <td
+                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
                                                             viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -208,7 +215,8 @@
                                         </tr>
                                         <tr class="text-left whitespace-nowrap font-14">
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
@@ -219,7 +227,8 @@
                                                 Order Name
                                             </td>
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
                                             <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
@@ -230,11 +239,13 @@
                                             </td>
 
                                             {{-- action --}}
-                                            <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                                                <div class="flex items-center space-x-1.5 justify-end">
+                                            <td
+                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                            viewBox="0 0 24 24" fill="currentColor"
+                                                            aria-hidden="true">
                                                             <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
                                                             <path fill-rule="evenodd"
                                                                 d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
@@ -269,7 +280,8 @@
                                         </tr>
                                         <tr class="text-left whitespace-nowrap font-14">
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
@@ -280,7 +292,8 @@
                                                 Order Name
                                             </td>
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
                                             <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
@@ -291,11 +304,13 @@
                                             </td>
 
                                             {{-- action --}}
-                                            <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                                                <div class="flex items-center space-x-1.5 justify-end">
+                                            <td
+                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                            viewBox="0 0 24 24" fill="currentColor"
+                                                            aria-hidden="true">
                                                             <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
                                                             <path fill-rule="evenodd"
                                                                 d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
@@ -330,7 +345,8 @@
                                         </tr>
                                         <tr class="text-left whitespace-nowrap font-14">
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
@@ -341,7 +357,8 @@
                                                 Order Name
                                             </td>
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                            <td
+                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
                                             <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
@@ -352,11 +369,13 @@
                                             </td>
 
                                             {{-- action --}}
-                                            <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
-                                                <div class="flex items-center space-x-1.5 justify-end">
+                                            <td
+                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                            viewBox="0 0 24 24" fill="currentColor"
+                                                            aria-hidden="true">
                                                             <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
                                                             <path fill-rule="evenodd"
                                                                 d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
@@ -394,8 +413,43 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="tab text-center font-16">No data</div>
-                        <div class="tab text-center font-16">No data</div>
+                        <div class="tab h-full">
+                            <div id="calendar"></div>
+                            <div class="mt-8">
+                                <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Resume') }}</h2>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div>
+                                        <label class="lara-label-sm">Vacation Days Entitled</label>
+                                        <p class="font-16 text-dark_2 font-medium">22</p>
+                                    </div>
+                                    <div>
+                                        <label class="lara-label-sm">Vacation Days Used</label>
+                                        <p class="font-16 text-dark_2 font-medium">12</p>
+                                    </div>
+                                    <div>
+                                        <label class="lara-label-sm">Vacation Days Remaining</label>
+                                        <p class="font-16 text-dark_2 font-medium">10</p>
+
+                                    </div>
+                                    <div>
+                                        <label class="lara-label-sm">Total Absences</label>
+                                        <div class="tag-btn bg-success/50">3</div>
+                                    </div>
+                                    <div>
+                                        <label class="lara-label-sm">Justified Absences</label>
+                                        <div class="font-16 text-dark_2 font-medium">3</div>
+                                    </div>
+                                    <div>
+                                        <label class="lara-label-sm">Unjustified Absences</label>
+                                        <div class="font-16 text-dark_2 font-medium">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,30 +457,29 @@
     </div>
     <x-section name="style">
         <link rel="stylesheet" href="{{ Vite::css('select.css') }}" />
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css" rel="stylesheet">
+
     </x-section>
     <x-section name="scripts">
-        {{-- <script src="{{ Vite::js('select-drop-down.js') }}"></script>
-        <script src="{{ Vite::js('search-select-drop-down.js') }}"></script>
-        <script src="{{ Vite::js('table.js') }}"></script>
-        <script src="{{ Vite::js('file-upload.js') }}"></script>
-        <script src="{{ Vite::js('select.js') }}"></script>
-        <script src="{{ Vite::js('upload-image.js') }}"></script> --}}
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar/main.min.js"></script>
         <script src="{{ Vite::js('tab.js') }}"></script>
         <script>
             tabFunc('component-tab');
-        </script>
 
-        {{-- <script>
-
-                let customSelect1 = document.querySelector(".custom-select1");
-
-                turnIntoCustom(customSelect1,{
-                   search: true,
-                   multiple: true,
-                   default_selected_text:'select country',
-                   fetchWithSearch: (value)=> `http://laraframe.test/test?search=${value}`
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    events: '/api/events',
+                    timeZone: 'UTC',
+                    events: [{
+                        id: 'a',
+                        title: 'my event',
+                        start: '2024-12-03'
+                    }]
                 });
-
-        </script> --}}
+                calendar.render();
+            });
+        </script>
     </x-section>
 </x-app-layout>

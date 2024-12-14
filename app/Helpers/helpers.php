@@ -20,7 +20,7 @@ if (!function_exists('get_logo_url')) {
     {
         $logoPath = 'storage/' . config('commonconfig.path_image');
         $companyLogo = settings('company_logo');
-        $avatar = valid_image($logoPath, $companyLogo) ? $logoPath . $companyLogo : $logoPath . 'logo-sm.png';
+        $avatar = valid_image($logoPath, $companyLogo) ? $logoPath . $companyLogo : $logoPath . 'logo.png';
         return asset($avatar);
     }
 }

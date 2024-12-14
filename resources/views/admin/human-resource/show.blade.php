@@ -51,20 +51,21 @@
                                 <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Personal Info') }}</h2>
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     <div>
-                                        <label class="font-13 text-dark_1">email</label>
+                                        <label class="lara-label-sm">email</label>
                                         <p class="font-16 text-dark_2 font-medium">admin@optimaize.ai</p>
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1">birthplace</label>
+                                        <label class="lara-label-sm">birthplace</label>
                                         <p class="font-16 text-dark_2 font-medium">2025-00-00</p>
                                     </div>
                                     <div>
-                                        <label class="font-13 pb-2 text-dark_1 block">Address</label>
-                                        <p class="font-16 text-dark_2 font-medium">123 Imaginary Street 4567-890 Lisbon Portugal</p>
+                                        <label class="lara-label-sm">Address</label>
+                                        <p class="font-16 text-dark_2 font-medium">123 Imaginary Street 4567-890 Lisbon
+                                            Portugal</p>
 
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1 block pb-2">Production Time</label>
+                                        <label class="lara-label-sm">Production Time</label>
                                         <div class="font-16 text-dark_2 font-medium">480 min</div>
                                     </div>
                                 </div>
@@ -73,11 +74,11 @@
                                 <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Company Info') }}</h2>
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     <div>
-                                        <label class="font-13 text-dark_1">Admission Date</label>
+                                        <label class="lara-label-sm">Admission Date</label>
                                         <p class="font-16 text-dark_2 font-medium">2025-00-00</p>
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1">Position</label>
+                                        <label class="lara-label-sm">Position</label>
                                         <p class="font-16 text-dark_2 font-medium">CCO</p>
                                     </div>
                                     <div>
@@ -86,26 +87,30 @@
 
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1 block pb-2">Hourly Value</label>
+                                        <label class="lara-label-sm">Hourly Value</label>
                                         <div class="font-16 text-dark_2 font-medium">0.00€</div>
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1 block pb-2">Working Hours</label>
+                                        <label class="lara-label-sm">Working Hours</label>
                                         <div class="font-16 text-dark_2 font-medium">160</div>
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1 block pb-2">Shift</label>
+                                        <label class="lara-label-sm">Shift</label>
                                         <div class="font-16 text-dark_2 font-medium">Noturno</div>
                                     </div>
                                     <div>
-                                        <label class="font-13 text-dark_1 block pb-2">Access Level</label>
+                                        <label class="lara-label-sm">Access Level</label>
                                         <div class="font-16 text-dark_2 font-medium">Total</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab text-center font-16">No data</div>
-                        <div class="tab text-center font-16">No data</div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
                     </div>
                 </div>
             </div>

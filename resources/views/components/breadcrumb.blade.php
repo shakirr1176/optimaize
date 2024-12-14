@@ -1,7 +1,7 @@
 @props(['border' => false])
 
-<div class="w-full my-8 2xl:my-10">
-    
+<div class="w-full mb-4 2xl:mb-6">
+
     @isset($above)
         {{ $above }}
     @endisset

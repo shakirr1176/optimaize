@@ -50,6 +50,7 @@ module.exports = {
                 "optm-purple": "#A249FF",
                 "optm-gray-100": "#DEDADA",
                 "optm-deep-purple": "#835FEB",
+                "optm-gray-50": "#25284D0D",
             },
 
             fontSize: {

@@ -47,50 +47,55 @@
                     </div>
                     <div class="w-full lg:w-3/4">
                         <div class="tab">
-                            <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Machines and Equipment Info') }}</h2>
+                            <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Machines and Equipment Info') }}
+                            </h2>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <div>
-                                    <label class="font-13 text-dark_1">Machine Name</label>
+                                    <label class="lara-label-sm">Machine Name</label>
                                     <p class="font-16 text-dark_2 font-medium">Laser Cutter Pro 5000</p>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1">Machine Type</label>
+                                    <label class="lara-label-sm">Machine Type</label>
                                     <p class="font-16 text-dark_2 font-medium">Cutting Machine</p>
                                 </div>
                                 <div>
-                                    <label class="font-13 pb-2 text-dark_1 block">Acquisition Date</label>
+                                    <label class="lara-label-sm">Acquisition Date</label>
                                     <p class="font-16 text-dark_2 font-medium">2020-03-15</p>
 
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Production Capacity (per hour)</label>
+                                    <label class="lara-label-sm">Production Capacity (per hour)</label>
                                     <div class="font-16 text-dark_2 font-medium">50 units</div>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Operating Cost (per hour)</label>
+                                    <label class="lara-label-sm">Operating Cost (per hour)</label>
                                     <div class="font-16 text-dark_2 font-medium">20€</div>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Shifts</label>
+                                    <label class="lara-label-sm">Shifts</label>
                                     <div class="font-16 text-dark_2 font-medium">Morning, Evening</div>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Sector</label>
+                                    <label class="lara-label-sm">Sector</label>
                                     <div class="font-16 text-dark_2 font-medium">Sector A</div>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Status</label>
+                                    <label class="lara-label-sm">Status</label>
                                     <div class="tag-btn bg-success/50">Active</div>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Maintenance Schedule</label>
+                                    <label class="lara-label-sm">Maintenance Schedule</label>
                                     <div class="font-16 text-dark_2 font-medium">Monthly</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab text-center font-16">No data</div>
-                        <div class="tab text-center font-16">No data</div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@
         <x-breadcrumb>{{ $title }}</x-breadcrumb>
     </x-section>
     <!-- role Permission start -->
-    <div class="rounded-xl dark:bg-lara-darkBlack bg-white p-6 2xl:p-10 mt-6 2xl:mt-10">
+    <div class="rounded-xl dark:bg-lara-darkBlack">
         <div class="row">
             <form class="w-full" method="post" action="{{ route('admin.roles.update', $role->slug) }}">
                 <div class="w-full px-4">
@@ -23,7 +23,7 @@
 
                         @php $allItems = true @endphp
                         <div class="role-permission rounded-xl overflow-hidden mb-6">
-                            <div class="dark:bg-lara-primary bg-gray-200 py-3 px-6 border dark:border-lara-darkBlack">
+                            <div class="dark:bg-lara-primary bg-optm-gray-300 py-3 px-6 border dark:border-lara-darkBlack">
                                 <div class="row items-center">
                                     @foreach ($routeGroups as $groupName => $permissionLists)
                                         @foreach ($permissionLists as $permissionName => $routeList)
@@ -39,7 +39,7 @@
                                             <label
                                                 class="w-6 h-6 flex justify-center items-center cursor-pointer custom-input-checked rounded">
                                                 <input class="hidden" type="checkbox">
-                                                <svg class="checked-item h-5 w-5 rounded border-2 dark:border-lara-gray border-gray-400/80 text-transparent"
+                                                <svg class="checked-item h-5 w-5 rounded border-2 dark:border-lara-gray border-gray-400 text-transparent"
                                                 viewBox="0 0 172 172">
                                                 <g fill="none" font-family="none" font-size="none"
                                                     font-weight="none" stroke-miterlimit="10"
@@ -53,9 +53,9 @@
                                             </svg>
                                             </label>
                                             <div class="cursor-pointer rolebutton">
-                                                <h2 class="font-16 dark:text-white text-lara-whiteGray font-medium">
+                                                <h2 class="font-16 dark:text-white text-dark_2 font-medium">
                                                     {{ $str->title($str->replace('_', ' ', $name)) }}</h2>
-                                                <div class="dark:text-white text-lara-whiteGray flex items-center space-x-3">
+                                                <div class="dark:text-white text-dark_2 flex items-center space-x-3">
                                                     <p class="font-14">{{ __('Show Items') }}</p>
                                                     {{-- @svg('heroicon-s-chevron-up', 'w-4') --}}
                                                     @svg('heroicon-s-chevron-down', 'w-4')
@@ -66,49 +66,49 @@
                                     <div class="lg:w-4/5 w-full px-4">
                                         <div class="row">
                                             <div class="sub-col-input md:w-1/4 px-4 mt-5 lg:mt-0 w-1/4">
-                                                <p class="dark:text-white text-lara-whiteGray font-14 font-medium mb-1 text-center">
+                                                <p class="dark:text-white text-dark_2 font-14 font-medium mb-1 text-center">
                                                     {{ __('Read Access') }}</p>
                                                 <div class="flex justify-center">
                                                     <label class="switch relative inline-block">
                                                         <input class="opacity-0 w-0 h-0" type="checkbox">
                                                         <span
-                                                            class="dark:text-white text-lara-whiteGray flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
+                                                            class="dark:text-white text-dark_2 flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
                                                         </span>
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="sub-col-input md:w-1/4 px-4 mt-5 lg:mt-0 w-1/4">
-                                                <p class="dark:text-white text-lara-whiteGray font-14 font-medium mb-1 text-center">
+                                                <p class="dark:text-white text-dark_2 font-14 font-medium mb-1 text-center">
                                                     {{ __('Write Access') }}</p>
                                                 <div class="flex justify-center">
                                                     <label class="switch relative inline-block">
                                                         <input class="opacity-0 w-0 h-0" type="checkbox">
                                                         <span
-                                                            class="dark:text-white text-lara-whiteGray flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
+                                                            class="dark:text-white text-dark_2 flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
                                                         </span>
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="sub-col-input md:w-1/4 px-4 mt-5 lg:mt-0 w-1/4">
-                                                <p class="dark:text-white text-lara-whiteGray font-14 font-medium mb-1 text-center">
+                                                <p class="dark:text-white text-dark_2 font-14 font-medium mb-1 text-center">
                                                     {{ __('Modify Access') }}</p>
                                                 <div class="flex justify-center">
                                                     <label class="switch relative inline-block">
                                                         <input class="opacity-0 w-0 h-0" type="checkbox">
                                                         <span
-                                                            class="dark:text-white text-lara-whiteGray flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
+                                                            class="dark:text-white text-dark_2 flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
                                                         </span>
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="sub-col-input md:w-1/4 px-4 mt-5 lg:mt-0 w-1/4">
-                                                <p class="dark:text-white text-lara-whiteGray font-14 font-medium mb-1 text-center">
+                                                <p class="dark:text-white text-dark_2 font-14 font-medium mb-1 text-center">
                                                     {{ __('Delete Access') }}</p>
                                                 <div class="flex justify-center">
                                                     <label class="switch relative inline-block">
                                                         <input class="opacity-0 w-0 h-0" type="checkbox">
                                                         <span
-                                                            class="dark:text-white text-lara-whiteGray flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
+                                                            class="dark:text-white text-dark_2 flex px-3 uppercase text-base items-center justify-between slider round absolute cursor-pointer inset-0 bg-black-30 duration-300">
                                                         </span>
                                                     </label>
                                                 </div>
@@ -120,7 +120,7 @@
                             <div class="roleDrop hidden">
                                 @php $allSubModules = true @endphp
                                 @foreach ($routeGroups as $groupName => $permissionLists)
-                                    <div class="sub-row-input-parent dark:bg-lara-primary bg-white border dark:border-lara-darkBlack py-5 px-6">
+                                    <div class="sub-row-input-parent dark:bg-lara-primary bg-optm-gray-300 py-5 px-6">
                                         @php $allSubModules = true @endphp
                                         @foreach ($permissionLists as $permissionName => $routeList)
                                             @php
@@ -135,7 +135,7 @@
                                                     <label
                                                         class=" w-6 h-6  flex justify-center items-center cursor-pointer custom-input-checked rounded">
                                                         <input class="hidden" type="checkbox">
-                                                        <svg class="checked-item h-5 w-5 rounded border-2 dark:border-lara-gray border-gray-400/80 text-transparent"
+                                                        <svg class="checked-item h-5 w-5 rounded border-2 dark:border-lara-gray border-gray-400 text-transparent"
                                                             viewBox="0 0 172 172">
                                                             <g fill="none" font-family="none" font-size="none"
                                                                 font-weight="none" stroke-miterlimit="10"
@@ -148,7 +148,7 @@
                                                             </g>
                                                         </svg>
                                                     </label>
-                                                    <p class="font-14 text-white font-medium">
+                                                    <p class="font-14 text-dark_2 font-medium">
                                                         {{ $str->title($str->replace('_', ' ', $groupName)) }}</p>
                                                 </div>
                                             </div>
@@ -164,7 +164,7 @@
                                                                         value="{{ $permissionName }}"
                                                                         {{ isset($role->permissions[$name][$groupName]) ? (in_array($permissionName, $role->permissions[$name][$groupName]) ? 'checked' : '') : '' }}
                                                                         class="hidden" type="checkbox">
-                                                                        <svg class="checked-item h-5 w-5 rounded border-2 dark:border-lara-gray border-gray-400/80 text-transparent"
+                                                                        <svg class="checked-item h-5 w-5 rounded border-2 dark:border-lara-gray border-gray-400 text-transparent"
                                                                             viewBox="0 0 172 172">
                                                                             <g fill="none" font-family="none" font-size="none"
                                                                                 font-weight="none" stroke-miterlimit="10"

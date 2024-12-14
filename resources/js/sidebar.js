@@ -1,11 +1,11 @@
 {
-    let sidebarCollapseButton = document.getElementById(
-        "sidebar-collapse-button"
+    let sidebarCollapseButton = document.querySelectorAll(
+        ".sidebar-collapse-button"
     );
 
-    let mainLayout = document.querySelector('.main-layout')
+    let mainLayout = document.querySelector(".main-layout");
     let collapseSidebarId = document.getElementById("collapse-sidebar");
-    let shadowLayer = document.querySelector('.shadow-layer')
+    let shadowLayer = document.querySelector(".shadow-layer");
     let mainContent = document.querySelector(".main-content");
     let subHeaders = document.querySelectorAll(".main-header");
     let activeMenu = document.querySelector(".active-menu");
@@ -20,13 +20,18 @@
     });
 
     window.addEventListener("load", () => {
-        let isSidebarExpand = localStorage.isSidebarExpand;
-        if (isSidebarExpand === "true") {
-            expandSidebar();
-        } else {
-            collapseSidebar(subDropDownItemIndex);
-        }
+
         menuResponse();
+
+        let isSidebarExpand = localStorage.isSidebarExpand;
+
+        if(!ipadView.matches){
+            if (isSidebarExpand === "true") {
+                expandSidebar();
+            } else {
+                collapseSidebar(subDropDownItemIndex);
+            }
+        }
 
         collapseSidebarId?.classList.remove("fade-in");
 
@@ -36,10 +41,9 @@
     });
 
     window.addEventListener("click", (e) => {
-
         if (ipadView.matches) {
             if (
-                e.target !== sidebarCollapseButton &&
+                !e.target.closest(".sidebar-collapse-button") &&
                 !e.target.closest("#collapse-sidebar")
             ) {
                 collapseSidebarId?.classList.add("-translate-x-full");
@@ -55,13 +59,16 @@
             collapseSidebarId?.classList.contains("collapse-sidebar")
         ) {
             if (
-                e.target !== sidebarCollapseButton &&
+                !e.target.closest(".sidebar-collapse-button") &&
                 !e.target.closest("#collapse-sidebar")
             ) {
                 prevItems.forEach((y) => {
-                    if(y.nextElementSibling){
+                    if (y.nextElementSibling) {
                         y.nextElementSibling.style.height = 0 + "px";
-                        y.nextElementSibling.setAttribute("data-collapse", "false");
+                        y.nextElementSibling.setAttribute(
+                            "data-collapse",
+                            "false"
+                        );
                     }
                     y?.classList.remove("active-on");
                 });
@@ -69,26 +76,28 @@
                 prevItems = [];
             }
         }
-
     });
 
-    sidebarCollapseButton.addEventListener("click", () => {
-        if (ipadView.matches) {
-            if (collapseSidebarId?.classList.contains("-translate-x-full")) {
+    sidebarCollapseButton.forEach((el) => {
+        el.addEventListener("click", () => {
+            if (ipadView.matches) {
+                if (
+                    collapseSidebarId?.classList.contains("-translate-x-full")
+                ) {
+                    collapseSidebarId?.classList.remove("-translate-x-full");
+                    collapseSidebarId?.classList.add("translate-x-0");
 
-                collapseSidebarId?.classList.remove("-translate-x-full");
-                collapseSidebarId?.classList.add("translate-x-0");
+                    shadowLayer?.classList.remove("-translate-x-full");
+                    shadowLayer?.classList.add("translate-x-0");
+                } else {
+                    collapseSidebarId?.classList.add("-translate-x-full");
+                    collapseSidebarId?.classList.remove("translate-x-0");
 
-                shadowLayer?.classList.remove("-translate-x-full");
-                shadowLayer?.classList.add("translate-x-0");
-            } else {
-                collapseSidebarId?.classList.add("-translate-x-full");
-                collapseSidebarId?.classList.remove("translate-x-0");
-
-                shadowLayer?.classList.add("-translate-x-full");
-                shadowLayer?.classList.remove("translate-x-0");
+                    shadowLayer?.classList.add("-translate-x-full");
+                    shadowLayer?.classList.remove("translate-x-0");
+                }
             }
-        }
+        });
     });
 
     function menuResponse() {
@@ -97,11 +106,24 @@
             collapseSidebarId?.classList.add("-translate-x-full");
             shadowLayer?.classList.add("absolute");
             shadowLayer?.classList.add("-translate-x-full");
+
+            collapseSidebarId?.classList.remove("collapse-sidebar");
+            collapseSidebarId?.classList.add("expand-sidebar");
+
+            mainLayout?.classList.remove("collapse-shadow");
+            mainLayout?.classList.add("expand-shadow");
+
         } else {
             collapseSidebarId?.classList.remove("absolute");
             collapseSidebarId?.classList.remove("-translate-x-full");
             shadowLayer?.classList.remove("absolute");
             shadowLayer?.classList.remove("-translate-x-full");
+
+            collapseSidebarId?.classList.add("collapse-sidebar");
+            collapseSidebarId?.classList.remove("expand-sidebar");
+
+            mainLayout?.classList.add("collapse-shadow");
+            mainLayout?.classList.remove("expand-shadow");
         }
     }
 
@@ -127,7 +149,6 @@
         mainLayout?.classList.add("collapse-shadow");
         mainLayout?.classList.remove("expand-shadow");
 
-
         subHeaders?.forEach((subHeader) => {
             if (subHeader) {
                 subHeader.classList?.add("clickable");
@@ -151,8 +172,9 @@
                         }
                     });
 
-                    if(subHeader.nextElementSibling){
-                        subHeader.nextElementSibling.style.zIndex = subDropDownItemIndex;
+                    if (subHeader.nextElementSibling) {
+                        subHeader.nextElementSibling.style.zIndex =
+                            subDropDownItemIndex;
                     }
                 }
             }
@@ -176,16 +198,18 @@
         });
     }
 
-    sidebarCollapseButton.addEventListener("click", () => {
-        if (!ipadView.matches) {
-            if (collapseSidebarId?.classList.contains("expand-sidebar")) {
-                collapseSidebar(subDropDownItemIndex);
-                localStorage.setItem("isSidebarExpand", "false");
-            } else {
-                expandSidebar();
-                localStorage.setItem("isSidebarExpand", "true");
+    sidebarCollapseButton.forEach((el) => {
+        el.addEventListener("click", () => {
+            if (!ipadView.matches) {
+                if (collapseSidebarId?.classList.contains("expand-sidebar")) {
+                    collapseSidebar(subDropDownItemIndex);
+                    localStorage.setItem("isSidebarExpand", "false");
+                } else {
+                    expandSidebar();
+                    localStorage.setItem("isSidebarExpand", "true");
+                }
             }
-        }
+        });
     });
 
     let dropDownItemParent = undefined;
@@ -196,13 +220,18 @@
                 "root-item"
             )
         ) {
-            dropDownItemParent = activeMenu?.parentElement.parentElement.parentElement;
+            dropDownItemParent =
+                activeMenu?.parentElement.parentElement.parentElement;
             if (dropDownItemParent !== undefined) {
                 if (collapseSidebarId?.classList.contains("expand-sidebar")) {
                     prevItems.push(dropDownItemParent.previousElementSibling);
                 }
-                dropDownItemParent.previousElementSibling?.classList.add("active-menu");
-                dropDownItemParent.previousElementSibling?.classList.add("active-on");
+                dropDownItemParent.previousElementSibling?.classList.add(
+                    "active-menu"
+                );
+                dropDownItemParent.previousElementSibling?.classList.add(
+                    "active-on"
+                );
             }
         }
 
@@ -213,17 +242,26 @@
                         "root-item"
                     )
                 ) {
-                    dropDownItemParent = dropDownItemParent.parentElement.parentElement.parentElement;
-                    if(dropDownItemParent.previousElementSibling){
+                    dropDownItemParent =
+                        dropDownItemParent.parentElement.parentElement
+                            .parentElement;
+                    if (dropDownItemParent.previousElementSibling) {
                         if (
-                            collapseSidebarId?.classList.contains("expand-sidebar")
-
+                            collapseSidebarId?.classList.contains(
+                                "expand-sidebar"
+                            )
                         ) {
-                            prevItems.push(dropDownItemParent.previousElementSibling);
+                            prevItems.push(
+                                dropDownItemParent.previousElementSibling
+                            );
                         }
 
-                        dropDownItemParent.previousElementSibling?.classList.add("active-menu");
-                        dropDownItemParent.previousElementSibling?.classList.add("active-on");
+                        dropDownItemParent.previousElementSibling?.classList.add(
+                            "active-menu"
+                        );
+                        dropDownItemParent.previousElementSibling?.classList.add(
+                            "active-on"
+                        );
                     }
 
                     getParent();
@@ -235,7 +273,7 @@
 
         prevItems.forEach((w) => {
             if (w !== undefined) {
-                if(w.nextElementSibling){
+                if (w.nextElementSibling) {
                     w.nextElementSibling.setAttribute("data-collapse", "true");
                     w.nextElementSibling.style.height = null;
                 }
@@ -257,70 +295,80 @@
         collapseSidebarId?.classList.remove("fade-in");
     });
 
-    function removeElement(data,prevArray){
-        let elements = data.parentElement.parentElement.querySelectorAll('.drop-down-header');
-        elements.forEach(el=>{
-            if(prevArray.includes(el)){
+    function removeElement(data, prevArray) {
+        let elements =
+            data.parentElement.parentElement.querySelectorAll(
+                ".drop-down-header"
+            );
+        elements.forEach((el) => {
+            if (prevArray.includes(el)) {
                 let i = prevArray.indexOf(el);
-                prevArray.splice(i,1);
+                prevArray.splice(i, 1);
             }
-        })
+        });
     }
 
     function sunMenuFunc(data) {
         if (isProcess) {
-            if (data && data.nextElementSibling && data.children[1] && data.children[1].classList.contains('menu-arrow')) {
+            if (
+                data &&
+                data.nextElementSibling &&
+                data.children[1] &&
+                data.children[1].classList.contains("menu-arrow")
+            ) {
                 isProcess = false;
-                prevItems.forEach(prev=>{
+                prevItems.forEach((prev) => {
+                    let underHeader =
+                        data.parentElement.parentElement.querySelectorAll(
+                            ".drop-down-header"
+                        );
 
-                    let underHeader = data.parentElement.parentElement.querySelectorAll('.drop-down-header');
-
-                    if(prev && underHeader && [...underHeader].includes(prev)){
-                        prev.classList.remove('active-on');
+                    if (
+                        prev &&
+                        underHeader &&
+                        [...underHeader].includes(prev)
+                    ) {
+                        prev.classList.remove("active-on");
 
                         let dropDown = prev.nextElementSibling;
 
-                        if(dropDown){
+                        if (dropDown) {
                             const xxScrollHeights = dropDown.scrollHeight;
-                            let elementTransitions =
-                            dropDown.style.transition;
+                            let elementTransitions = dropDown.style.transition;
                             dropDown.style.transition = "";
 
                             requestAnimationFrame(function () {
-                                dropDown.style.height =
-                                    xxScrollHeights + "px";
-                                dropDown.style.transition =
-                                    elementTransitions;
+                                dropDown.style.height = xxScrollHeights + "px";
+                                dropDown.style.transition = elementTransitions;
                                 requestAnimationFrame(function () {
                                     dropDown.style.height = 0 + "px";
                                 });
                             });
                         }
                     }
-                })
+                });
 
-                if(!prevItems.includes(data)){
-
-                    data.classList.add('active-on');
-                    removeElement(data,prevItems);
+                if (!prevItems.includes(data)) {
+                    data.classList.add("active-on");
+                    removeElement(data, prevItems);
                     prevItems.push(data);
 
                     let elementHeight = data.nextElementSibling.scrollHeight;
-                        data.nextElementSibling.style.height = elementHeight + "px";
+                    data.nextElementSibling.style.height = elementHeight + "px";
 
-                        data.nextElementSibling.addEventListener(
-                            "transitionend",
-                            function (e) {
-                                isProcess = true;
-                                data.nextElementSibling.removeEventListener(
-                                    "transitionend",
-                                    arguments.callee
-                                );
-                                data.nextElementSibling.style.height = null;
-                            }
-                        );
-                }else{
-                    removeElement(data,prevItems)
+                    data.nextElementSibling.addEventListener(
+                        "transitionend",
+                        function (e) {
+                            isProcess = true;
+                            data.nextElementSibling.removeEventListener(
+                                "transitionend",
+                                arguments.callee
+                            );
+                            data.nextElementSibling.style.height = null;
+                        }
+                    );
+                } else {
+                    removeElement(data, prevItems);
                     data.nextElementSibling.addEventListener(
                         "transitionend",
                         function (e) {

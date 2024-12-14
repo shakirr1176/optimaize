@@ -63,79 +63,11 @@
         <!-- side menu end -->
 
         <!-- main section start -->
-        <div class="main-content overflow-hidden p-6 md:p-12 2xl:p-24 2xl:pr-36 w-full">
+        <div class="main-content overflow-hidden p-6 md:p-12 2xl:p-24 2xl:pr-36 w-full !pt-0">
             <!-- header start -->
-            {{-- <x-header></x-header> --}}
+            <x-header></x-header>
 
-            <header class="w-full flex flex-wrap sm:flex-nowrap gap-4">
-                <div class="flex-1 relative min-w-[200px]">
-                    @svg('heroicon-s-magnifying-glass', 'w-4 2xl:w-5 text-dark_2 absolute top-1/2 -translate-y-1/2 left-3')
-                    <input class="lara-input-search" placeholder="Search" type="text">
-                </div>
-                <div class="relative px-4 flex items-center rounded-lara-radious w-fit bg-optm-gray-300">
-                    <div class="hover-dropdown-box cursor-pointer">
-                        <div class="pointer-events-none flex gap-2 justify-end items-center">
-                            <div class="text-dark_2">
-                                <h3 class="font-14 font-medium uppercas">
-                                    {{ auth()->user()->first_name }}
-                                </h3>
-                                <p class="font-12">{{ ucwords(auth()->user()->assigned_role) }}
-                                </p>
-                            </div>
-                            <div class="size-7 2xl:size-9 rounded-full overflow-hidden">
-                                <img src="{{ auth()->user()->avatar }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="hover-dropdown-show-box hidden z-10 absolute w-40 transition-all duration-500 top-full mt-2 2xl:mt-3 right-0">
 
-                        <div class="mt-4 shadow-lara-shadow2 rounded-xl overflow-hidden">
-                            <ul>
-                                <li>
-                                    <a class="group dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block"
-                                        href="{{ route('profile.index') }}">
-                                        {{ __('Profile') }}
-                                        <span
-                                            class="dark:group-hover:bg-lara-whiteGray group-hover:bg-gray-100 duration-300 w-3 h-3 dark:bg-lara-gray-300 bg-white inline-block rotate-45 absolute top-2.5 right-5"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block"
-                                        href="{{ route('profile.edit') }}">
-                                        {{ __('Edit Profile') }}
-                                    </a>
-                                </li>
-                                @if (has_permission('admin.settings.index'))
-                                    <li>
-                                        <a class="dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block"
-                                            href="{{ route('admin.settings.index') }}">
-                                            {{ __('Setting') }}
-                                        </a>
-                                    </li>
-                                @endif
-                                <li>
-                                    <a class="dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block confirmation"
-                                        data-form-id="logout" data-form-method="POST"
-                                        data-alert="{{ __('Are you sure?') }}" href="{{ route('logout') }}">
-                                        {{ __('Logout') }}
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="hover-dropdown-box cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 rounded-lara-radious flex justify-center items-center">
-                        <span class="relative pointer-events-none">
-                            @svg('heroicon-s-bell', 'w-5 2xl:w-6 text-black-50')
-                            <span class="border border-gray-700 size-2 2xl:size-3 absolute top-0 right-0 bg-optm-purple rounded-full"></span>
-                        </span>
-
-                    </div>
-
-                </div>
-            </header>
             <!-- header end -->
             <div class="duration-500 w-full">
                 @yield('breadcrumb')

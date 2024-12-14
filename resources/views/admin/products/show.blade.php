@@ -51,26 +51,30 @@
 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <div>
-                                    <label class="font-13 text-dark_1">Product name</label>
+                                    <label class="lara-label-sm">Product name</label>
                                     <p class="font-16 text-dark_2 font-medium">Smartphone Case Simply</p>
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1">Product Category</label>
+                                    <label class="lara-label-sm">Product Category</label>
                                     <p class="font-16 text-dark_2 font-medium">Electronics</p>
                                 </div>
                                 <div>
-                                    <label class="font-13 pb-2 text-dark_1 block">Product Sub-Category</label>
+                                    <label class="lara-label-sm">Product Sub-Category</label>
                                     <p class="font-16 text-dark_2 font-medium">Mobile Accessories</p>
 
                                 </div>
                                 <div>
-                                    <label class="font-13 text-dark_1 block pb-2">Production Time</label>
+                                    <label class="lara-label-sm">Production Time</label>
                                     <div class="font-16 text-dark_2 font-medium">480 min</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab text-center font-16">No data</div>
-                        <div class="tab text-center font-16">No data</div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{__('No data')}}</span>
+                        </div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{__('No data')}}</span>
+                        </div>
                     </div>
                 </div>
             </div>

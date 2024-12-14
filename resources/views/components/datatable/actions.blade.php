@@ -1,6 +1,6 @@
 @props(['data', 'rowData'])
 
-<div class="flex items-center justify-end gap-2">
+<div class="flex items-center justify-end gap-1 2xl:gap-1.5">
     @foreach ($data->actionLinks as $link)
         @if (!has_permission($link['route_name']))
             @continue
