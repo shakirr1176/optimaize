@@ -94,7 +94,7 @@
                                 {{ __('Member Joining At') }}
                             </label>
                             <div class="font-16 text-dark_2 font-medium"><span
-                                    class="tag-btn bg-primary">{{ auth()->user()->created_at->format('Y M d') }}</span>
+                                    class="tag-com bg-primary">{{ auth()->user()->created_at->format('Y M d') }}</span>
                             </div>
                         </div>
                     </div>

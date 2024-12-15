@@ -38,8 +38,8 @@
         <div class="">
             <div class="rounded-2xl bg-[#25284D0D] overflow-hidden">
                 <div id="component-tab" class="flex font-16 font-semibold items-center">
-                    <button class="active tabButton duration-300 flex-1 min-w-[200px]">Information</button>
-                    <button class="tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
+                    <button class="tabButton duration-300 flex-1 min-w-[200px]">Information</button>
+                    <button class="active tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
                     <button class="tabButton duration-300 flex-1 min-w-[200px]">Competencies</button>
                 </div>
                 <div class="p-6">
@@ -434,7 +434,7 @@
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Total Absences</label>
-                                        <div class="tag-btn bg-success/50">3</div>
+                                        <div class="tag-com bg-success/50">3</div>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Justified Absences</label>

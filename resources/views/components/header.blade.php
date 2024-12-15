@@ -1,5 +1,5 @@
 <header
-    {{ $attributes->merge(['class' => 'bg-optm-gray-200 sticky top-0 z-50 2xl:h-[80px] h-[75px] w-full flex justify-between flex-wrap sm:flex-nowrap gap-4']) }}>
+    {{ $attributes->merge(['class' => 'bg-optm-gray-200 sticky top-0 z-40 2xl:h-[80px] h-[75px] w-full flex justify-between flex-wrap sm:flex-nowrap gap-4']) }}>
     @php
         $userNotifications = get_user_notifications();
     @endphp
@@ -120,7 +120,7 @@
                      class="angle-down h-3 w-3 duration-300 rotate-45 transform origin-bottom-left">
                      </div>
                  </div>
-                 <div class="shadow-lara-shadow3 rounded-xl overflow-hidden cursor-pointer mt-4 relative ">
+                 <div class="shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)] rounded-xl overflow-hidden cursor-pointer mt-4 relative ">
                      <ul class="text-black-80 langParent">
                          @foreach (language() as $shortCode => $language)
                              <li class="flex items-center justify-center">

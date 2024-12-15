@@ -152,8 +152,17 @@
     .error-message{
         @apply font-14 text-red-600 pt-2 empty-hidden
     }
-    .tag-btn{
-        @apply  min-w-fit w-fit font-14 capitalize font-medium rounded-full px-4 py-1 2xl:py-1.5 flex justify-center items-center gap-2
+    .tag-com{
+        @apply relative min-w-fit w-fit font-14 capitalize font-medium rounded-full px-4 py-1 2xl:py-1.5 flex justify-center items-center gap-2
+    }
+
+    .tag-com .remove-tag{
+        @apply  absolute size-3 2xl:size-4 rounded-full bg-danger text-white items-center justify-center -left-0 -top-1  transform cursor-pointer;
+        display: none;
+    }
+
+    .tag-com:hover .remove-tag{
+        display: flex
     }
 }
 
@@ -609,14 +618,14 @@ table {
 .active-menu,
 .active-on,
 .drop-down-header:hover {
-    @apply bg-gradient-to-r from-transparent to-light-menu-active dark:to-[#334892ad];
+    @apply bg-gradient-to-r from-transparent to-light-menu-active dark:to-optm-deep-purple;
     position: relative;
 }
 
 .active-menu::before,
 .active-on::before,
 .drop-down-header:hover::before {
-    @apply bg-[#a2b6ff] dark:bg-lara-blue;
+    @apply bg-optm-purple dark:bg-optm-purple;
     content: "";
     position: absolute;
     top: 0;
@@ -1120,4 +1129,12 @@ input:-webkit-autofill:active {
 
   .tab.active{
     @apply block
+  }
+
+  .gradient-circle{
+    @apply pointer-events-none fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[50%] aspect-square rounded-full;
+    background: radial-gradient(#A249FF, transparent);
+    filter: blur(140px);
+    opacity: 0.20;
+    z-index: 99;
   }

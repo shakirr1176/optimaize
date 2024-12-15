@@ -39,7 +39,7 @@
                         </div>
                         <div>
                             <label class="lara-label-sm">Estimated Completion Time</label>
-                            <div class="tag-btn bg-success/50">60 min</div>
+                            <div class="tag-com bg-success/50">60 min</div>
 
                         </div>
                     </div>

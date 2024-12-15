@@ -26,9 +26,8 @@
 </head>
 
 <body class="font-Poppins">
+    <div class="gradient-circle"></div>
     <div id="preloader" class="preloader">
-
-
         <div id="particles-background" class="vertical-centered-box"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
 
@@ -59,11 +58,11 @@
     </div>
     <div class="main-layout bg-optm-gray-200 dark:bg-lara-primary flex min-h-screen">
         <!-- side menu start -->
-        <x-sidebar id="collapse-sidebar" class="group collapse-sidebar"></x-sidebar>
+        <x-sidebar id="collapse-sidebar" class="group"></x-sidebar>
         <!-- side menu end -->
 
         <!-- main section start -->
-        <div class="main-content overflow-hidden p-6 md:p-12 2xl:p-24 2xl:pr-36 w-full !pt-0">
+        <div class="main-content overflow-auto p-6 md:p-12 2xl:p-24 2xl:pr-36 w-full !pt-0">
             <!-- header start -->
             <x-header></x-header>
 
@@ -104,12 +103,12 @@
                 </div>
                 <div class="flex items-center justify-center h-full pt-4 px-4 pb-20 text-center sm:p-0">
                     <div id="lf-modal-content"
-                        class="lf-modal-content inline-block dark:bg-lara-primary bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-6 align-middle sm:max-w-md w-full">
+                        class="lf-modal-content inline-block dark:bg-lara-primary bg-light-body rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-6 align-middle sm:max-w-md w-full">
                         <div class="flex w-full">
                             <a href="javascript:"
                                 class="lf-close inline-block ml-auto mr-3 mt-2 font-18 text-white hover:text-gray-400">&#10005;</a>
                         </div>
-                        <div class="dark:bg-lara-primary bg-white px-4 pb-6 text-center">
+                        <div class="dark:bg-lara-primary bg-light-body px-4 pb-6 text-center">
                             <div id="lf-icon"
                                 class="border-4 rounded-full text-5xl inline-flex items-center justify-center">
                             </div>

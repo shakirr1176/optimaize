@@ -18,7 +18,7 @@
                                 </svg>
                             </div>
                             <input v-model="searchPhrase" @keyup="searchTranslations" type="text"
-                                class="lara-input-search dark:bg-lara-darkBlack bg-optm-gray-300 rounded-full" id="simple-search" placeholder="{{ __('Search') }}" required>
+                                class="lara-input-search" id="simple-search" placeholder="{{ __('Search') }}" required>
                         </div>
                     </form>
                 </div>
