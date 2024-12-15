@@ -68,7 +68,7 @@
     }
 
     .lara-btn {
-        @apply min-w-fit duration-300 font-medium capitalize rounded-lara-radious bg-optm-purple/10 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 text-dark_2 dark:text-optm-gray-200;
+        @apply outline-none min-w-fit duration-300 font-medium capitalize rounded-lara-radious bg-optm-purple/10 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 text-dark_2 dark:text-optm-gray-200;
     }
 
     .lara-secondary-btn {
@@ -128,7 +128,7 @@
     }
     .custom-select > span,
     .drop-icon {
-        @apply absolute text-dark_2 pointer-events-none top-1/2 -translate-y-1/2 right-4 2xl:right-6 font-16;
+        @apply absolute text-dark_2 dark:text-optm-gray-200 pointer-events-none top-1/2 -translate-y-1/2 right-4 2xl:right-6 font-16;
     }
     .form-arwa > span {
         @apply top-1/2 transform -translate-y-1/2 absolute pointer-events-none  right-3 font-16 pb-px font-thin z-40;
@@ -140,7 +140,7 @@
     }
 
     .select-selected {
-        @apply rounded-lara-radious dark:bg-lara-primary text-dark_2 bg-optm-gray-300;
+        @apply rounded-lara-radious dark:bg-dark-optm-gray-300 text-dark_2 dark:text-optm-gray-200  bg-optm-gray-300;
     }
 
     .custom-input-checked input:checked + .checked-item,

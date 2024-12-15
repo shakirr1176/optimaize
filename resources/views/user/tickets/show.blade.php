@@ -123,7 +123,7 @@ use App\Enums\TicketStatusEnum;
                             @csrf
                             <div class="flex flex-wrap -mx-1 mt-7">
                                 <div class="w-full px-1">
-                                    <textarea rows="5" class="outline-none px-4 py-4 w-full font-16 text-black-50 dark:bg-lara-primary bg-white border dark:border-gray-600 rounded-md" name="content"
+                                    <textarea rows="5" class="lara-btn w-full" name="content"
                                         placeholder="{{ __('Type your message here...') }}"></textarea>
                                     <p class="text-sm text-red-600 mt-2">{{ $errors->first('content') }}
                                     </p>

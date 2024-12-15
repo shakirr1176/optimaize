@@ -21,4 +21,6 @@
     </div>
 </div>
 <input {{ $attributes->merge(['class' => 'uploadImgBtn']) }} type="{{ $type }}" hidden="">
-<p class="text-sm text-red-600 mt-2 error-message">{{ $error }}</p>
+@if (isset($error))
+<p class="error-message">{{ $error }}</p>
+@endif
