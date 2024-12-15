@@ -1,22 +1,22 @@
 <header
-    {{ $attributes->merge(['class' => 'bg-optm-gray-200 sticky top-0 z-40 2xl:h-[80px] h-[75px] w-full flex justify-between flex-wrap sm:flex-nowrap gap-4']) }}>
+    {{ $attributes->merge(['class' => 'bg-optm-gray-200 dark:bg-dark-optm-gray-200 sticky top-0 z-40 2xl:h-[80px] h-[75px] w-full flex justify-between flex-wrap sm:flex-nowrap gap-4']) }}>
     @php
         $userNotifications = get_user_notifications();
     @endphp
-    <button class="sidebar-collapse-button">
-        <svg class="w-4 2xl:w-5 mx-auto" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="2.00152e-07" y1="16.5" x2="20" y2="16.5" stroke="#10122B" stroke-width="3" />
-            <line x1="2.23158e-07" y1="9" x2="20" y2="9" stroke="#10122B" stroke-width="3" />
-            <line x1="2.23158e-07" y1="1.5" x2="13.3333" y2="1.5" stroke="#10122B" stroke-width="3" />
+    <button id="sidebar-collapse-button">
+        <svg class="dark:text-optm-gray-200 w-4 2xl:w-5 mx-auto pointer-events-none" stroke="currentColor" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2.00152e-07" y1="16.5" x2="20" y2="16.5" stroke="currentColor" stroke-width="3" />
+            <line x1="2.23158e-07" y1="9" x2="20" y2="9" stroke="currentColor" stroke-width="3" />
+            <line x1="2.23158e-07" y1="1.5" x2="13.3333" y2="1.5" stroke="currentColor" stroke-width="3" />
         </svg>
     </button>
 
     <div class="flex items-center gap-3">
         <div class="relative">
             <div
-                class="hover-dropdown-box cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 rounded-lara-radious flex justify-center items-center">
+                class="hover-dropdown-box cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
                 <span class="relative pointer-events-none">
-                    @svg('heroicon-s-bell', 'w-5 2xl:w-6 text-black-50')
+                    @svg('heroicon-s-bell', 'w-5 2xl:w-6 text-black-50 dark:text-optm-gray-200')
                     <span
                         class="border border-gray-700 size-2 2xl:size-3 absolute top-0 right-0 bg-optm-purple rounded-full"></span>
                 </span>
@@ -64,8 +64,8 @@
 
 
         {{-- dark night --}}
-        {{-- <div
-            class="dark-light cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 rounded-lara-radious flex justify-center items-center">
+        <div
+            class="dark-light cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
             <span class="relative pointer-events-none">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-5 2xl:w-6 text-black-50 block dark:hidden"
+                class="w-5 2xl:w-6 text-black-50 dark:text-optm-gray-200 block dark:hidden"
               >
                 <path
                   stroke-linecap="round"
@@ -96,19 +96,19 @@
                 />
               </svg>
             </span>
-        </div> --}}
+        </div>
 
          <!-- lang start -->
          @if (settings('lang_switcher'))
          <div class="relative">
-             <div class="px-3 hover-dropdown-box cursor-pointer h-[39px] 2xl:h-[50px] bg-optm-gray-300 rounded-lara-radious flex justify-center items-center">
+             <div class="px-3 hover-dropdown-box cursor-pointer h-[39px] 2xl:h-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
                  @if (settings('lang_switcher_item') === 'icon')
                      <div class="pointer-events-none flex items-center justify-center">
                          <div class="w-6 2xl:w-7 h-6 2xl:h-7 country-flag overflow-hidden">
                          </div>
                      </div>
                  @else
-                     <div class="langName pointer-events-none font-medium font-18 text-dark_2/80 overflow-hidden text-ellipsis uppercase">
+                     <div class="langName pointer-events-none font-medium font-18 text-dark_2/80 dark:text-optm-gray-200 overflow-hidden text-ellipsis uppercase">
                      </div>
                  @endif
              </div>
@@ -149,10 +149,10 @@
          </div>
      @endif
      <!-- lang end -->
-        <div class="py-1 2xl:py-1.5 relative px-4 flex items-center rounded-lara-radious w-fit bg-optm-gray-300">
+        <div class="py-1 2xl:py-1.5 relative px-4 flex items-center rounded-lara-radious w-fit bg-optm-gray-300 dark:bg-dark-optm-gray-300">
             <div class="hover-dropdown-box cursor-pointer whitespace-nowrap">
                 <div class="pointer-events-none flex gap-2 justify-end items-center">
-                    <div class="text-dark_2">
+                    <div class="text-dark_2 dark:text-optm-gray-200">
                         <h3 class="max-w-[150px] overflow-hidden text-ellipsis font-14 font-medium uppercas">
                             {{ auth()->user()->first_name }}
                         </h3>

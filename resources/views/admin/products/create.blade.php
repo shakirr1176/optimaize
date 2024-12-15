@@ -15,7 +15,7 @@
 
             <x-slot name="below">
                 <div class="flex justify-between">
-                    <div class="text-dark_1 font-20 font-semibold">#RH-01</div>
+                    <div class="text-dark_1 dark:text-branco-sujo font-20 font-semibold">#RH-01</div>
                 </div>
             </x-slot>
 
@@ -25,7 +25,7 @@
                         @svg('heroicon-s-minus')
                         {{ __('Cancel') }}
                     </button>
-                    <button class="lara-submit-btn" type="submit">
+                    <button type="submit" class="lara-submit-btn" type="submit">
                         @svg('heroicon-s-plus')
                         {{ __('Create') }}
                     </button>
@@ -35,7 +35,7 @@
         <div class="grid grid-cols-12">
             <div class="order-2 sm:order-1 col-span-12 sm:col-span-9 space-y-8">
                 <div>
-                    <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Product info') }}</h2>
+                    <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Product info') }}</h2>
                     <div class="col-span-12 sm:col-span-9">
                         <div class="grid grid-cols-12 gap-5 2xl:gap-6">
                             <div class="col-span-12">

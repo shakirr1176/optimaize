@@ -6,9 +6,9 @@
         </x-breadcrumb>
     </x-section>
     <div class="w-full">
-        <div class="dark:bg-lara-darkBlack rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
+        <div class="rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
             <table class="responsive-table w-full whitespace-nowrap">
-                <thead class="text-dark_1">
+                <thead class="text-dark_1 dark:text-branco-sujo">
                     <tr class="uppercase text-left whitespace-nowrap">
                         <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
                             Product ID
@@ -35,28 +35,28 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="text-dark_2">
+                <tbody class="text-dark_2 dark:text-optm-gray-200">
                     <tr class="text-left whitespace-nowrap font-14">
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             #PR-0001
                         </td>
 
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Smartphone Case Simply
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Electronics
                         </td>
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             Mobile Accessories
                         </td>
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             480min
                         </td>
                         {{-- action --}}
-                        <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="{{ route('admin.products.show', 'slug') }}"
                                     class="action-btn relative group">

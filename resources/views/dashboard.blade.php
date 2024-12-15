@@ -7,29 +7,29 @@
         </x-breadcrumb>
     </x-section>
     <div>
-        <div class="text-dark_1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6 2xl:mb-8">
-            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] p-4 xl:p-6">
+        <div class="text-dark_1 dark:text-optm-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6 2xl:mb-8">
+            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-dark_2 p-4 xl:p-6">
                 <img src="{{ Vite::image('machine.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">12</p>
                     <p class="font-14">Machines and Equipment</p>
                 </div>
             </div>
-            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] p-4 xl:p-6">
+            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-dark_1 p-4 xl:p-6">
                 <img src="{{ Vite::image('sections.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">3</p>
                     <p class="font-14">Sections</p>
                 </div>
             </div>
-            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] p-4 xl:p-6">
+            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-optm-purple p-4 xl:p-6">
                 <img src="{{ Vite::image('huuman-resource.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">78</p>
                     <p class="font-14">Human Resources</p>
                 </div>
             </div>
-            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] p-4 xl:p-6">
+            <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-optm-deep-purple p-4 xl:p-6">
                 <img src="{{ Vite::image('products.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">143</p>
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            {{-- <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+            {{-- <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A] dark:bg-optm-purple">
                 <div class="flex items-center justify-between">
                     <p class="font-20 font-medium">{{ __('Users') }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A] dark:bg-optm-purple">
                 <div class="flex items-center justify-between">
                     <p class="font-20 font-medium">{{ __('Permission') }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A] dark:bg-optm-purple">
                 <div class="flex items-center justify-between">
                     <p class="font-20 font-medium">{{ __('Active Users') }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A]">
+            <div class="rounded-2xl p-4 xl:p-6 bg-[#10122B1A] dark:bg-optm-purple">
                 <div class="flex items-center justify-between">
                     <p class="font-20 font-medium">{{ __('Announcement') }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -129,13 +129,13 @@
         </div>
 
         <div
-            class="font-18 py-3 2xl:py-4 px-2 xl:px-3 flex items-center justify-between bg-optm-gray-300 rounded-lara-radious">
-            <span class="text-dark_2 font-medium">{{ __('Orders') }}</span>
+            class="font-18 py-3 2xl:py-4 px-2 xl:px-3 flex items-center justify-between bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious">
+            <span class="text-dark_2 dark:text-optm-gray-200 font-medium">{{ __('Orders') }}</span>
             <a class="text-optm-purple hover:underline" href="">{{ __('See All') }}</a>
         </div>
-        <div class="dark:bg-lara-darkBlack rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
+        <div class="rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
             <table class="responsive-table w-full whitespace-nowrap">
-                <thead class="text-dark_1">
+                <thead class="text-dark_1 dark:text-branco-sujo">
                     <tr class="uppercase text-left whitespace-nowrap">
                         <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
                             ID
@@ -167,24 +167,24 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="text-dark_2">
+                <tbody class="text-dark_2 dark:text-optm-gray-200">
                     <tr class="text-left whitespace-nowrap font-14">
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             #O-00000001
                         </td>
 
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             2025-00-00
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Order Name
                         </td>
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             0000,00€
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             <div class="flex items-center gap-2">
                                 <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                 <span>Closed</span>
@@ -192,7 +192,7 @@
                         </td>
 
                         {{-- action --}}
-                        <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -230,21 +230,21 @@
                     </tr>
                     <tr class="text-left whitespace-nowrap font-14">
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             #O-00000001
                         </td>
 
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             2025-00-00
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Order Name
                         </td>
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             0000,00€
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             <div class="flex items-center gap-2">
                                 <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                 <span>Closed</span>
@@ -252,7 +252,7 @@
                         </td>
 
                         {{-- action --}}
-                        <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -290,21 +290,21 @@
                     </tr>
                     <tr class="text-left whitespace-nowrap font-14">
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             #O-00000001
                         </td>
 
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             2025-00-00
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Order Name
                         </td>
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             0000,00€
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             <div class="flex items-center gap-2">
                                 <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                 <span>Closed</span>
@@ -312,7 +312,7 @@
                         </td>
 
                         {{-- action --}}
-                        <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -350,21 +350,21 @@
                     </tr>
                     <tr class="text-left whitespace-nowrap font-14">
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             #O-00000001
                         </td>
 
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             2025-00-00
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Order Name
                         </td>
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             0000,00€
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             <div class="flex items-center gap-2">
                                 <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                 <span>Closed</span>
@@ -372,7 +372,7 @@
                         </td>
 
                         {{-- action --}}
-                        <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -410,21 +410,21 @@
                     </tr>
                     <tr class="text-left whitespace-nowrap font-14">
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             #O-00000001
                         </td>
 
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             2025-00-00
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             Order Name
                         </td>
 
-                        <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                        <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                             0000,00€
                         </td>
-                        <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                             <div class="flex items-center gap-2">
                                 <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                 <span>Closed</span>
@@ -432,7 +432,7 @@
                         </td>
 
                         {{-- action --}}
-                        <td class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                        <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                             <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                 <a href="" class="action-btn relative group">
                                     <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"

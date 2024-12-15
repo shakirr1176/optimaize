@@ -1,8 +1,8 @@
 <div
     {{ $attributes->merge(['class' => 'w-full px-6 hidden bg-black fixed top-0 left-0 z-50 h-screen bg-opacity-50']) }}>
-    <form id="modalForm" class="h-full py-10 flex items-center justify-center modalForm">
-        <div class="dark:bg-lara-darkBlack bg-optm-gray-100 w-full sm:w-7/12 md:w-1/2 xl:w-5/12 mx-auto relative rounded-xl">
-            <div class=" dark:bg-lara-primary py-4 2xl:py-6 px-6 2xl:px-8 font-20 font-semibold rounded-t-xl">
+    <form class="h-full py-10 flex items-center justify-center modalForm">
+        <div class="bg-optm-gray-100 dark:bg-dark_1 w-full sm:w-7/12 md:w-1/2 xl:w-5/12 mx-auto relative rounded-xl">
+            <div class=" py-4 2xl:py-6 px-6 2xl:px-8 font-20 font-semibold rounded-t-xl">
                 <p class="text-dark_1 dark:text-white capitalize">{{ $title }}</p>
                 <button type="button" class="absolute -top-2 -right-2 w-6 h-6 border-2 text-white border-white bg-danger rounded-full flex items-center justify-center closeButton">
                     @svg('heroicon-s-x-mark', 'w-4 pointer-events-none')
@@ -14,8 +14,8 @@
                     {{ $inputs }}
                 </div>
 
-                <div class="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-gray-400">
-                    <x-forms.button class="closeButton lara-cancel-btn" type="button">
+                <div class="grid grid-cols-2 gap-3 mt-4 pt-4 border-t-2 border-optm-gray-300 dark:border-gray-400/10">
+                    <x-forms.button class="closeButton lara-cancel-btn dark:bg-danger/70 dark:hover:bg-danger/80" type="button">
                         @svg('heroicon-s-minus')
                         {{ __('Cancel') }}
                     </x-forms.button>

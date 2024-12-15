@@ -38,20 +38,29 @@ module.exports = {
                 "light-body": "#f3f3f9",
                 "light-table-row": "#f3f3f9",
                 "light-gray-100": "#94a3b8",
-                "light-menu-active": "#f3f3f9",
 
                 // optimaize
                 danger: "#FF5454",
                 "lara-green": "#43DC80",
+
                 "optm-gray-200": "#F2F2F2",
+                "dark-optm-gray-200": "#191D3C",
+
                 "optm-gray-300": "#4A3F6E1A",
+                "dark-optm-gray-300": "#4A3F6E66",
+
                 dark_1: "#25284D",
+                "branco-sujo": "#C3C3C3",
+
                 dark_2: "#10122B",
+                branco: "#191D3C",
+
                 "optm-purple": "#A249FF",
                 "optm-gray-100": "#DEDADA",
                 "optm-deep-purple": "#835FEB",
                 "optm-gray-50": "#25284D0D",
             },
+
 
             fontSize: {
                 f10: "10px",
@@ -87,12 +96,12 @@ module.exports = {
         require("@tailwindcss/forms")({
             strategy: "class",
         }),
-        function({ addUtilities }) {
+        function ({ addUtilities }) {
             addUtilities({
-              '.empty-hidden:empty': {
-                display: 'none',
-              },
-            })
-          }
+                ".empty-hidden:empty": {
+                    display: "none",
+                },
+            });
+        },
     ],
 };

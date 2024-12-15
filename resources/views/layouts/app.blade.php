@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="main-layout bg-optm-gray-200 dark:bg-lara-primary flex min-h-screen">
+    <div class="main-layout bg-optm-gray-200 dark:bg-dark-optm-gray-200 flex min-h-screen">
         <!-- side menu start -->
         <x-sidebar id="collapse-sidebar" class="group"></x-sidebar>
         <!-- side menu end -->
@@ -103,18 +103,18 @@
                 </div>
                 <div class="flex items-center justify-center h-full pt-4 px-4 pb-20 text-center sm:p-0">
                     <div id="lf-modal-content"
-                        class="lf-modal-content inline-block dark:bg-lara-primary bg-light-body rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-6 align-middle sm:max-w-md w-full">
+                        class="lf-modal-content inline-block bg-light-body dark:bg-dark_2 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-6 align-middle sm:max-w-md w-full">
                         <div class="flex w-full">
                             <a href="javascript:"
                                 class="lf-close inline-block ml-auto mr-3 mt-2 font-18 text-white hover:text-gray-400">&#10005;</a>
                         </div>
-                        <div class="dark:bg-lara-primary bg-light-body px-4 pb-6 text-center">
+                        <div class="bg-light-body dark:bg-dark_2 px-4 pb-6 text-center">
                             <div id="lf-icon"
                                 class="border-4 rounded-full text-5xl inline-flex items-center justify-center">
                             </div>
                             <p id="lf-message" class="font-16 font-semibold dark:text-white text-lara-whiteGray"></p>
                         </div>
-                        <div id="lf-button" class="font-16 dark:bg-lara-whiteGray bg-light-body p-4 text-center hidden">
+                        <div id="lf-button" class="font-16 bg-light-body dark:bg-dark_2 p-4 text-center hidden">
                             <button
                                 class="lf-close py-2 px-4 bg-black-80 text-white rounded hover:bg-opacity-80 mr-2 flash-close-button"
                                 type="button">{{ __('Cancel') }}

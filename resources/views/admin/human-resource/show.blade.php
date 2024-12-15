@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-section name="title">{{ $title }}</x-section>
     <x-section name="breadcrumb">
-        <x-breadcrumb>
+        <x-breadcrumb :border="true">
             <x-slot name="above">
                 <a href="{{ route('admin.human-resource.index') }}"
                     class="w-fit mb-2 flex items-center gap-1.5 text-optm-purple font-16 hover:underline">
@@ -10,9 +10,14 @@
                 </a>
             </x-slot>
             {{ $title }}
+            <x-slot name="below">
+                <div class="flex justify-between">
+                    <div class="text-dark_1 dark:text-branco-sujo font-20 font-semibold">#RH-01</div>
+                </div>
+            </x-slot>
         </x-breadcrumb>
     </x-section>
-    <div class="rounded-2xl bg-[#25284D0D] overflow-hidden">
+    <div class="rounded-2xl bg-optm-gray-50 dark:bg-dark_2 overflow-hidden">
         <div id="show-2-tab" class="flex flex-wrap font-16 font-semibold">
             <button class="tabButton active duration-300 flex-1 min-w-[200px]">Information</button>
             <button class="tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
@@ -48,59 +53,59 @@
                     <div class="w-full lg:w-3/4">
                         <div class="tab space-y-8">
                             <div>
-                                <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Personal Info') }}</h2>
+                                <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('Personal Info') }}</h2>
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     <div>
                                         <label class="lara-label-sm">email</label>
-                                        <p class="font-16 text-dark_2 font-medium">admin@optimaize.ai</p>
+                                        <p class="show-value">admin@optimaize.ai</p>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">birthplace</label>
-                                        <p class="font-16 text-dark_2 font-medium">2025-00-00</p>
+                                        <p class="show-value">2025-00-00</p>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Address</label>
-                                        <p class="font-16 text-dark_2 font-medium">123 Imaginary Street 4567-890 Lisbon
+                                        <p class="show-value">123 Imaginary Street 4567-890 Lisbon
                                             Portugal</p>
 
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Production Time</label>
-                                        <div class="font-16 text-dark_2 font-medium">480 min</div>
+                                        <div class="show-value">480 min</div>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Company Info') }}</h2>
+                                <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('Company Info') }}</h2>
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     <div>
                                         <label class="lara-label-sm">Admission Date</label>
-                                        <p class="font-16 text-dark_2 font-medium">2025-00-00</p>
+                                        <p class="show-value">2025-00-00</p>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Position</label>
-                                        <p class="font-16 text-dark_2 font-medium">CCO</p>
+                                        <p class="show-value">CCO</p>
                                     </div>
                                     <div>
-                                        <label class="font-13 pb-2 text-dark_1 block">Department</label>
-                                        <p class="font-16 text-dark_2 font-medium">Management</p>
+                                        <label class="lara-label-sm">Department</label>
+                                        <p class="show-value">Management</p>
 
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Hourly Value</label>
-                                        <div class="font-16 text-dark_2 font-medium">0.00€</div>
+                                        <div class="show-value">0.00€</div>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Working Hours</label>
-                                        <div class="font-16 text-dark_2 font-medium">160</div>
+                                        <div class="show-value">160</div>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Shift</label>
-                                        <div class="font-16 text-dark_2 font-medium">Noturno</div>
+                                        <div class="show-value">Noturno</div>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Access Level</label>
-                                        <div class="font-16 text-dark_2 font-medium">Total</div>
+                                        <div class="show-value">Total</div>
                                     </div>
                                 </div>
                             </div>

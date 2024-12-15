@@ -7,13 +7,13 @@
     <x-section name="breadcrumb">
         <x-breadcrumb>{{ __('Profile') }}</x-breadcrumb>
     </x-section>
-    <div class="mt-6 2xl:mt-10 rounded-lara-radious bg-optm-gray-50 dark:bg-lara-darkBlack">
+    <div class="mt-6 2xl:mt-10 rounded-lara-radious bg-optm-gray-50 dark:bg-dark_2">
         <div class="row">
             @include('profile.avatar')
             <div class="w-full lg:w-3/4 px-4">
                 <div class="w-full h-full rounded-lg p-6 2xl:p-10">
                     <div class="flex justify-between items-center border-b dark:border-b-lara-whiteGray pb-2 mb-4">
-                        <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('User Information') }}</h2>
+                        <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('User Information') }}</h2>
                         <div>
                             <a class="lara-submit-btn" href="{{ route('profile.edit') }}">
                                 @svg('heroicon-s-pencil', 'w-3')
@@ -26,7 +26,7 @@
                             <label class="lara-label-sm">
                                 {{ __('Name') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 {{ auth()->user()->fullName }}</div>
                         </div>
                         <div>
@@ -34,7 +34,7 @@
                                 {{ __('User') }}
                                 {{ __('Role') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 {{ ucwords(auth()->user()->assigned_role) }}</div>
                         </div>
                         <div>
@@ -74,7 +74,7 @@
                                     @endif
                                 @endif
                             </div>
-                            <div class="font-16 text-dark_2 font-medium flex flex-wrap items-center">
+                            <div class="show-value flex flex-wrap items-center">
                                 <span class="w-auto overflow-hidden text-ellipsis mailto:sm:w-auto mr-4">
                                     {{ auth()->user()->email }}
                                 </span>
@@ -84,7 +84,7 @@
                             <label class="lara-label-sm">
                                 {{ __('Account Status') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 <span
                                     class="dark:text-white text-lara-whiteGray py-1 block">{{ display_user_status(auth()->user()->is_active) }}</span>
                             </div>
@@ -93,8 +93,8 @@
                             <label class="lara-label-sm">
                                 {{ __('Member Joining At') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium"><span
-                                    class="tag-com bg-primary">{{ auth()->user()->created_at->format('Y M d') }}</span>
+                            <div class="show-value"><span
+                                    class="tag-com bg-primary dark:text-dark_2">{{ auth()->user()->created_at->format('Y M d') }}</span>
                             </div>
                         </div>
                     </div>

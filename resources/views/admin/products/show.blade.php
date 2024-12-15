@@ -12,7 +12,7 @@
             {{ $title }}
         </x-breadcrumb>
     </x-section>
-    <div class="rounded-2xl bg-[#25284D0D] overflow-hidden">
+    <div class="rounded-2xl bg-optm-gray-50 dark:bg-dark_2 overflow-hidden">
         <div id="show-2-tab" class="flex flex-wrap font-16 font-semibold">
             <button class="tabButton active duration-300 flex-1 min-w-[200px]">Information</button>
             <button class="tabButton duration-300 flex-1 min-w-[200px]">Production Routes</button>
@@ -47,25 +47,25 @@
                     </div>
                     <div class="w-full lg:w-3/4">
                         <div class="tab">
-                            <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Product Info') }}</h2>
+                            <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('Product Info') }}</h2>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <div>
                                     <label class="lara-label-sm">Product name</label>
-                                    <p class="font-16 text-dark_2 font-medium">Smartphone Case Simply</p>
+                                    <p class="show-value">Smartphone Case Simply</p>
                                 </div>
                                 <div>
                                     <label class="lara-label-sm">Product Category</label>
-                                    <p class="font-16 text-dark_2 font-medium">Electronics</p>
+                                    <p class="show-value">Electronics</p>
                                 </div>
                                 <div>
                                     <label class="lara-label-sm">Product Sub-Category</label>
-                                    <p class="font-16 text-dark_2 font-medium">Mobile Accessories</p>
+                                    <p class="show-value">Mobile Accessories</p>
 
                                 </div>
                                 <div>
                                     <label class="lara-label-sm">Production Time</label>
-                                    <div class="font-16 text-dark_2 font-medium">480 min</div>
+                                    <div class="show-value">480 min</div>
                                 </div>
                             </div>
                         </div>

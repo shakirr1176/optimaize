@@ -8,7 +8,7 @@
 
 <div class="alert-box duration-500 overflow-hidden w-full">
     <div
-        {{ $attributes->merge(['class' => 'flex space-x-3 items-center relative ' . $alert['bg_color'] . ' ' . $alert['border_color'] . ' bg-optm-gray-300 bg-opacity-20 border-l-4 p-5']) }}>
+        {{ $attributes->merge(['class' => 'flex space-x-3 items-center relative ' . $alert['bg_color'] . ' ' . $alert['border_color'] . ' bg-optm-gray-300 dark:bg-dark-optm-gray-300 bg-opacity-20 border-l-4 p-5']) }}>
         {!! $alert['icon'] !!}
         <div class="font-18 {{ $alert['text_color'] }}">
             {{ $slot }}
