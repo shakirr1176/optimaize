@@ -16,9 +16,9 @@ use App\Enums\TicketStatusEnum;
             {{ $title }}
         </x-breadcrumb>
     </x-section>
-    <div class="bg-optm-gray-50 rounded-xl overflow-hidden">
-        <div class="bg-optm-gray-300 py-2 2xl:py-4 px-6 flex flex-wrap items-center justify-between relative">
-            <h3 class="font-18 text-dark_1 font-semibold">{{ __('Discussion') }}</h3>
+    <div class="bg-optm-gray-50 rounded-xl overflow-hidden dark:bg-dark_2">
+        <div class="bg-optm-gray-300 dark:border-optm-gray-50 py-2 2xl:py-4 px-6 flex flex-wrap items-center justify-between relative">
+            <h3 class="font-18 text-dark_1 dark:text-optm-gray-200 font-semibold">{{ __('Discussion') }}</h3>
             @if ($ticket->status == App\Enums\TicketStatusEnum::OPEN->value)
                 <div class="flex items-center space-x-2">
                     <a class="bg-danger hover:bg-opacity-90 text-white lara-btn confirmation"
@@ -34,15 +34,15 @@ use App\Enums\TicketStatusEnum;
             <div>
                 <ul class="flex flex-wrap items-center -mx-4">
                     <li class="flex flex-wrap items-center px-4 my-1">
-                        <h5 class="dark:text-white text-dark_2 font-14 font-medium mr-4">{{ __('Ticket ID') }} :</h5>
-                        <p class=" dark:text-white text-dark_2 font-14">{{ $ticket->id }}</p>
+                        <h5 class="text-dark_2 dark:text-branco-sujo font-14 font-medium mr-4">{{ __('Ticket ID') }} :</h5>
+                        <p class=" text-dark_2 dark:text-branco-sujo font-14">{{ $ticket->id }}</p>
                     </li>
                     <li class="flex items-center px-4 my-1">
-                        <h5 class="dark:text-white text-dark_2 font-14 font-medium mr-4">{{ __('Date') }} :</h5>
-                        <p class=" font-14 dark:text-white text-dark_2">{{ $ticket->created_at->toDateTimeString() }}</p>
+                        <h5 class="text-dark_2 dark:text-branco-sujo font-14 font-medium mr-4">{{ __('Date') }} :</h5>
+                        <p class=" font-14 text-dark_2 dark:text-branco-sujo">{{ $ticket->created_at->toDateTimeString() }}</p>
                     </li>
                     <li class="flex items-center px-4 my-1">
-                        <h5 class="dark:text-white text-dark_2 font-14 font-medium mr-4">{{ __('Status') }} :</h5>
+                        <h5 class="text-dark_2 dark:text-branco-sujo font-14 font-medium mr-4">{{ __('Status') }} :</h5>
                         <p class=" font-14">{{ display_ticket_status($ticket->status) }}</p>
                     </li>
                 </ul>
@@ -96,7 +96,7 @@ use App\Enums\TicketStatusEnum;
                                         class="text-black-50 font-16">{{ $comment->created_at !== null ? $comment->created_at->diffForHumans() : '' }}</span>
                                 </div>
                                 <div class="mt-3">
-                                    <p class="capitalize font-14 text-dark_2 font-bold">
+                                    <p class="capitalize font-14 text-dark_2 dark:text-branco-sujo font-bold">
                                         {{ $comment->content }}
                                     </p>
                                     @if ($comment->attachment)

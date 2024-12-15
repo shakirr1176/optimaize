@@ -86,6 +86,7 @@
         ) {
             filterField?.classList.add("hidden");
         }
+        
         if (e.target.classList.contains("closeButton")) {
             resetErrorMessages(e.target.closest(".modalForm"));
             e.target
@@ -280,7 +281,7 @@
 
 
 
-    
+
     let responsiveTable = document.querySelector(".responsive-table");
     responsiveTable?.addEventListener("click", (e) => {
         if (e.target.closest(".tableDropBtn")) {

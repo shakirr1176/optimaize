@@ -48,47 +48,30 @@
 
 <div class="mt-6 flex flex-wrap items-center">
     <div class="w-full md:w-1/2">
-        <p class="font-14 text-center text-dark_2 dark:text-black-50 md:text-left rounded-lara-radious block">
+        <p class="font-14 text-center text-dark_2 dark:text-branco-sujo md:text-left rounded-lara-radious block">
             {{ __('Showing: :currentItem :current of :total data', ['currentItem' => $currentItem, 'current' => $current, 'total' => $paginationData->total()]) }}
         </p>
-       <div class="flex items-center space-x-4">
-
-
-       {{-- <div class="custom-select h-7  pagination-select relative w-24">
-        <span>
-            @svg('heroicon-s-chevron-down', 'w-3.5 font-thin')
-        </span>
-        <select name="" id="">
-            <option selected value="">show 10</option>
-            <option value="">show 15</option>
-            <option value="">show 20</option>
-            <option value="">show 25</option>
-            <option value="">show 30</option>
-            <option value="">show 100</option>
-        </select>
-       </div> --}}
-       </div>
     </div>
     <div class="mt-5 w-full md:mt-0 md:w-1/2">
         <ul class="flex items-center justify-center space-x-1.5 md:justify-end">
             @if ($paginationData->onFirstPage())
                 <li>
                     <span
-                    class="font-18 flex h-9 w-9 rounded-lara-radious cursor-not-allowed items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white">
+                    class="font-18 flex h-9 w-9 rounded-lara-radious cursor-not-allowed items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white">
                     @svg('heroicon-s-chevron-double-left','h-2 w-2')
                 </span>
                 </li>
                 <li>
                     <span
-                        class="rounded-lara-radious font-14 flex h-9 w-9 cursor-not-allowed items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3"> @svg('heroicon-s-chevron-left', 'h-2.5 w-2.5') </span>
+                        class="rounded-lara-radious font-14 flex h-9 w-9 cursor-not-allowed items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white px-3"> @svg('heroicon-s-chevron-left', 'h-2.5 w-2.5') </span>
                 </li>
             @else
                 <li>
-                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
+                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->url(1) }}">@svg('heroicon-s-chevron-double-left','h-2 w-2')</a>
                 </li>
                 <li>
-                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3 duration-300 hover:bg-optm-purple hover:text-white"
+                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white px-3 duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->previousPageUrl() }}">
                         @svg('heroicon-s-chevron-left','h-2.5 w-2.5')
                     </a>
@@ -102,32 +85,32 @@
                     </li>
                 @else
                     <li>
-                        <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
+                        <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
                             href="{{ $paginationData->url($i) }}">{{ $i }}</a>
                     </li>
                 @endif
             @endforeach
             @if ($paginationData->hasMorePages())
                 <li>
-                    <a class="rounded-lara-radious font-14 flex h-9 w-auto items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3 duration-300 hover:bg-optm-purple hover:text-white"
+                    <a class="rounded-lara-radious font-14 flex h-9 w-auto items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white px-3 duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->nextPageUrl() }}">
                         @svg('heroicon-s-chevron-right','h-2.5 w-2.5')
                     </a>
                 </li>
                 <li>
-                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
+                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->url($paginationData->lastPage()) }}">@svg('heroicon-s-chevron-double-right','h-2 w-2')</a>
                 </li>
             @else
                 <li>
                     <span
-                    class="font-14 flex h-9 w-9 rounded-lara-radious cursor-not-allowed items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3">
+                    class="font-14 flex h-9 w-9 rounded-lara-radious cursor-not-allowed items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white px-3">
                     @svg('heroicon-s-chevron-right','h-2.5 w-2.5')
                 </span>
                 </li>
                 <li>
                     <span
-                    class="font-18 flex h-9 w-9 rounded-lara-radious cursor-not-allowed items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white">@svg('heroicon-s-chevron-double-right','h-2 w-2')</span>
+                    class="font-18 flex h-9 w-9 rounded-lara-radious cursor-not-allowed items-center justify-center dark:bg-dark-optm-gray-300 bg-white dark:text-white">@svg('heroicon-s-chevron-double-right','h-2 w-2')</span>
                 </li>
             @endif
         </ul>

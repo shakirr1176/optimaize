@@ -3,7 +3,7 @@
     <x-section name="breadcrumb">
         <x-breadcrumb>{{ __('Profile') }}</x-breadcrumb>
     </x-section>
-    <div class="mt-6 2xl:mt-10 rounded-lara-radious overflow-hidden bg-optm-gray-50 dark:bg-lara-darkBlack">
+    <div class="mt-6 2xl:mt-10 rounded-lara-radious overflow-hidden bg-optm-gray-50 dark:bg-dark_2">
         <div id="edit-tab" class="flex font-16 font-semibold items-center">
             <button class="active tabButton duration-300 flex-1 min-w-[200px]">{{ __('Profile') }}</button>
             <button class="tabButton duration-300 flex-1 min-w-[200px]"> {{ __('Change Password') }}</button>
@@ -36,12 +36,12 @@
                                 </div>
                             </div>
                             <div class="flex flex-wrap mt-4 gap-x-4 gap-y-2">
-                                <x-forms.button class="lara-cancel-btn px-10" type="reset">
+                                <button class="lara-cancel-btn dark:bg-danger/70 px-10" type="reset">
                                     {{ __('Reset') }}
-                                </x-forms.button>
-                                <x-forms.button class="lara-submit-btn px-10" type="submit">
+                                </button>
+                                <button class="lara-submit-btn px-10" type="submit">
                                     {{ __('Update') }}
-                                </x-forms.button>
+                                </button>
                             </div>
                         </form>
                     </div>

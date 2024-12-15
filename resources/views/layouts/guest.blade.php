@@ -16,6 +16,8 @@
 
 <body class="font-Poppins bg-optm-gray-200">
     <!-- main section start -->
+    <div class="gradient-circle"></div>
+    <div class="gradient-circle-2"></div>
     <div class="w-full min-h-screen flex items-center justify-center p-4 md: py-10">
         {{ $slot }}
     </div>

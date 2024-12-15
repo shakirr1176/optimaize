@@ -15,7 +15,7 @@
 
             <x-slot name="below">
                 <div class="flex justify-between">
-                    <div class="text-dark_1 font-20 font-semibold">#RH-01</div>
+                    <div class="text-dark_1 dark:text-branco-sujo font-20 font-semibold">#RH-01</div>
                 </div>
             </x-slot>
 
@@ -25,7 +25,7 @@
                         @svg('heroicon-s-minus')
                         {{ __('Cancel') }}
                     </button>
-                    <button class="lara-submit-btn">
+                    <button type="submit" class="lara-submit-btn">
                         @svg('heroicon-s-plus')
                         {{ __('Create') }}
                     </button>
@@ -35,7 +35,7 @@
         <div class="grid grid-cols-12">
             <div class="order-2 sm:order-1 col-span-12 sm:col-span-9 space-y-8">
                 <div>
-                    <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">
+                    <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">
                         {{ __('Machine and Equipment Info') }}</h2>
                     <div class="col-span-12 sm:col-span-9">
                         <div class="grid grid-cols-3 gap-5 2xl:gap-6">
@@ -98,122 +98,128 @@
                     </div>
                 </div>
                 <div>
-                    <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Assign Operations') }}
+                    <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Assign Operations') }}
                     </h2>
                     <div
-                        class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="tag-com bg-lara-blue/50"><span>cutting</span>
+                        id="assign-operations"
+                        class="modal-parent-container flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 dark:bg-dark-optm-gray-300 outline-none w-full rounded-lara-radious">
+                        <div class="flex flex-wrap items-center gap-3 empty-hidden">
+                            <div class="tag-com-js tag-com bg-lara-blue/50"><span>cutting</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
-                            <div class="tag-com bg-warning/50">
+                            <div class="tag-com-js tag-com bg-warning/50">
                                 <span>Engraving</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
                         </div>
-                        <button class="tag-com border-2 border-lara-gray-300 text-gray-500">
+                        <button id="assign-operations-add-btn" class="modal-open-btn tag-com-js tag-com border-2 border-lara-gray-300 dark:border-branco-sujo/40 text-gray-500">
                             <span>Add more</span>
                             @svg('heroicon-s-plus', 'w-3')
                         </button>
                     </div>
                 </div>
                 <div>
-                    <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Assign Operators') }}
+                    <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Assign Operators') }}
                     </h2>
                     <div
-                        class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="tag-com bg-danger/50"><span>John Doe</span>
+                        id="assign-operators"
+                        class="modal-parent-container flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 dark:bg-dark-optm-gray-300 outline-none w-full rounded-lara-radious">
+                        <div class="flex flex-wrap items-center gap-3 empty-hidden">
+                            <div class="tag-com-js tag-com bg-danger/50"><span>John Doe</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
-                            <div class="tag-com bg-warning/50">
+                            <div class="tag-com-js tag-com bg-warning/50">
                                 <span>Jane Smith</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
-                            <div class="tag-com bg-success/50">
+                            <div class="tag-com-js tag-com bg-success/50">
                                 <span>Alex Johnson</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
-                            <div class="tag-com bg-info/50">
+                            <div class="tag-com-js tag-com bg-info/50">
                                 <span>Mike Lee</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
                         </div>
-                        <button class="tag-com border-2 border-lara-gray-300 text-gray-500">
+                        <button id="assign-operators-add-btn" class="modal-open-btn tag-com-js tag-com border-2 border-lara-gray-300 dark:border-branco-sujo/40 text-gray-500">
                             <span>Add more</span>
                             @svg('heroicon-s-plus', 'w-3')
                         </button>
                     </div>
                 </div>
                 <div>
-                    <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Assign Groups') }}</h2>
+                    <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Assign Groups') }}</h2>
                     <div
-                        class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="tag-com bg-danger/50"><span>#G-001 - Cutting Machines</span>
+                        id="assign-groups"
+                        class="modal-parent-container flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 dark:bg-dark-optm-gray-300 outline-none w-full rounded-lara-radious">
+                        <div class="flex flex-wrap items-center gap-3 empty-hidden">
+                            <div class="tag-com-js tag-com bg-danger/50"><span>#G-001 - Cutting Machines</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
-                            <div class="tag-com bg-info/50">
+                            <div class="tag-com-js tag-com bg-info/50">
                                 <span>#G-005 - Cutting Machines Premium</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
                         </div>
-                        <button class="tag-com border-2 border-lara-gray-300 text-gray-500">
+                        <button id="assign-groups-add-btn" class="modal-open-btn tag-com-js tag-com border-2 border-lara-gray-300 dark:border-branco-sujo/40 text-gray-500">
                             <span>Add more</span>
                             @svg('heroicon-s-plus', 'w-3')
                         </button>
                     </div>
                 </div>
+
                 <div>
-                    <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Assign Routes') }}</h2>
+                    <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Assign Routes') }}</h2>
                     <div
-                        class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <div class="tag-com bg-info/50"><span>Premium Cases</span>
+                        id="assign-routes"
+                        class="modal-parent-container flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 dark:bg-dark-optm-gray-300 outline-none w-full rounded-lara-radious">
+                        <div class="flex flex-wrap items-center gap-3 empty-hidden">
+                            <div class="tag-com-js tag-com bg-info/50"><span>Premium Cases</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
-                            <div class="tag-com bg-info/50">
+                            <div class="tag-com-js tag-com bg-info/50">
                                 <span>Simple Assembly + Premium Painting</span>
                                 <button>@svg('heroicon-s-pencil', 'w-3')</button>
-                                <button class="remove-tag" type="button">
+                                <button class="remove-tag-js remove-tag" type="button">
                                     @svg('heroicon-s-x-mark')
                                 </button>
                             </div>
                         </div>
-                        <button class="tag-com border-2 border-lara-gray-300 text-gray-500">
+                        <button id="assign-routes-add-btn" class="modal-open-btn tag-com-js tag-com border-2 border-lara-gray-300 dark:border-branco-sujo/40 text-gray-500">
                             <span>Add more</span>
                             @svg('heroicon-s-plus', 'w-3')
                         </button>
                     </div>
                 </div>
             </div>
+
             <div class="order-1 sm:order-2 col-span-12 sm:col-span-3">
                 <div
                     class="parentImgUploadDiv mb-8 sm:mb-0 sm:mt-12 bg-gray-200 aspect-square max-w-[200px] w-[70%] mx-auto sm:ml-auto rounded-full">
@@ -223,9 +229,102 @@
                     </x-forms.image-upload>
                 </div>
             </div>
+
         </div>
     </form>
+
+    <x-modal class="assign-operations-modal" title="{{ __('Assign operations') }}">
+        <x-slot name="inputs">
+            <div class="col-span-12">
+                <x-forms.text id="name" name="name" value="">
+                    <x-slot name="label">{{ __('name') }}</x-slot>
+                    <x-slot name="error">{{ $errors->first('name') }}</x-slot>
+                </x-forms.text>
+            </div>
+        </x-slot>
+
+        <x-slot name="button">
+            <x-forms.button class="lara-submit-btn" type="submit" id="">
+                {{ __('Update') }}
+            </x-forms.button>
+        </x-slot>
+    </x-modal>
+
+    <x-modal class="assign-operators-modal" title="{{ __('Assign Operators') }}">
+        <x-slot name="inputs">
+            <div class="col-span-12">
+                <x-forms.text id="name" name="name" value="">
+                    <x-slot name="label">{{ __('name') }}</x-slot>
+                    <x-slot name="error">{{ $errors->first('name') }}</x-slot>
+                </x-forms.text>
+            </div>
+        </x-slot>
+
+        <x-slot name="button">
+            <x-forms.button class="lara-submit-btn" type="submit" id="">
+                {{ __('Update') }}
+            </x-forms.button>
+        </x-slot>
+    </x-modal>
+
+    <x-modal class="assign-groups-modal" title="{{ __('Assign groups') }}">
+        <x-slot name="inputs">
+            <div class="col-span-12">
+                <x-forms.text id="name" name="name" value="">
+                    <x-slot name="label">{{ __('name') }}</x-slot>
+                    <x-slot name="error">{{ $errors->first('name') }}</x-slot>
+                </x-forms.text>
+            </div>
+        </x-slot>
+
+        <x-slot name="button">
+            <x-forms.button class="lara-submit-btn" type="submit" id="">
+                {{ __('Update') }}
+            </x-forms.button>
+        </x-slot>
+    </x-modal>
+
+    <x-modal class="assign-routes-modal" title="{{ __('Assign routes') }}">
+        <x-slot name="inputs">
+            <div class="col-span-12">
+                <x-forms.text id="name" name="name" value="">
+                    <x-slot name="label">{{ __('name') }}</x-slot>
+                    <x-slot name="error">{{ $errors->first('name') }}</x-slot>
+                </x-forms.text>
+            </div>
+        </x-slot>
+
+        <x-slot name="button">
+            <x-forms.button class="lara-submit-btn" type="submit" id="">
+                {{ __('Update') }}
+            </x-forms.button>
+        </x-slot>
+    </x-modal>
+
     <x-section name="scripts">
         <script src="{{ Vite::js('file-upload.js') }}"></script>
+        <script src="{{ Vite::js('table.js') }}"></script>
+        <script src="{{ Vite::js('custom-crud.js') }}"></script>
+
+        <script>
+            let modalOpenBtn = document.querySelectorAll('.modal-open-btn');
+            modalOpenBtn.forEach((btn) => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let modalParent = btn.closest('.modal-parent-container');
+                    let modalParentId = modalParent.getAttribute('id');
+                    let modal = document.querySelector(`.${modalParentId}-modal`);
+                    modal?.classList.remove('hidden');
+                })
+            })
+
+            window.addEventListener('click', function(e) {
+                if(e.target.closest('.remove-tag-js')){
+                    let thisParent = e.target.closest('.tag-com-js');
+                    thisParent.remove();
+                }
+            })
+
+        </script>
     </x-section>
 </x-app-layout>

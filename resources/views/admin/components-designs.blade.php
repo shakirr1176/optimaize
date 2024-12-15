@@ -13,7 +13,7 @@
 
             <x-slot name="below">
                 <div class="flex justify-between">
-                    <div class="text-dark_1 font-20 font-semibold">#RH-01</div>
+                    <div class="text-dark_1 dark:text-branco-sujo font-20 font-semibold">#RH-01</div>
                 </div>
             </x-slot>
 
@@ -36,7 +36,7 @@
     </x-section>
     <div class="component-page">
         <div class="">
-            <div class="rounded-2xl bg-[#25284D0D] overflow-hidden">
+            <div class="rounded-2xl optm-gray-50 overflow-hidden">
                 <div id="component-tab" class="flex font-16 font-semibold items-center">
                     <button class="tabButton duration-300 flex-1 min-w-[200px]">Information</button>
                     <button class="active tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
@@ -52,9 +52,9 @@
                                 </button>
                             </div>
                             <div
-                                class="dark:bg-lara-darkBlack rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
+                                class="rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
                                 <table class="responsive-table w-full whitespace-nowrap">
-                                    <thead class="text-dark_1">
+                                    <thead class="text-dark_1 dark:text-branco-sujo">
                                         <tr class="uppercase text-left whitespace-nowrap">
                                             <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
                                                 ID
@@ -86,25 +86,25 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody class="text-dark_2">
+                                    <tbody class="text-dark_2 dark:text-optm-gray-200">
                                         <tr class="text-left whitespace-nowrap font-14">
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 2025-00-00
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 Order Name
                                             </td>
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 <div class="flex items-center gap-2">
                                                     <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                                     <span>Closed</span>
@@ -113,7 +113,7 @@
 
                                             {{-- action --}}
                                             <td
-                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                                                 <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
@@ -152,22 +152,22 @@
                                         </tr>
                                         <tr class="text-left whitespace-nowrap font-14">
 
-                                            <td class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 2025-00-00
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 Order Name
                                             </td>
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 <div class="flex items-center gap-2">
                                                     <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                                     <span>Closed</span>
@@ -176,7 +176,7 @@
 
                                             {{-- action --}}
                                             <td
-                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                                                 <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
@@ -216,22 +216,22 @@
                                         <tr class="text-left whitespace-nowrap font-14">
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 2025-00-00
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 Order Name
                                             </td>
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 <div class="flex items-center gap-2">
                                                     <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                                     <span>Closed</span>
@@ -240,7 +240,7 @@
 
                                             {{-- action --}}
                                             <td
-                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                                                 <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
@@ -281,22 +281,22 @@
                                         <tr class="text-left whitespace-nowrap font-14">
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 2025-00-00
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 Order Name
                                             </td>
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 <div class="flex items-center gap-2">
                                                     <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                                     <span>Closed</span>
@@ -305,7 +305,7 @@
 
                                             {{-- action --}}
                                             <td
-                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                                                 <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
@@ -346,22 +346,22 @@
                                         <tr class="text-left whitespace-nowrap font-14">
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 #O-00000001
                                             </td>
 
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 2025-00-00
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 Order Name
                                             </td>
 
                                             <td
-                                                class="font-semibold bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
+                                                class="font-semibold bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left ">
                                                 0000,00€
                                             </td>
-                                            <td class="bg-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
+                                            <td class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-4 py-1.5 2xl:py-2.5 text-left">
                                                 <div class="flex items-center gap-2">
                                                     <span class="bg-lara-green rounded-full size-4 2xl:size-5"></span>
                                                     <span>Closed</span>
@@ -370,7 +370,7 @@
 
                                             {{-- action --}}
                                             <td
-                                                class="bg-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
+                                                class="bg-optm-gray-300 dark:bg-dark-optm-gray-300 px-2 py-1.5 2xl:py-2.5 text-md whitespace-normal">
                                                 <div class="flex items-center space-x-1 2xl:space-x-1.5 justify-end">
                                                     <a href="" class="action-btn relative group">
                                                         <svg class="w-4 mx-auto" xmlns="http://www.w3.org/2000/svg"
@@ -416,20 +416,20 @@
                         <div class="tab h-full">
                             <div id="calendar"></div>
                             <div class="mt-8">
-                                <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('Resume') }}</h2>
+                                <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('Resume') }}</h2>
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                                     <div>
                                         <label class="lara-label-sm">Vacation Days Entitled</label>
-                                        <p class="font-16 text-dark_2 font-medium">22</p>
+                                        <p class="show-value">22</p>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Vacation Days Used</label>
-                                        <p class="font-16 text-dark_2 font-medium">12</p>
+                                        <p class="show-value">12</p>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Vacation Days Remaining</label>
-                                        <p class="font-16 text-dark_2 font-medium">10</p>
+                                        <p class="show-value">10</p>
 
                                     </div>
                                     <div>
@@ -438,11 +438,11 @@
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Justified Absences</label>
-                                        <div class="font-16 text-dark_2 font-medium">3</div>
+                                        <div class="show-value">3</div>
                                     </div>
                                     <div>
                                         <label class="lara-label-sm">Unjustified Absences</label>
-                                        <div class="font-16 text-dark_2 font-medium">0</div>
+                                        <div class="show-value">0</div>
                                     </div>
                                 </div>
                             </div>

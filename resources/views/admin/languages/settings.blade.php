@@ -52,18 +52,18 @@
                 </div>
             </div>
         </div>
-        <div class="rounded-xl w-full dark:bg-lara-whiteGray bg-optm-gray-50 p-6 2xl:p-12 mt-4 2xl:mt-8">
+        <div class="rounded-xl w-full dark:bg-dark_2 bg-optm-gray-50 p-6 2xl:p-12 mt-4 2xl:mt-8">
             <div class="row items-center">
                 <div class="lg:w-1/2 w-full px-4 3xl:mt-0">
                     <div class="wrapper w-full mt-8">
                         <div id="scrollParent"
                             class="hide-scrollbar pl-4 customScroll-none h-96 w-full relative overflow-auto">
                             <div class="parent w-full">
-                                <div class="py-4 2xl:py-6 cursor-pointer dark:hover:bg-lara-primary hover:bg-optm-gray-300 p-3 font-14"
+                                <div class="py-4 2xl:py-6 cursor-pointer dark:hover:bg-dark-optm-gray-300 hover:bg-optm-gray-300 p-3 font-14"
                                     v-for="(value, key) in filteredTranslations" @click="selectedKey = key;"
                                     v-if="Object.keys(filteredTranslations).length">
                                     <p class="text-black-50" v-html="highlight(key)"></p>
-                                    <p class="text-dark_1" v-html="highlight(value)"></p>
+                                    <p class="text-dark_1 dark:text-branco-sujo" v-html="highlight(value)"></p>
                                 </div>
                                 <div class="py-4 2xl:py-6 cursor-pointer hover:bg-lara-primary p-3 font-14" v-else>
                                     <p class="text-black-50">{{ __('No translation match with your search key.') }}</p>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="mt-4 2xl:mt-6">
                         <label class="lara-label" for="Text">{{ __('Text') }}</label>
-                        <textarea class="lara-input dark:bg-lara-primary dark:border-none" name="" cols="30" rows="10"
+                        <textarea class="lara-input" name="" cols="30" rows="10"
                             v-model="translations[selectedLanguage][selectedKey]" @keyup="changeTranslations(selectedKey, $event)">
                     </textarea>
                     </div>
@@ -87,7 +87,7 @@
                         {{ __('NB: Do not modify language variable that start with (:) ie- :user') }}
                     </p>
                     <div class="w-full sm:w-1/3 mt-6 2xl:mt-8">
-                        <button class="lara-btn font-semibold text-white bg-lara-blue hover:bg-opacity-90"
+                        <button class="lara-btn px-10"
                             @click="save">
                             {{ __('Save') }}
                         </button>

@@ -16,10 +16,10 @@
             {{ $title }}
         </x-breadcrumb>
     </x-section>
-    <div class="bg-optm-gray-50 rounded-xl overflow-hidden">
+    <div class="bg-optm-gray-50 rounded-xl overflow-hidden dark:bg-dark_2">
         <div
-            class="dark:bg-lara-darkBlack bg-optm-gray-300 py-2 2xl:py-4 px-6 flex flex-wrap items-center justify-between relative">
-            <h3 class="font-18 text-dark_1 font-semibold">
+            class="bg-optm-gray-300 py-2 2xl:py-4 px-6 flex flex-wrap items-center justify-between relative">
+            <h3 class="font-18 text-dark_1 dark:text-optm-gray-200 font-semibold">
                 {{ __('Discussion') }}</h3>
             @if ($ticket->status == TicketStatusEnum::OPEN->value)
 

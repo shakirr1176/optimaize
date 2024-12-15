@@ -15,7 +15,7 @@
 
             <x-slot name="below">
                 <div class="flex justify-between">
-                    <div class="text-dark_1 font-20 font-semibold">#RH-01</div>
+                    <div class="text-dark_1 dark:text-branco-sujo font-20 font-semibold">#RH-01</div>
                 </div>
             </x-slot>
 
@@ -34,7 +34,7 @@
         </x-breadcrumb>
         <div class="order-2 sm:order-1 col-span-12 sm:col-span-9 space-y-8">
             <div>
-                <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">
+                <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">
                     {{ __('Section Info') }}</h2>
                 <div class="col-span-12 sm:col-span-9">
                     <div class="grid grid-cols-3 gap-5 2xl:gap-6">
@@ -48,30 +48,30 @@
                 </div>
             </div>
             <div>
-                <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Assign Operations') }}</h2>
+                <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Assign Operations') }}</h2>
                 <div
-                    class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious">
+                    class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 dark:bg-dark-optm-gray-300 outline-none w-full rounded-lara-radious">
                     <div class="flex flex-wrap items-center gap-3">
                         <button class="tag-com bg-lara-blue/50"><span>cutting</span>
                             @svg('heroicon-s-pencil', 'w-3')
                         </button>
                     </div>
-                    <button class="tag-com border-2 border-lara-gray-300 text-gray-500">
+                    <button type="submit" class="tag-com border-2 border-lara-gray-300 dark:border-branco-sujo/40 text-gray-500">
                         <span>{{__('Add more')}}</span>
                         @svg('heroicon-s-plus', 'w-3')
                     </button>
                 </div>
             </div>
             <div>
-                <h2 class="mb-3 font-semibold dark:text-white text-dark_1 font-18">{{ __('Assign Associated Machines and Equipments') }}</h2>
+                <h2 class="mb-3 font-semibold dark:text-branco-sujo text-dark_1 font-18">{{ __('Assign Associated Machines and Equipments') }}</h2>
                 <div
-                    class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 outline-none w-full rounded-lara-radious">
+                    class="flex flex-wrap items-center gap-3 px-4 font-14 py-2.5 2xl:py-3 text-dark_2 bg-optm-gray-300 dark:bg-dark-optm-gray-300 outline-none w-full rounded-lara-radious">
                     <div class="flex flex-wrap items-center gap-3">
-                        <button class="tag-com border-2 border-lara-gray-400"><span>cutting</span>
+                        <button class="tag-com bg-lara-blue/50"><span>cutting</span>
                             @svg('heroicon-s-pencil', 'w-3')
                         </button>
                     </div>
-                    <button class="tag-com border-2 border-lara-gray-300 text-gray-500">
+                    <button class="tag-com border-2 border-lara-gray-300 dark:border-branco-sujo/40 text-gray-500">
                         <span>{{__('Add more')}}</span>
                         @svg('heroicon-s-plus', 'w-3')
                     </button>

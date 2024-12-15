@@ -12,7 +12,7 @@
             {{ $title }}
         </x-breadcrumb>
     </x-section>
-    <div class="mt-6 2xl:mt-10 rounded-lara-radious bg-optm-gray-50 dark:bg-lara-darkBlack">
+    <div class="mt-6 2xl:mt-10 rounded-lara-radious bg-optm-gray-50 dark:bg-dark_2">
         <div class="row">
             <div class="w-full lg:w-1/4 px-4">
                 <div class="h-full px-6 2xl:px-12 py-6 2xl:py-10">
@@ -44,21 +44,21 @@
             <div class="w-full lg:w-3/4 px-4">
                 <div class="w-full h-full p-6 2xl:p-10">
                     <div class="w-full border-b dark:border-lara-whiteGray pb-1 mb-4">
-                        <h2 class="font-18 text-dark_1 mb-3 font-semibold">{{ __('User Information') }}</h2>
+                        <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('User Information') }}</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div>
                             <label class="lara-label-sm">
                                 {{ __('Name') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 {{ $user->fullName }}</div>
                         </div>
                         <div>
                             <label class="lara-label-sm">
                                 {{ __('User Role') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 {{ ucwords($user->assigned_role) }}</div>
                         </div>
                         <div>
@@ -66,7 +66,7 @@
                                 {{ __('Email') }}
                             </label>
                             <div
-                                class="font-16 text-dark_2 font-medium">
+                                class="show-value">
                                 <span class="w-auto overflow-hidden text-ellipsis mailto:sm:w-auto mr-4">
                                     {{ $user->email }}
                                 </span>
@@ -76,7 +76,7 @@
                             <label class="lara-label-sm">
                                 {{ __('Account Status') }}
                             </label>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 {{ display_user_status($user->is_active) }}
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                             <div class="lara-label-sm">
                                 {{ __('Member Joining At') }}
                             </div>
-                            <div class="font-16 text-dark_2 font-medium">
+                            <div class="show-value">
                                 <span
                                     class="tag-com bg-primary">{{ $user->created_at->format('Y M d') }}
                                 </span>
