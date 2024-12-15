@@ -1,5 +1,5 @@
 <label class="lara-label" for="">{{ $label }}</label>
-<textarea {{ $attributes->merge(['class' => 'lara-input outline-none px-4 py-4 w-full font-16 text-text-50 dark:bg-lara-primary bg-white dark:border-none']) }}
+<textarea {{ $attributes->merge(['class' => 'lara-input']) }}
     name="{{ $name }}" rows="5" type="address">
     {{ $slot }}
 </textarea>

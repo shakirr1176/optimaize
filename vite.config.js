@@ -22,6 +22,7 @@ export default defineConfig({
                 "resources/js/sidebar.js",
                 "resources/js/table.js",
                 "resources/js/crud-process.js",
+                "resources/js/custom-crud.js",
                 "resources/js/tab.js",
                 "resources/js/upload-image.js",
                 "resources/js/multi-select-dropdown.js",

@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div
-        class="2xl:max-w-5xl xl:max-w-4xl sm:max-w-3xl bg-optm-gray-300 dark:bg-lara-whiteGray rounded-lg md:px-32 md:py-10 xl:py-32 px-6 py-6 relative">
+        class="2xl:max-w-5xl xl:max-w-4xl sm:max-w-3xl bg-optm-gray-300 dark:bg-lara-whiteGray md:px-20 xl:px-32 md:py-20 xl:py-20 2xl:py-32 px-6 py-6 relative rounded-lg">
         <div class="flex items-center flex-wrap -mx-4 -mt-5">
             <div class="xl:w-1/2 w-full px-4">
                 <img class="object-cover object-center xl:max-w-sm max-w-xs 2xl:h-96 h-60 mx-auto xl:mx-0"

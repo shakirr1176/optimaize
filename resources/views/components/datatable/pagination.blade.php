@@ -84,11 +84,11 @@
                 </li>
             @else
                 <li>
-                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-primary hover:text-white"
+                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->url(1) }}">@svg('heroicon-s-chevron-double-left','h-2 w-2')</a>
                 </li>
                 <li>
-                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3 duration-300 hover:bg-primary hover:text-white"
+                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3 duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->previousPageUrl() }}">
                         @svg('heroicon-s-chevron-left','h-2.5 w-2.5')
                     </a>
@@ -98,24 +98,24 @@
                 @if ($i === $paginationData->currentPage())
                     <li>
                         <span
-                            class="font-14 dark:bg-primary bg-lara-gray-400 flex h-9 w-9 rounded-lara-radious items-center justify-center bg-lara-orange text-white duration-300">{{ $i }}</span>
+                            class="font-14 dark:bg-optm-purple bg-optm-purple flex h-9 w-9 rounded-lara-radious items-center justify-center bg-lara-orange text-white duration-300">{{ $i }}</span>
                     </li>
                 @else
                     <li>
-                        <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-primary hover:text-white"
+                        <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
                             href="{{ $paginationData->url($i) }}">{{ $i }}</a>
                     </li>
                 @endif
             @endforeach
             @if ($paginationData->hasMorePages())
                 <li>
-                    <a class="rounded-lara-radious font-14 flex h-9 w-auto items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3 duration-300 hover:bg-primary hover:text-white"
+                    <a class="rounded-lara-radious font-14 flex h-9 w-auto items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white px-3 duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->nextPageUrl() }}">
                         @svg('heroicon-s-chevron-right','h-2.5 w-2.5')
                     </a>
                 </li>
                 <li>
-                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-primary hover:text-white"
+                    <a class="font-14 flex h-9 w-9 rounded-lara-radious items-center justify-center dark:bg-lara-darkBlack bg-white dark:text-white duration-300 hover:bg-optm-purple hover:text-white"
                         href="{{ $paginationData->url($paginationData->lastPage()) }}">@svg('heroicon-s-chevron-double-right','h-2 w-2')</a>
                 </li>
             @else

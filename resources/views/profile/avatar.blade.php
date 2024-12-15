@@ -1,11 +1,11 @@
-<div class="w-full lg:w-1/4 px-4 mb-8 xl:mb-0">
+<div class="w-full lg:w-1/4 px-4">
     <div class="rounded-lg h-full px-6 2xl:px-12 py-6 2xl:py-10">
         <form autocomplete="off" action="{{ route('profile.avatar.update') }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="upload-image-parent w-full xl:w-auto px-3 flex items-center justify-center">
                 <div
-                    class="shrink-0 shadow-lara-shadow3 mx-auto xl:mx-0 w-40 h-40 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center dark:bg-lara-gray-100/50 bg-gray-300">
+                    class="shrink-0 mx-auto xl:mx-0 w-40 h-40 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center dark:bg-lara-gray-100/50 bg-gray-300">
                     <div class="dark:bg-lara-gray-100 bg-gray-300 w-32 h-32 2xl:w-48 2xl:h-48 rounded-full border-2 border-white border-none relative group">
                         <div class="w-full h-full flex-col flex items-center justify-center text-center">
                             @if (!auth()->user()->avatar)

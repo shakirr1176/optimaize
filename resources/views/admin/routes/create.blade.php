@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-section name="title">{{ $title }}</x-section>
-    <x-section name="breadcrumb">
+    <form action="" method="">
         <x-breadcrumb>
             <x-slot name="above">
                 <a href="{{ route('admin.routes.index') }}"
@@ -11,8 +11,8 @@
             </x-slot>
             {{ $title }}
         </x-breadcrumb>
-    </x-section>
-    <div class="">
-        this is create page
-    </div>
+        <div>
+            This is create page
+        </div>
+    </form>
 </x-app-layout>

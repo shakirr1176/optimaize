@@ -29,7 +29,7 @@
                         </div>
                         <div>
                             <label class="lara-label-sm">Operation Type</label>
-                            <p class="tag-btn bg-info/50">Cutting</p>
+                            <p class="tag-com bg-info/50">Cutting</p>
                         </div>
                         <div>
                             <label class="lara-label-sm">Created Date</label>
@@ -38,7 +38,7 @@
                         </div>
                         <div>
                             <label class="lara-label-sm">Status</label>
-                            <div class="tag-btn bg-success/50">active</div>
+                            <div class="tag-com bg-success/50">active</div>
                         </div>
                         <div>
                             <label class="lara-label-sm">Production Capacity (per hour)</label>

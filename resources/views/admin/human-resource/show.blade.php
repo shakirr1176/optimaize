@@ -21,7 +21,7 @@
         <div class="p-6">
             <div id="show-2-tab-content">
                 <div class="flex flex-wrap">
-                    <div class="w-full lg:w-1/4 upload-image-parent px-6 flex ">
+                    <div class="w-full lg:w-1/4 px-6 flex">
                         <div
                             class="shadow-lara-shadow3 mx-auto xl:mx-0 w-40 h-40 2xl:w-44 2xl:h-44 rounded-full  justify-center items-center dark:bg-lara-gray-100/50 bg-gray-200">
                             <div
