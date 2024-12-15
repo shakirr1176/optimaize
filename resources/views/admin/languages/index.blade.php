@@ -26,11 +26,9 @@
         </x-slot>
 
         <x-slot name="button">
-            <div class="px-2 w-full sm:w-1/2 mt-6 sm:mt-0">
-                <x-forms.button class="w-full bg-lara-blue font-16 font-semibold" type="submit" id="updateSubmitBtn">
-                    {{ __('Update') }}
-                </x-forms.button>
-            </div>
+            <x-forms.button class="dark:bg-optm-purple dark:text-dark_2" type="submit" id="updateSubmitBtn">
+                {{ __('Update') }}
+            </x-forms.button>
         </x-slot>
     </x-modal>
     <!-- modal end  -->
@@ -39,7 +37,7 @@
         <script src="{{ Vite::js('select-drop-down.js') }}"></script>
         <script src="{{ Vite::js('file-upload.js') }}"></script>
         <script src="{{ Vite::js('table.js') }}"></script>
-        <script src="{{ Vite::js('crud-process.js') }}"></script>
+        <script src="{{ Vite::js('custom-crud.js') }}"></script>
         <script>
             let updateId;
 

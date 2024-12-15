@@ -1,6 +1,6 @@
 <div
     {{ $attributes->merge(['class' => 'w-full px-6 hidden bg-black fixed top-0 left-0 z-50 h-screen bg-opacity-50']) }}>
-    <form class="h-full py-10 flex items-center justify-center modalForm">
+    <form autocomplete="off" class="h-full py-10 flex items-center justify-center modalForm">
         <div class="bg-optm-gray-100 dark:bg-dark_1 w-full sm:w-7/12 md:w-1/2 xl:w-5/12 mx-auto relative rounded-xl">
             <div class=" py-4 2xl:py-6 px-6 2xl:px-8 font-20 font-semibold rounded-t-xl">
                 <p class="text-dark_1 dark:text-white capitalize">{{ $title }}</p>

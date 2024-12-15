@@ -3,5 +3,7 @@
     name="{{ $name }}" rows="5" type="address">
     {{ $slot }}
 </textarea>
-<p class="text-sm text-red-600 mt-2 error-message">{{ $error }}</p>
+@if (isset($error))
+<p class="error-message">{{ $error }}</p>
+@endif
 

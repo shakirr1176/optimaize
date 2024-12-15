@@ -36,7 +36,7 @@
     <x-section name="scripts">
         <script src="{{ Vite::js('select-drop-down.js') }}"></script>
         <script src="{{ Vite::js('table.js') }}"></script>
-        <script src="{{ Vite::js('crud-process.js') }}"></script>
+        <script src="{{ Vite::js('custom-crud.js') }}"></script>
         <script>
             let updateId;
 
