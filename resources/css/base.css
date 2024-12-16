@@ -85,7 +85,7 @@
     .action-btn-2 {
         @apply rounded-full w-8 h-8 duration-300 flex items-center justify-center bg-optm-purple/10 text-dark_2 dark:text-white dark:bg-optm-purple hover:bg-optm-purple/20 dark:hover:bg-optm-deep-purple;
     }
-    
+
     .lara-cancel-btn {
         @apply lara-btn bg-danger/25 dark:bg-dark_2 dark:text-white dark:hover:bg-danger/70 hover:bg-danger/40 flex gap-2 items-center justify-center font-semibold;
     }
@@ -1105,7 +1105,7 @@ input:-webkit-autofill:active {
 }
 
 #particles-background {
-    @apply dark:bg-lara-primary bg-white;
+    @apply dark:bg-dark_2 bg-white;
 }
 
 /* Keyframes */
@@ -1152,3 +1152,6 @@ input:-webkit-autofill:active {
     opacity: 0.2;
     z-index: 99;
 }
+
+/* calendar */
+
