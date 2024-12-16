@@ -1,11 +1,13 @@
 {
     let darkLight = document.querySelector(".dark-light");
 
-    if (localStorage.getItem("dark") == "true") {
-        document.querySelector("body").classList.add("dark");
-    } else {
-        document.querySelector("body").classList.remove("dark");
-    }
+    window.addEventListener('load',()=>{
+        if (localStorage.getItem("dark") == "true") {
+            document.querySelector("body").classList.add("dark");
+        } else {
+            document.querySelector("body").classList.remove("dark");
+        }
+    })
 
     darkLight?.addEventListener("click", () => {
         document.querySelector("body").classList.toggle("dark");

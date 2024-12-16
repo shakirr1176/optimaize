@@ -37,7 +37,7 @@
                 <div class="loader-line-mask">
                     <div class="loader-line"></div>
                 </div>
-                <svg class="w-5 h-5 dark:text-gray-300 text-lara-whiteGray" version="1.1" id="Capa_1"
+                <svg class="w-5 h-5 dark:text-gray-300 text-dark_1" version="1.1" id="Capa_1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 30.393 30.393" xml:space="preserve" fill="currentColor">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -112,7 +112,7 @@
                             <div id="lf-icon"
                                 class="border-4 rounded-full text-5xl inline-flex items-center justify-center">
                             </div>
-                            <p id="lf-message" class="font-16 font-semibold dark:text-white text-lara-whiteGray"></p>
+                            <p id="lf-message" class="font-16 font-semibold dark:text-white text-dark_1"></p>
                         </div>
                         <div id="lf-button" class="font-16 bg-light-body dark:bg-dark_2 p-4 text-center hidden">
                             <button

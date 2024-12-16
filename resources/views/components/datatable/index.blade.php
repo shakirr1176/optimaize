@@ -45,7 +45,7 @@
 
                 @forelse($data as $item)
                     <x-table.tr class="font-14 font-medium">
-                        {{-- <td class="bg-light-table-row dark:bg-lara-whiteGray w-10">
+                        {{-- <td class="bg-light-table-row dark:bg-dark_1 w-10">
                             <div class="w-10">
                                 <button class="tableDropBtn w-4 h-4 2xl:w-5 2xl:h-5 mx-auto block">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto  text-lara-blue">

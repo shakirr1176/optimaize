@@ -68,21 +68,21 @@
     }
 
     .lara-btn {
-        @apply outline-none min-w-fit duration-300 font-medium capitalize rounded-lara-radious bg-optm-purple/10 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 text-dark_2 dark:text-optm-gray-200;
+        @apply outline-none min-w-fit duration-300 font-medium capitalize rounded-lara-radious bg-optm-purple/10 dark:bg-optm-purple hover:bg-optm-purple/20 dark:hover:bg-optm-deep-purple text-dark_2 dark:text-dark_2;
     }
 
     .lara-secondary-btn {
         @apply lara-btn bg-optm-purple text-white hover:bg-purple-600;
     }
     .lara-logo-btn {
-        @apply duration-300 capitalize rounded-full bg-optm-purple size-10 2xl:size-[52px] flex justify-center items-center text-white hover:bg-optm-deep-purple;
+        @apply duration-300 capitalize rounded-full bg-optm-purple dark:bg-optm-purple dark:text-dark_2 size-10 2xl:size-[52px] flex justify-center items-center text-white hover:bg-optm-deep-purple dark:hover:bg-optm-deep-purple;
     }
 
     .action-btn {
-        @apply w-8 h-8 duration-300 flex items-center justify-center bg-optm-purple rounded-full text-white;
+        @apply w-8 h-8 duration-300 flex items-center justify-center bg-optm-purple hover:bg-optm-deep-purple rounded-full text-white;
     }
     .lara-cancel-btn {
-        @apply lara-btn bg-danger/25 dark:bg-dark_2 hover:bg-danger/40 flex gap-2 items-center justify-center font-semibold;
+        @apply lara-btn bg-danger/25 dark:bg-dark_2 dark:text-white dark:hover:bg-danger/70 hover:bg-danger/40 flex gap-2 items-center justify-center font-semibold;
     }
     .lara-submit-btn {
         @apply lara-btn bg-optm-purple/10 dark:bg-optm-purple dark:text-dark_2 hover:bg-optm-purple/20 flex gap-2 items-center justify-center font-semibold;
@@ -120,11 +120,11 @@
 
     .select-items div,
     .select-selected {
-        @apply text-black-50 w-full;
+        @apply w-full;
     }
 
     .select-items div {
-        @apply dark:bg-lara-gray-100 text-dark_2 bg-optm-gray-200;
+        @apply dropdown-list-color;
     }
     .custom-select > span,
     .drop-icon {
@@ -132,11 +132,6 @@
     }
     .form-arwa > span {
         @apply top-1/2 transform -translate-y-1/2 absolute pointer-events-none  right-3 font-16 pb-px font-thin z-40;
-    }
-
-    .select-items div:hover,
-    .select-items .same-as-selected {
-        @apply dark:bg-primary bg-purple-200 text-lara-whiteGray dark:text-white;
     }
 
     .select-selected {
@@ -166,6 +161,22 @@
 
     .tag-com:hover .remove-tag {
         display: flex;
+    }
+    .dropdown-list-color, .select-items div {
+        @apply
+        text-dark_2
+        bg-white
+        hover:text-lara-primary
+        hover:bg-gray-100
+        [&.active]:text-lara-primary
+        [&.active]:bg-gray-100
+
+        dark:text-dark_2
+        dark:bg-lara-gray-300
+        dark:hover:text-white
+        dark:hover:bg-near-black-purple
+        dark:[&.active]:bg-near-black-purple
+        dark:[&.active]:text-white;
     }
 }
 
@@ -542,19 +553,7 @@ table {
 }
 
 .lang-hover-style {
-    @apply bg-gray-200 dark:bg-lara-whiteGray;
-}
-
-.lang-btn.active {
-    @apply bg-gray-200 text-lara-whiteGray dark:bg-lara-whiteGray dark:text-white;
-}
-
-.lang-btn {
-    @apply hover:bg-gray-200 hover:text-lara-whiteGray dark:hover:bg-lara-whiteGray dark:hover:text-white;
-}
-
-.lang-style {
-    @apply bg-white text-lara-whiteGray dark:bg-lara-gray-300 dark:text-lara-primary;
+    @apply bg-gray-100 dark:bg-near-black-purple;
 }
 
 .angle-down:not(.lang-hover-style) {
@@ -1007,10 +1006,6 @@ input:-webkit-autofill:active {
     @apply text-black dark:text-white;
 }
 
-.drop-down-list.active {
-    @apply bg-gray-100 dark:bg-lara-whiteGray text-lara-primary dark:text-white;
-}
-
 .darkblack-imp {
     @apply dark:bg-lara-primary bg-white;
 }
@@ -1140,14 +1135,14 @@ input:-webkit-autofill:active {
 
 .gradient-circle {
     @apply pointer-events-none fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[50%] aspect-square rounded-full;
-    background: radial-gradient(#a249ff, transparent);
+    background: radial-gradient(#9e43ff, transparent);
     filter: blur(140px);
-    opacity: 0.2;
+    opacity: 0.4;
     z-index: 99;
 }
 .gradient-circle-2 {
     @apply pointer-events-none fixed bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[50%] aspect-square rounded-full;
-    background: radial-gradient(#a249ff, transparent);
+    background: radial-gradient(#6300cc, transparent);
     filter: blur(140px);
     opacity: 0.2;
     z-index: 99;

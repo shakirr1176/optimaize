@@ -12,7 +12,7 @@
             @include('profile.avatar')
             <div class="w-full lg:w-3/4 px-4">
                 <div class="w-full h-full rounded-lg p-6 2xl:p-10">
-                    <div class="flex justify-between items-center border-b dark:border-b-lara-whiteGray pb-2 mb-4">
+                    <div class="flex justify-between items-center border-b dark:border-b-dark_1 pb-2 mb-4">
                         <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('User Information') }}</h2>
                         <div>
                             <a class="lara-submit-btn" href="{{ route('profile.edit') }}">
@@ -86,7 +86,7 @@
                             </label>
                             <div class="show-value">
                                 <span
-                                    class="dark:text-white text-lara-whiteGray py-1 block">{{ display_user_status(auth()->user()->is_active) }}</span>
+                                    class="dark:text-white text-dark_1 py-1 block">{{ display_user_status(auth()->user()->is_active) }}</span>
                             </div>
                         </div>
                         <div>

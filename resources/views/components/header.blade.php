@@ -29,16 +29,16 @@
                 </div>
                 <div
                     class="dark:bg-lara-gray-300 bg-white mt-4 rounded-xl shadow-lara-shadow3 relative overflow-hidden">
-                    <div class="p-4 font-sm font-16 text-lara-whiteGray text-center">
+                    <div class="p-4 font-sm font-16 text-dark_1 text-center">
                         {{ __('You have :count notifications', ['count' => $userNotifications['count_unread']]) }}
                     </div>
                     <ul class="h-52 w-full overflow-y-auto text-TextColor customScroll">
                         <li class="">
                             @foreach ($userNotifications['list'] as $notification)
                                 <a
-                                    class="p-3 border-t text-lara-whiteGray border-lara-gray-light font-14 flex items-center space-x-3 hover:bg-gray-100">
+                                    class="p-3 border-t text-dark_1 border-lara-gray-light font-14 flex items-center space-x-3 hover:bg-gray-100">
                                     <div>
-                                        <p class="text-lara-whiteGray ">
+                                        <p class="text-dark_1 ">
                                             {{ $notification->message }}
                                         </p>
                                     </div>
@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                     <div class="p-4">
-                        <a class="rounded-md block px-3 py-2 dark:bg-lara-primary bg-gray-200 hover:bg-opacity-90 hover: border-t border-lara-gray-light dark:text-white text-lara-whiteGray font-14 text-center"
+                        <a class="rounded-md block px-3 py-2 dark:bg-lara-primary bg-gray-200 hover:bg-opacity-90 hover: border-t border-lara-gray-light dark:text-white text-dark_1 font-14 text-center"
                             href="{{ route('notifications.index') }}">{{ __('See All Notifications') }}</a>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                          @foreach (language() as $shortCode => $language)
                              <li class="flex items-center justify-center">
                                  <a href="javascript:;"
-                                 class="{{ App::getLocale() === $shortCode ? 'active' : '' }} lang-btn w-full lang-style duration-300 language flex items-center space-x-3"
+                                 class="{{ App::getLocale() === $shortCode ? 'active' : '' }} dropdown-list-color lang-btn w-full duration-300 language flex items-center space-x-3"
                                      onclick="setLang('{{ $shortCode }}')">
                                      @if (settings('lang_switcher_item') === 'icon')
                                          <div class="w-6 drop-flag">
@@ -171,29 +171,29 @@
                 <div class="mt-4 shadow-lara-shadow2 rounded-xl overflow-hidden">
                     <ul>
                         <li>
-                            <a class="group dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block"
+                            <a class="dropdown-list-color group text-center lang-btn duration-300 block"
                                 href="{{ route('profile.index') }}">
                                 {{ __('Profile') }}
                                 <span
-                                    class="dark:group-hover:bg-lara-whiteGray group-hover:bg-gray-100 duration-300 w-3 h-3 dark:bg-lara-gray-300 bg-white inline-block rotate-45 absolute top-2.5 right-5"></span>
+                                    class="dark:group-hover:bg-near-black-purple group-hover:bg-gray-100 duration-300 w-3 h-3 dark:bg-lara-gray-300 bg-white inline-block rotate-45 absolute top-2.5 right-5"></span>
                             </a>
                         </li>
                         <li>
-                            <a class="dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block"
+                            <a class="dropdown-list-color text-center lang-btn duration-300 block"
                                 href="{{ route('profile.edit') }}">
                                 {{ __('Edit Profile') }}
                             </a>
                         </li>
                         @if (has_permission('admin.settings.index'))
                             <li>
-                                <a class="dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block"
+                                <a class="dropdown-list-color text-center lang-btn duration-300 block"
                                     href="{{ route('admin.settings.index') }}">
                                     {{ __('Setting') }}
                                 </a>
                             </li>
                         @endif
                         <li>
-                            <a class="dark:bg-lara-gray-300 bg-white dark:hover:bg-lara-whiteGray hover:bg-gray-100 text-center lang-btn duration-300 text-lara-whiteGray dark:hover:text-white hover:text-lara-whiteGray block confirmation"
+                            <a class="dropdown-list-color text-center lang-btn duration-300 block confirmation"
                                 data-form-id="logout" data-form-method="POST" data-alert="{{ __('Are you sure?') }}"
                                 href="{{ route('logout') }}">
                                 {{ __('Logout') }}
