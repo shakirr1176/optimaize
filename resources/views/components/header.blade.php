@@ -15,12 +15,18 @@
         <div class="relative">
             <div
                 class="hover-dropdown-box cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
-                <span class="relative pointer-events-none">
-                    @svg('heroicon-s-bell', 'w-5 2xl:w-6 text-black-50 dark:text-optm-gray-200')
-                    <span
-                        class="border border-gray-700 size-2 2xl:size-3 absolute top-0 right-0 bg-optm-purple rounded-full"></span>
-                </span>
 
+                <div class="relative pointer-events-none">
+                    <span
+                        class="text-f10 pointer-events-none flex w-5 h-5 2xl:h-6 2xl:w-6 items-center justify-center absolute 2xl:-top-5 2xl:-right-4 -top-4 -right-4">
+                        <span class="absolute inline-flex h-full w-full rounded-full dark:bg-optm-purple bg-lara-gray-400"></span>
+                        <span
+                        class="flex relative rounded-full w-5 h-5 2xl:h-6 2xl:w-6 font-semibold text-f10 2xl:text-xs text-white bg-lara-orange items-center justify-center">{{ $userNotifications['count_unread'] > 9 ? '9+' : $userNotifications['count_unread'] }}</span>
+                    </span>
+                    <span class="text-xl 2xl:text-2xl text-black-80 group-hover:text-black-50">
+                        @svg('heroicon-o-bell', 'w-5 2xl:w-6 text-black-50 dark:text-optm-gray-200')
+                    </span>
+                </div>
             </div>
             <div
                 class="hover-dropdown-show-box hidden z-10 absolute w-56 2xl:w-60 transition-all duration-500 right-0 top-full mt-2 2xl:mt-3">

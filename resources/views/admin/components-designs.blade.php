@@ -36,7 +36,7 @@
     </x-section>
     <div class="component-page">
         <div class="">
-            <div class="rounded-2xl optm-gray-50 overflow-hidden">
+            <div class="rounded-2xl bg-optm-gray-50 dark:bg-dark_2 overflow-hidden">
                 <div id="component-tab" class="flex font-16 font-semibold items-center">
                     <button class="tabButton duration-300 flex-1 min-w-[200px]">Information</button>
                     <button class="active tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
@@ -46,8 +46,8 @@
                     <div id="component-tab-content">
                         <div class="tab">
                             <div class="flex items-center justify-between gap-4">
-                                <label class="font-18 font-semibold" for="">Operations and Task</label>
-                                <button class="action-btn bg-opacity-10 text-dark_2">
+                                <div class="font-18 text-dark_1 dark:text-branco-sujo font-semibold" for="">Operations and Task</div>
+                                <button class="action-btn-2">
                                     @svg('heroicon-s-plus', 'w-4')
                                 </button>
                             </div>
@@ -414,7 +414,30 @@
                             </div>
                         </div>
                         <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="component-page mt-8">
+        <div class="">
+            <div class="rounded-2xl bg-optm-gray-50 dark:bg-dark_2 overflow-hidden">
+                <div id="calendar-tab" class="flex font-16 font-semibold items-center">
+                    <button class="active tabButton duration-300 flex-1 min-w-[200px]">Information</button>
+                    <button class="tabButton duration-300 flex-1 min-w-[200px]">Hours and Vacation Map</button>
+                    <button class="tabButton duration-300 flex-1 min-w-[200px]">Competencies</button>
+                </div>
+                <div class="p-6">
+                    <div id="calendar-tab-content">
+                        <div class="tab w-full">
+
                             <div id="calendar"></div>
+
                             <div class="mt-8">
                                 <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('Resume') }}</h2>
 
@@ -450,11 +473,15 @@
                         <div class="tab h-full">
                             <span class="show-no-data">{{ __('No data') }}</span>
                         </div>
+                        <div class="tab h-full">
+                            <span class="show-no-data">{{ __('No data') }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <x-section name="style">
         <link rel="stylesheet" href="{{ Vite::css('select.css') }}" />
         <link href="https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css" rel="stylesheet">
@@ -465,6 +492,7 @@
         <script src="{{ Vite::js('tab.js') }}"></script>
         <script>
             tabFunc('component-tab');
+            tabFunc('calendar-tab');
 
             document.addEventListener('DOMContentLoaded', function() {
                 var calendarEl = document.getElementById('calendar');
