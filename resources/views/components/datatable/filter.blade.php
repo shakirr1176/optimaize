@@ -162,7 +162,7 @@
                     <div
                         class="download-drop duration-300 rounded-xl overflow-hidden absolute z-10 top-full sm:right-0 -right-[184px] mt-3 hidden w-52 shadow-lara-shadow2 2xl:w-56">
                         @foreach (datatable_downloadable_type() as $item => $value)
-                            <a class="lara-padding py-2 download block space-x-2 text-lara-primary dark:bg-dark-optm-gray-300 bg-white hover:bg-gray-100 dark:hover:bg-dark_1 dark:hover:text-white group"
+                            <a class="download group dropdown-list-color block py-2 px-4
                                 data-type="{{ $item }}"
                                 href="{{ generate_filter_url('download', $item) }}">
                                 @svg(get_heroicon_name($value['icon']), 'w-4 pointer-events-none text-lara-darkBlack dark:group-hover:text-white inline-block')
@@ -188,7 +188,7 @@
 
     <div class="filter-field absolute top-full -right-4 z-30 mt-2 hidden px-4">
         <div
-            class="rounded-xl overflow-hidden w-82 customScroll customScrollY flex h-[400px] flex-col overflow-y-scroll dark:bg-lara-primary bg-white shadow-lara-shadow2 sm:w-96 2xl:h-[550px] 2xl:w-[500px]">
+            class="rounded-xl overflow-hidden w-82 customScroll customScrollY flex h-[400px] flex-col overflow-y-scroll dark:bg-dark_1 bg-white shadow-lara-shadow2 sm:w-96 2xl:h-[550px] 2xl:w-[500px]">
             <h2
                 class="font-16 border-b border-black-30 border-opacity-40 p-4 font-medium capitalize dark:text-white text-dark_1 2xl:p-6">
                 {{ __('Filter Options') }}
@@ -204,7 +204,7 @@
                                     <div class="defaultcal relative">
                                         <div class="defaultcal relative">
                                             <input id="filter-start-date"
-                                                class="lara-input-date dark:bg-lara-gray-100 bg-opacity-300 dark:border-transparent border-opacity-40"
+                                                class="lara-input-date"
                                                 type="date" name="{{ $data->getPageName() }}-frm"
                                                 value="{{ get_query_param($data->getPageName() . '-frm') }}">
                                             <div
@@ -218,7 +218,7 @@
                                     <label class="lara-label" for="filter-end-date">{{ __('End Date') }}</label>
                                     <div class="relative">
                                         <input id="filter-end-date"
-                                            class="lara-input-date dark:bg-lara-gray-100 bg-opacity-300 dark:border-transparent border-opacity-40"
+                                            class="lara-input-date"
                                             type="date" name="{{ $data->getPageName() }}-to"
                                             value="{{ get_query_param($data->getPageName() . '-to') }}">
                                         <div
@@ -243,7 +243,7 @@
                                                         name="{{ $data->getPageName() }}-fltr[{{ $fieldProperties['field_name'] }}][]"
                                                         value="{{ $optionValue }}"
                                                         {{ is_array(request()->input($data->getPageName() . '-fltr.' . $fieldProperties['field_name'])) && in_array($optionValue, request()->input($data->getPageName() . '-fltr.' . $fieldProperties['field_name'])) ? 'checked' : '' }}>
-                                                    <svg class="checked-item h-5 w-5 rounded border-2 border-gray-400 dark:border-dark_1 text-transparent"
+                                                    <svg class="checked-item h-5 w-5 rounded border-2 border-gray-400 dark:border-lara-gray text-transparent"
                                                         viewBox="0 0 172 172">
                                                         <g fill="none" font-family="none" font-size="none"
                                                             font-weight="none" stroke-miterlimit="10"
