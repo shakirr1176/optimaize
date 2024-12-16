@@ -1,6 +1,6 @@
 <label class="lara-label" for="">{{ $label }}</label>
 <div class="group relative">
-    <div class="drop-area flex flex-col justify-center items-center w-full h-32 dark:border-lara-whiteGray border-gray-400 border-2 border-dashed cursor-pointer">
+    <div class="drop-area flex flex-col justify-center items-center w-full h-32 dark:border-gray-600 border-gray-400 border-2 border-dashed cursor-pointer">
         <div class="flex flex-col justify-center items-center pt-5 pb-6">
             <img src="" alt="" {{ $attributes->merge(['class' => 'mb-1']) }}
                 name="{{ $name }}"

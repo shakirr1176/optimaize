@@ -14,15 +14,20 @@
     @endif
 </head>
 
-<body class="font-Poppins bg-optm-gray-200">
+<body class="font-Poppins">
     <!-- main section start -->
-    <div class="gradient-circle"></div>
-    <div class="gradient-circle-2"></div>
-    <div class="w-full min-h-screen flex items-center justify-center p-4 md: py-10">
-        {{ $slot }}
+    <div class="bg-optm-gray-200 dark:bg-dark-optm-gray-200">
+        <div class="gradient-circle"></div>
+        <div class="gradient-circle-2"></div>
+        <div class="w-full min-h-screen flex items-center justify-center p-4 md: py-10">
+            <div class="2xl:max-w-5xl xl:max-w-4xl sm:max-w-3xl bg-optm-gray-300 dark:bg-dark-optm-gray-300 md:px-20 xl:px-32 md:py-20 xl:py-20 2xl:py-32 px-6 py-6 relative rounded-lg">
+                {{ $slot }}
+            </div>
+        </div>
     </div>
     <!-- main section end -->
 </body>
+<script src="{{ Vite::js('theme-switch.js') }}"></script>
 <script>
     let alertBoxButtons = document.querySelectorAll('.alert-close-btn');
     let alertBoxs = document.querySelectorAll('.alert-box');

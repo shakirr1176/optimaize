@@ -7,7 +7,7 @@
     <div class="w-full relative mt-4 2xl:mt-8">
         <div class="row items-center justify-between mb-4">
             <div class="w-full sm:w-1/3 px-4 py-2">
-                <div class="w-full flex items-center dark:bg-lara-whiteGray bg-white rounded-xl border dark:border-none">
+                <div class="w-full flex items-center dark:bg-dark_1 bg-white rounded-xl border dark:border-none">
                     <div class="w-24 pl-4 text-black-50 whitespace-nowrap font-16">{{ __('Logs of') }} :</div>
                     <div class="w-full overflow-hidden text-ellipsis relative flex-auto">
                         @svg('heroicon-s-chevron-down', 'w-4 text-black-80 dark:text-white absolute pointer-events-none top-1/2 -translate-y-1/2 right-4')
@@ -84,10 +84,10 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="dark:text-white text-lara-whiteGray">
+                <tbody class="dark:text-white text-dark_1">
                     @forelse($logs as $key => $log)
                         <tr class="mt-4 font-14 font-medium">
-                            <td class="rounded-xl dark:bg-lara-whiteGray bg-light-table-row text-left 2xl:py-4 py-3.5">
+                            <td class="rounded-xl dark:bg-dark_1 bg-light-table-row text-left 2xl:py-4 py-3.5">
                                 <div class="flex">
                                     <div class="w-10 flex justify-center">
                                         <button class="tableDropBtn text-primary">
@@ -101,7 +101,7 @@
                                     </p>
                                 </div>
                                 <div class="hidden">
-                                    <div class="px-6 py-5 font-14 dark:bg-lara-whiteGray bg-light-table-row rounded-xl">
+                                    <div class="px-6 py-5 font-14 dark:bg-dark_1 bg-light-table-row rounded-xl">
                                         <div>
                                             <p class="font-semibold">{{ __('Details') }} :</p>
                                             {{ $log['text'] }}
@@ -118,8 +118,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="px-6 text-left dark:bg-lara-whiteGray bg-light-table-row">{{ $log['date'] }}</td>
-                            <td class="px-6 text-left dark:bg-lara-whiteGray bg-light-table-row"><span
+                            <td class="px-6 text-left dark:bg-dark_1 bg-light-table-row">{{ $log['date'] }}</td>
+                            <td class="px-6 text-left dark:bg-dark_1 bg-light-table-row"><span
                                     class="text-Info px-6 capitalize max-w-[500px] 2xl:max-w-[700px] overflow-hidden text-ellipsis block">{{ substr($log['text'], 0, 80) }} . . .</span>
                             </td>
                         </tr>

@@ -49,6 +49,7 @@ module.exports = {
                 "optm-gray-300": "#4A3F6E1A",
                 "dark-optm-gray-300": "#4A3F6E66",
 
+                'near-black-purple': '#31345E',
                 dark_1: "#25284D",
                 "branco-sujo": "#C3C3C3",
 

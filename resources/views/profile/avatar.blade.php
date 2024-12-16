@@ -9,8 +9,8 @@
                     <div class="dark:bg-lara-gray-100 bg-gray-300 w-32 h-32 2xl:w-48 2xl:h-48 rounded-full border-2 border-white border-none relative group">
                         <div class="w-full h-full flex-col flex items-center justify-center text-center">
                             @if (!auth()->user()->avatar)
-                                @svg('heroicon-s-camera', 'w-4 dark:text-white/70 text-lara-whiteGray')
-                                <div class="font-semibold font-14 dark:text-white/70 text-lara-whiteGray px-4 mt-2">
+                                @svg('heroicon-s-camera', 'w-4 dark:text-white/70 text-dark_1')
+                                <div class="font-semibold font-14 dark:text-white/70 text-dark_1 px-4 mt-2">
                                     {{ __('Upload New Avatar') }}
                                 </div>
                             @else

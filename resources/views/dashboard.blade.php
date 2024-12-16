@@ -9,28 +9,28 @@
     <div>
         <div class="text-dark_1 dark:text-optm-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6 2xl:mb-8">
             <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-dark_2 p-4 xl:p-6">
-                <img src="{{ Vite::image('machine.png') }}" alt="">
+                <img class="dark:brightness-[6]" src="{{ Vite::image('machine.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">12</p>
                     <p class="font-14">Machines and Equipment</p>
                 </div>
             </div>
             <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-dark_1 p-4 xl:p-6">
-                <img src="{{ Vite::image('sections.png') }}" alt="">
+                <img class="dark:brightness-[6]" src="{{ Vite::image('sections.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">3</p>
                     <p class="font-14">Sections</p>
                 </div>
             </div>
             <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-optm-purple p-4 xl:p-6">
-                <img src="{{ Vite::image('huuman-resource.png') }}" alt="">
+                <img class="dark:brightness-[6]" src="{{ Vite::image('huuman-resource.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">78</p>
                     <p class="font-14">Human Resources</p>
                 </div>
             </div>
             <div class="flex items-center gap-6 rounded-2xl bg-[#10122B1A] dark:bg-optm-deep-purple p-4 xl:p-6">
-                <img src="{{ Vite::image('products.png') }}" alt="">
+                <img class="dark:brightness-[6]" src="{{ Vite::image('products.png') }}" alt="">
                 <div>
                     <p class="font-24 font-semibold">143</p>
                     <p class="font-14">Products</p>

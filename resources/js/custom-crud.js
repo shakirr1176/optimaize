@@ -114,10 +114,10 @@
                 );
 
                 optionItems?.forEach((element) => {
-                    element.classList.remove("same-as-selected");
+                    element.removeAttribute("class");
                     if (element.getAttribute("data-value") == data[index]) {
                         selectSelected.innerHTML = element.innerHTML;
-                        element.classList.add("same-as-selected");
+                        element.className = "same-as-selected active";
                     }
                 });
                 options = field.querySelectorAll("option");

@@ -20,7 +20,7 @@
                         <div
                             class="shrink-0 mx-auto xl:mx-0 w-40 h-40 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center dark:bg-lara-gray-100/50 bg-gray-200">
                             <div
-                                class="dark:bg-lara-gray-100 bg-gray-300 w-32 h-32 2xl:w-48 2xl:h-48 rounded-full overflow-hidden border-2 dark:border-lara-whiteGray border-white relative group">
+                                class="dark:bg-lara-gray-100 bg-gray-300 w-32 h-32 2xl:w-48 2xl:h-48 rounded-full overflow-hidden border-2 dark:border-dark_1 border-white relative group">
                                 <img src="{{ $user->avatar }}" alt="">
                             </div>
                         </div>
@@ -43,7 +43,7 @@
 
             <div class="w-full lg:w-3/4 px-4">
                 <div class="w-full h-full p-6 2xl:p-10">
-                    <div class="w-full border-b dark:border-lara-whiteGray pb-1 mb-4">
+                    <div class="w-full border-b dark:border-dark_1 pb-1 mb-4">
                         <h2 class="font-18 text-dark_1 dark:text-branco-sujo mb-5 2xl:mb-6 font-semibold">{{ __('User Information') }}</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

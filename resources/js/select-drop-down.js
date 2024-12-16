@@ -18,6 +18,12 @@
                 c = document.createElement("DIV");
                 c.innerHTML = selElmnt.options[j].innerHTML;
                 c.setAttribute("data-value", selElmnt.options[j].value);
+                c.removeAttribute("class");
+
+                if(selElmnt.value == selElmnt.options[j].value){
+                    c.setAttribute("class", "same-as-selected active");
+                }
+
                 c.addEventListener("click", function (e) {
                     var y, i, k, s, h, sl, yl;
                     s =
@@ -38,7 +44,7 @@
                             for (k = 0; k < yl; k++) {
                                 y[k].removeAttribute("class");
                             }
-                            this.setAttribute("class", "same-as-selected");
+                            this.setAttribute("class", "same-as-selected active");
                             break;
                         }
                     }
