@@ -1156,7 +1156,7 @@ input:-webkit-autofill:active {
 /* calendar */
 
 #calendar{
-    @apply dark:text-branco-sujo
+    @apply text-dark_1 font-16 dark:text-branco-sujo
 }
 
 .fc-col-header-cell, .fc-theme-standard .fc-scrollgrid,.fc-theme-standard td, .fc-theme-standard th{
@@ -1166,4 +1166,8 @@ input:-webkit-autofill:active {
 .fc-scrollgrid-sync-table
 {
     width: 100% !important;
+}
+
+.fc-button-primary{
+    @apply  dark:!bg-optm-gray-300
 }
