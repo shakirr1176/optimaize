@@ -14,7 +14,7 @@
     <div class="flex items-center gap-3">
         <div class="relative">
             <div
-                class="hover-dropdown-box cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
+                class="hover-dropdown-box cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 dark:hover:bg-optm-purple/30 rounded-lara-radious flex justify-center items-center">
 
                 <div class="relative pointer-events-none">
                     <span
@@ -71,7 +71,7 @@
 
         {{-- dark night --}}
         <div
-            class="dark-light cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
+            class="dark-light cursor-pointer size-[39px] 2xl:size-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 dark:hover:bg-optm-purple/30 rounded-lara-radious flex justify-center items-center">
             <span class="relative pointer-events-none">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@
          <!-- lang start -->
          @if (settings('lang_switcher'))
          <div class="relative">
-             <div class="px-3 hover-dropdown-box cursor-pointer h-[39px] 2xl:h-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 rounded-lara-radious flex justify-center items-center">
+             <div class="px-3 hover-dropdown-box cursor-pointer h-[39px] 2xl:h-[50px] bg-optm-gray-300 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 dark:hover:bg-optm-purple/30 rounded-lara-radious flex justify-center items-center">
                  @if (settings('lang_switcher_item') === 'icon')
                      <div class="pointer-events-none flex items-center justify-center">
                          <div class="w-6 2xl:w-7 h-6 2xl:h-7 country-flag overflow-hidden">
@@ -155,7 +155,7 @@
          </div>
      @endif
      <!-- lang end -->
-        <div class="py-1 2xl:py-1.5 relative px-4 flex items-center rounded-lara-radious w-fit bg-optm-gray-300 dark:bg-dark-optm-gray-300">
+        <div class="py-1 2xl:py-1.5 relative px-4 flex items-center rounded-lara-radious w-fit bg-optm-gray-300 dark:bg-dark-optm-gray-300 hover:bg-optm-purple/20 dark:hover:bg-optm-purple/30">
             <div class="hover-dropdown-box cursor-pointer whitespace-nowrap">
                 <div class="pointer-events-none flex gap-2 justify-end items-center">
                     <div class="text-dark_2 dark:text-optm-gray-200">
