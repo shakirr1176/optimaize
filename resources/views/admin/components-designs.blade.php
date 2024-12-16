@@ -53,7 +53,7 @@
                             </div>
                             <div
                                 class="rounded-xl overflow-x-scroll customScrollX min-h-[calc(100vh-390px)]">
-                                <table class="responsive-table w-full whitespace-nowrap">
+                                <table class="laraframe-table responsive-table w-full whitespace-nowrap">
                                     <thead class="text-dark_1 dark:text-branco-sujo">
                                         <tr class="uppercase text-left whitespace-nowrap">
                                             <th class="2xl:pt-3 pt-2.5 font-14 font-medium px-4">
