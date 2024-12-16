@@ -544,15 +544,15 @@ span.optext {
     @apply font-14;
 }
 
-td:first-child {
+.laraframe-table td:first-child {
     border-radius: 14px 0 0 14px;
 }
 
-td:last-child {
+.laraframe-table td:last-child {
     border-radius: 0 14px 14px 0;
 }
 
-table {
+.laraframe-table {
     border-collapse: separate;
     border-spacing: 0px 8px;
 }
@@ -1155,3 +1155,15 @@ input:-webkit-autofill:active {
 
 /* calendar */
 
+#calendar{
+    @apply dark:text-branco-sujo
+}
+
+.fc-col-header-cell, .fc-theme-standard .fc-scrollgrid,.fc-theme-standard td, .fc-theme-standard th{
+    @apply dark:border-gray-600
+}
+
+.fc-scrollgrid-sync-table
+{
+    width: 100% !important;
+}

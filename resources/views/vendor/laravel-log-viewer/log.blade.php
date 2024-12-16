@@ -6,13 +6,13 @@
     </x-section>
     <div class="w-full relative mt-4 2xl:mt-8">
         <div class="row items-center justify-between mb-4">
-            <div class="w-full sm:w-1/3 px-4 py-2">
-                <div class="w-full flex items-center dark:bg-dark_1 bg-white rounded-xl border dark:border-none">
+            <div class="w-full sm:w-1/3 px-4">
+                <div class="w-full flex items-center">
                     <div class="w-24 pl-4 text-black-50 whitespace-nowrap font-16">{{ __('Logs of') }} :</div>
                     <div class="w-full overflow-hidden text-ellipsis relative flex-auto">
                         @svg('heroicon-s-chevron-down', 'w-4 text-black-80 dark:text-white absolute pointer-events-none top-1/2 -translate-y-1/2 right-4')
                         <select name="file"
-                            class="file pr-8 overflow-hidden text-ellipsis font-16 text-black-80 appearance-none bg-transparent w-full py-1.5 outline-none px-4">
+                            class="file pr-8 overflow-hidden text-ellipsis lara-input appearance-none">
                             @foreach ($files as $file)
                                 <option class="bg-lara-primary" {{ $current_file == $file ? 'selected' : '' }}
                                     value="?l={{ Crypt::encrypt($file) }}"> {{ $file }}
@@ -27,7 +27,7 @@
                     <div class="flex flex-wrap sm:justify-end gap-1 items-center">
                         <div class="w-auto">
                             <a href="?dl={{ Crypt::encrypt($current_file) }}"
-                                class="lara-btn px-4 py-1.5 flex items-center font-medium bg-lara-blue text-white hover:text-white border dark:border-none duration-300 hover:bg-opacity-90">
+                                class="lara-btn flex items-center gap-2">
                                 @svg('heroicon-s-folder-arrow-down', 'w-4 mb-0.5 mr-1')
                                 {{ __('Download') }}
                             </a>
@@ -35,7 +35,7 @@
                         <div class="w-auto">
                             <a href="?del={{ Crypt::encrypt($current_file) }}" id="delete-log" data-form-method="GET"
                                 data-alert="{{ __('Are you sure?') }}"
-                                class="confirmation lara-btn px-4 py-1.5 flex items-center font-medium bg-lara-blue text-white hover:text-white border dark:border-none duration-300 hover:bg-opacity-90">
+                                class="confirmation lara-cancel-btn">
                                 @svg('heroicon-m-trash', 'w-4 mb-0.5 mr-0.5')
                                 {{ __('Delete Current File') }}
                             </a>
@@ -57,8 +57,8 @@
     </div>
     <div class="w-full 2xl:mt-4">
         <!-- table start -->
-        <div class="w-full overflow-x-scroll customScrollX dark:bg-lara-darkBlack bg-white p-6">
-            <table class="border-spacing-y-1.5 border-separate w-full whitespace-nowrap" id="dataTable">
+        <div class="w-full overflow-x-scroll customScrollX">
+            <table class="laraframe-table border-spacing-y-1.5 border-separate w-full whitespace-nowrap" id="dataTable">
                 <thead>
                     <tr class="text-left font-14 text-black-50 whitespace-nowrap">
                         <th class="sortClass cursor-pointer my-3 2xl:py-4 py-3.5 font-medium capitalize pr-6 pl-10">
@@ -87,7 +87,7 @@
                 <tbody class="dark:text-white text-dark_1">
                     @forelse($logs as $key => $log)
                         <tr class="mt-4 font-14 font-medium">
-                            <td class="rounded-xl dark:bg-dark_1 bg-light-table-row text-left 2xl:py-4 py-3.5">
+                            <td class="rounded-xl dark:bg-dark_1 bg-optm-gray-300 text-left 2xl:py-4 py-3.5">
                                 <div class="flex">
                                     <div class="w-10 flex justify-center">
                                         <button class="tableDropBtn text-primary">
@@ -101,7 +101,7 @@
                                     </p>
                                 </div>
                                 <div class="hidden">
-                                    <div class="px-6 py-5 font-14 dark:bg-dark_1 bg-light-table-row rounded-xl">
+                                    <div class="px-6 py-5 font-14 dark:bg-dark_1 bg-optm-gray-300 rounded-xl">
                                         <div>
                                             <p class="font-semibold">{{ __('Details') }} :</p>
                                             {{ $log['text'] }}
@@ -118,8 +118,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="px-6 text-left dark:bg-dark_1 bg-light-table-row">{{ $log['date'] }}</td>
-                            <td class="px-6 text-left dark:bg-dark_1 bg-light-table-row"><span
+                            <td class="px-6 text-left dark:bg-dark_1 bg-optm-gray-300">{{ $log['date'] }}</td>
+                            <td class="px-6 text-left dark:bg-dark_1 bg-optm-gray-300"><span
                                     class="text-Info px-6 capitalize max-w-[500px] 2xl:max-w-[700px] overflow-hidden text-ellipsis block">{{ substr($log['text'], 0, 80) }} . . .</span>
                             </td>
                         </tr>
