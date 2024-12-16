@@ -21,7 +21,7 @@ use App\Enums\TicketStatusEnum;
             <h3 class="font-18 text-dark_1 dark:text-optm-gray-200 font-semibold">{{ __('Discussion') }}</h3>
             @if ($ticket->status == App\Enums\TicketStatusEnum::OPEN->value)
                 <div class="flex items-center space-x-2">
-                    <a class="bg-danger hover:bg-opacity-90 text-white lara-btn confirmation"
+                    <a class="lara-cancel-btn dark:bg-danger/70 dark:hover:bg-danger/80 confirmation"
                         data-form-method="put" data-alert="{{ 'Are you sure?' }}"
                         data-form-id="close-{{ $ticket->id }}"
                         href="{{ route('tickets.close', ['ticket' => $ticket->id]) }}">
@@ -43,7 +43,7 @@ use App\Enums\TicketStatusEnum;
                     </li>
                     <li class="flex items-center px-4 my-1">
                         <h5 class="text-dark_2 dark:text-branco-sujo font-14 font-medium mr-4">{{ __('Status') }} :</h5>
-                        <p class=" font-14">{{ display_ticket_status($ticket->status) }}</p>
+                        <p class="text-dark_2 dark:text-branco-sujo font-14">{{ display_ticket_status($ticket->status) }}</p>
                     </li>
                 </ul>
             </div>
@@ -123,7 +123,7 @@ use App\Enums\TicketStatusEnum;
                             @csrf
                             <div class="flex flex-wrap -mx-1 mt-7">
                                 <div class="w-full px-1">
-                                    <textarea rows="5" class="lara-btn w-full" name="content"
+                                    <textarea rows="5" class="lara-input w-full" name="content"
                                         placeholder="{{ __('Type your message here...') }}"></textarea>
                                     <p class="text-sm text-red-600 mt-2">{{ $errors->first('content') }}
                                     </p>
@@ -159,17 +159,15 @@ use App\Enums\TicketStatusEnum;
                                     </p>
                                 </div>
                             </div>
-                            <div class="w-full mt-7">
+                            <div class="w-full mt-8">
                                 <div class="flex items-center space-x-3">
-                                    <button
-                                    class="bg-lara-blue hover:bg-opacity-90 text-white lara-btn"
-                                        type="submit">
-                                        {{ __('Submit') }}
-                                    </button>
-                                    <button
-                                        class="bg-danger hover:bg-opacity-90 text-white lara-btn"
+                                    <button class="lara-cancel-btn dark:bg-danger/70 dark:hover:bg-danger/80 px-10"
                                         type="reset">
                                         {{ __('Reset') }}
+                                    </button>
+                                    <button class="lara-btn px-10"
+                                        type="submit">
+                                        {{ __('Submit') }}
                                     </button>
                                 </div>
                             </div>
